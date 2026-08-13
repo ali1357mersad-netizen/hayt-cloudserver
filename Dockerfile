@@ -4,10 +4,17 @@ EXPOSE 8080
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["Hayt.CloudServer.csproj", "."]
-RUN dotnet restore "./Hayt.CloudServer.csproj"
-COPY . .
-WORKDIR "/src/."
+
+# فقط پروژه CloudServer رو کپی کن
+COPY ["Hayt-CloudServer/Hayt.CloudServer.csproj", "Hayt-CloudServer/"]
+COPY ["Hayt.Shared/Hayt.Shared.csproj", "Hayt.Shared/"]
+RUN dotnet restore "Hayt-CloudServer/Hayt.CloudServer.csproj"
+
+# بقیه فایلهای لازم
+COPY Hayt-CloudServer/ Hayt-CloudServer/
+COPY Hayt.Shared/ Hayt.Shared/
+
+WORKDIR "/src/Hayt-CloudServer"
 RUN dotnet build "Hayt.CloudServer.csproj" -c Release -o /app/build
 
 FROM build AS publish
