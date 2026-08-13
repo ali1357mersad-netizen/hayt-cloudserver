@@ -1,0 +1,445 @@
+﻿{
+    "Title":  "انگلیسی را قورت بده - جلد چهارم",
+    "Subtitle":  "مکالمات پیشرفته و داستان‌های بلندتر در ۱۰ درس",
+    "Description":  "دوره چهارم آموزش انگلیسی - زمان‌های گذشته و آینده، مکالمات تلفنی، داستان‌های بلندتر",
+    "Author":  "Hayt Academy",
+    "Language":  "fa",
+    "Level":  4,
+    "Version":  "1.0.0",
+    "IsActive":  true,
+    "BookKey":  "english_made_easy_04",
+    "Sections":  [
+                     {
+                         "Title":  "بخش اول: زمان‌ها و مکالمات پیشرفته",
+                         "OrderNumber":  1,
+                         "Chapters":  {
+                                          "Title":  "فصل اول: گذشته و آینده",
+                                          "OrderNumber":  1,
+                                          "Lessons":  [
+                                                          {
+                                                              "Title":  "درس ۳۱: زمان گذشته ساده - کارهایی که دیروز انجام دادم",
+                                                              "Content":  "📖 داستان این درس:\n\nالکس درباره دیروزش می‌گه:\n\n\"Yesterday was a busy day. I woke up at 7 o\u0027clock. I ate breakfast and went to work. I worked until 5 o\u0027clock. Then I came home and watched TV.\"\n\n🎯 کلمات جدید:\n- Yesterday = دیروز\n- Last night = دیشب\n- Ago = پیش\n- Woke up = بیدار شدم\n- Ate = خوردم\n- Went = رفتم\n- Came = آمدم\n- Watched = تماشا کردم\n- Worked = کار کردم\n- Played = بازی کردم\n- Visited = دیدار کردم\n- Cooked = آشپزی کردم\n\n📝 گرامر: گذشته ساده\nبرای ساختن گذشته ساده، به فعل `-ed` اضافه می‌کنیم:\n- Play → Played\n- Work → Worked\n- Watch → Watched\n\nبعضی فعل‌ها بی‌قاعده هستند:\n- Go → Went\n- Eat → Ate\n- Come → Came\n- Wake up → Woke up\n\n📝 جملات کاربردی:\n- Yesterday, I went to the park = دیروز به پارک رفتم\n- I ate pizza for dinner = برای شام پیتزا خوردم\n- She visited her grandmother = او مادربزرگش را دیدار کرد\n- We played football yesterday = دیروز فوتبال بازی کردیم\n\n🗣️ تمرین مکالمه:\nA: \"What did you do yesterday?\"\nB: \"I went to work and then came home.\"\nA: \"Did you watch TV?\"\nB: \"Yes, I watched a movie.\"\n\n🔁 مرور:\nدرس ۱۸: زمان و ساعت\nدرس ۹: اعداد\nحالا ترکیب کن:\n\"Yesterday, I woke up at 7 o\u0027clock.\"\n\"I went to work at 8 o\u0027clock.\"\n\n💡 نکته مادرانه:\nدرباره دیروزت بگو:\n\"Yesterday, I ...\"",
+                                                              "Level":  4,
+                                                              "OrderNumber":  31,
+                                                              "EstimatedMinutes":  22,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "گذشته فعل Go چیست؟",
+                                                                                    "OptionA":  "Goed",
+                                                                                    "OptionB":  "Went",
+                                                                                    "OptionC":  "Gone",
+                                                                                    "OptionD":  "Going",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "گذشته Go = Went (بی‌قاعده)",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «دیروز به پارک رفتم»؟",
+                                                                                    "OptionA":  "Today I go to park",
+                                                                                    "OptionB":  "Yesterday I went to the park",
+                                                                                    "OptionC":  "Tomorrow I will go to park",
+                                                                                    "OptionD":  "I go to park yesterday",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Yesterday I went to the park = دیروز به پارک رفتم",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۳۰ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "زمان گذشته",
+                                                                                    "OptionB":  "جمع‌بندی جلد سوم و سطح A2",
+                                                                                    "OptionC":  "داستان کوتاه",
+                                                                                    "OptionD":  "خرید",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "درس ۳۰ جمع‌بندی جلد سوم بود",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۳۲: زمان آینده - برنامه‌های فردا",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا درباره برنامه‌های فرداش می‌گه:\n\n\"Tomorrow is Friday. I will wake up late. I will have breakfast with my family. Then I will go to the cinema with Alex. We will watch a new movie.\"\n\n🎯 کلمات جدید:\n- Tomorrow = فردا\n- Next week = هفته آینده\n- Next month = ماه آینده\n- Will = خواهم (برای آینده)\n- Plan = برنامه\n- Cinema = سینما\n- Movie = فیلم\n- Trip = سفر\n- Meeting = جلسه\n- Appointment = قرار ملاقات\n- Invite = دعوت کردن\n- Promise = قول دادن\n\n📝 گرامر: آینده با Will\nفاعل + will + فعل ساده\n- I will go = من خواهم رفت\n- She will come = او خواهد آمد\n- We will eat = ما خواهیم خورد\n\n📝 جملات کاربردی:\n- I will go to the cinema tomorrow = فردا به سینما خواهم رفت\n- She will visit us next week = او هفته آینده به دیدن ما خواهد آمد\n- We will have a meeting at 3 o\u0027clock = ساعت ۳ جلسه خواهیم داشت\n- I will call you tonight = امشب بهت زنگ می‌زنم\n\n🗣️ تمرین مکالمه:\nA: \"What will you do tomorrow?\"\nB: \"I will visit my grandmother.\"\nA: \"That\u0027s nice! What time will you go?\"\nB: \"I will go at 10 o\u0027clock in the morning.\"\n\n🔁 مرور:\nدرس ۳۱: گذشته\nدرس ۱۸: زمان\nحالا ترکیب کن:\n\"Yesterday I went to work. Tomorrow I will go to the park.\"\n\n💡 نکته مادرانه:\nدرباره برنامه‌های فردات بگو:\n\"Tomorrow I will ...\"",
+                                                              "Level":  4,
+                                                              "OrderNumber":  32,
+                                                              "EstimatedMinutes":  22,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "برای آینده از چه کلمه‌ای استفاده می‌کنیم؟",
+                                                                                    "OptionA":  "Did",
+                                                                                    "OptionB":  "Will",
+                                                                                    "OptionC":  "Was",
+                                                                                    "OptionD":  "Have",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Will برای آینده استفاده می‌شود",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «فردا به سینما خواهم رفت»؟",
+                                                                                    "OptionA":  "Yesterday I went to cinema",
+                                                                                    "OptionB":  "Tomorrow I will go to the cinema",
+                                                                                    "OptionC":  "I go to cinema today",
+                                                                                    "OptionD":  "I am going cinema",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Tomorrow I will go to the cinema = فردا به سینما خواهم رفت",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۳۱ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "زمان آینده",
+                                                                                    "OptionB":  "زمان گذشته ساده",
+                                                                                    "OptionC":  "داستان کوتاه",
+                                                                                    "OptionD":  "خرید",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۳۱ زمان گذشته ساده را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۳۳: مکالمه تلفنی",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا به الکس زنگ می‌زنه:\n\n\"Hello?\"\n\"Hi Alex! This is Sara.\"\n\"Oh, hi Sara! How are you?\"\n\"I\u0027m good. I\u0027m calling to invite you to my party.\"\n\n🎯 کلمات جدید:\n- Call = زنگ زدن\n- Phone = تلفن\n- Ring = زنگ خوردن\n- Answer = جواب دادن\n- Message = پیام\n- Voicemail = پیغام گیر\n- Busy = مشغول\n- Available = در دسترس\n- Call back = دوباره زنگ زدن\n- Hang up = قطع کردن\n- Hold on = صبر کن\n- Wrong number = شماره اشتباه\n\n📝 جملات کاربردی:\n- Hello, this is Sara = الو، سارا هستم\n- Can I speak to Alex? = می‌توانم با الکس صحبت کنم؟\n- Hold on, please = لطفاً صبر کنید\n- I will call you back = بعداً بهت زنگ می‌زنم\n- Sorry, wrong number = ببخشید، شماره اشتباه\n\n🗣️ تمرین مکالمه تلفنی:\nSara: \"Hello?\"\nAlex: \"Hi Sara! This is Alex.\"\nSara: \"Hi Alex! How are you?\"\nAlex: \"I\u0027m fine. I\u0027m calling to ask about the homework.\"\nSara: \"Sure! Hold on, let me get my notebook.\"\nAlex: \"Thanks!\"\n\n🔁 مرور:\nدرس ۳۱: گذشته\nدرس ۳۲: آینده\nحالا ترکیب کن:\n\"I called you yesterday.\"\n\"I will call you tomorrow.\"\n\n💡 نکته مادرانه:\nتمرین کن تلفنی به انگلیسی جواب بدی:\n\"Hello? This is ...\"",
+                                                              "Level":  4,
+                                                              "OrderNumber":  33,
+                                                              "EstimatedMinutes":  22,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "چطور تلفنی بگی «سارا هستم»؟",
+                                                                                    "OptionA":  "I am Sara",
+                                                                                    "OptionB":  "This is Sara",
+                                                                                    "OptionC":  "That is Sara",
+                                                                                    "OptionD":  "Here is Sara",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "توی تلفن می‌گوییم This is ...",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "Hold on یعنی چه؟",
+                                                                                    "OptionA":  "قطع کن",
+                                                                                    "OptionB":  "صبر کن",
+                                                                                    "OptionC":  "زنگ بزن",
+                                                                                    "OptionD":  "بیا",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Hold on یعنی صبر کن / منتظر باش",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۳۲ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "مکالمه تلفنی",
+                                                                                    "OptionB":  "زمان آینده",
+                                                                                    "OptionC":  "زمان گذشته",
+                                                                                    "OptionD":  "داستان",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۳۲ زمان آینده را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۳۴: درخواست مؤدبانه و کمک خواستن",
+                                                              "Content":  "📖 داستان این درس:\n\nالکس توی خیابون گم شده:\n\n\"Excuse me, could you help me please?\"\n\"Of course! How can I help you?\"\n\"Could you tell me how to get to the museum?\"\n\"Sure! Go straight and turn left. It\u0027s on your right.\"\n\n🎯 کلمات جدید:\n- Could you...? = می‌توانی...؟ (مؤدبانه)\n- Would you...? = می‌خواهی...؟ (مؤدبانه)\n- May I...? = می‌توانم...؟ (خیلی مؤدبانه)\n- Please = لطفاً\n- Thank you = متشکرم\n- Thanks a lot = خیلی ممنون\n- You\u0027re welcome = خواهش می‌کنم\n- Sure = حتماً\n- Of course = البته\n- No problem = مشکلی نیست\n\n📝 جملات کاربردی:\n- Could you help me, please? = می‌توانی به من کمک کنی لطفاً؟\n- Would you like some tea? = چای می‌خواهی؟\n- May I come in? = می‌توانم وارد شوم؟\n- Could you repeat that, please? = می‌توانی آن را تکرار کنی لطفاً؟\n- Could you speak slower, please? = می‌توانی آرام‌تر صحبت کنی لطفاً؟\n\n🗣️ تمرین مکالمه:\nA: \"Excuse me, could you help me?\"\nB: \"Of course!\"\nA: \"Could you tell me where the bank is?\"\nB: \"Sure! It\u0027s next to the supermarket.\"\nA: \"Thank you so much!\"\nB: \"You\u0027re welcome!\"\n\n🔁 مرور:\nدرس ۱۷: جهت‌ها\nدرس ۶: Where\nحالا ترکیب کن:\n\"Could you tell me where the hospital is?\"\n\n💡 نکته مادرانه:\nهمیشه مؤدبانه صحبت کن:\n\"Could you please ...?\"\n\"Thank you!\"",
+                                                              "Level":  4,
+                                                              "OrderNumber":  34,
+                                                              "EstimatedMinutes":  22,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "مؤدبانه‌ترین شکل درخواست کدام است؟",
+                                                                                    "OptionA":  "Give me water",
+                                                                                    "OptionB":  "May I have some water?",
+                                                                                    "OptionC":  "I want water",
+                                                                                    "OptionD":  "Water!",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "May I... مؤدبانه‌ترین شکل درخواست است",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "Could you repeat that? یعنی چه؟",
+                                                                                    "OptionA":  "می‌توانی بیایی؟",
+                                                                                    "OptionB":  "می‌توانی آن را تکرار کنی؟",
+                                                                                    "OptionC":  "می‌توانی بروی؟",
+                                                                                    "OptionD":  "می‌توانی بخوابی؟",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Could you repeat that? یعنی می‌توانی آن را تکرار کنی؟",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۳۳ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "درخواست مؤدبانه",
+                                                                                    "OptionB":  "مکالمه تلفنی",
+                                                                                    "OptionC":  "زمان گذشته",
+                                                                                    "OptionD":  "زمان آینده",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۳۳ مکالمه تلفنی را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۳۵: احساسات و حالات",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا امروز حال خوبی نداره:\n\n\"What\u0027s wrong, Sara? You look sad.\"\n\"I\u0027m feeling a little tired and stressed.\"\n\"Oh, I\u0027m sorry. Is there anything I can do?\"\n\"Thanks, Alex. Just talking to you helps.\"\n\n🎯 کلمات جدید:\n- Happy = خوشحال\n- Sad = غمگین\n- Angry = عصبانی\n- Scared = ترسیده\n- Excited = هیجان‌زده\n- Bored = خسته / حوصله‌ام سر رفته\n- Tired = خسته (از نظر جسمی)\n- Stressed = استرس‌دار\n- Relaxed = آرام\n- Worried = نگران\n- Surprised = متعجب\n- Proud = مفتخر\n\n📝 جملات کاربردی:\n- I feel happy today = امروز احساس خوشحالی می‌کنم\n- She looks sad = او غمگین به نظر می‌رسد\n- Why are you angry? = چرا عصبانی هستی؟\n- I\u0027m excited about the trip = از سفر هیجان‌زده هستم\n- Don\u0027t worry! = نگران نباش!\n\n🗣️ تمرین مکالمه:\nA: \"How are you feeling today?\"\nB: \"I feel a little tired.\"\nA: \"Why don\u0027t you rest?\"\nB: \"Good idea! I will take a nap.\"\n\n🔁 مرور:\nدرس ۸: I am = من هستم\nدرس ۲۲: شخصیت\nحالا ترکیب کن:\n\"I am happy because it\u0027s a sunny day.\"\n\"She is sad because she lost her phone.\"\n\n💡 نکته مادرانه:\nهر روز درباره احساساتت بگو:\n\"Today I feel ...\"",
+                                                              "Level":  4,
+                                                              "OrderNumber":  35,
+                                                              "EstimatedMinutes":  22,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Excited یعنی چه؟",
+                                                                                    "OptionA":  "غمگین",
+                                                                                    "OptionB":  "هیجان‌زده",
+                                                                                    "OptionC":  "عصبانی",
+                                                                                    "OptionD":  "خسته",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Excited یعنی هیجان‌زده",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «نگران نباش»؟",
+                                                                                    "OptionA":  "Don\u0027t be sad",
+                                                                                    "OptionB":  "Don\u0027t worry",
+                                                                                    "OptionC":  "Don\u0027t be angry",
+                                                                                    "OptionD":  "Don\u0027t be tired",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Don\u0027t worry = نگران نباش",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۳۴ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "احساسات",
+                                                                                    "OptionB":  "درخواست مؤدبانه",
+                                                                                    "OptionC":  "تلفن",
+                                                                                    "OptionD":  "گذشته",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۳۴ درخواست مؤدبانه را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۳۶: مقایسه کردن",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا و الکس درباره شهرها مقایسه می‌کنند:\n\n\"Tehran is bigger than Isfahan.\"\n\"Really? But Isfahan is more beautiful than Tehran!\"\n\"You\u0027re right! And the weather in Isfahan is better.\"\n\n🎯 کلمات جدید:\n- Bigger = بزرگ‌تر\n- Smaller = کوچک‌تر\n- Taller = بلندتر\n- Shorter = کوتاه‌تر\n- Faster = سریع‌تر\n- Slower = آرام‌تر\n- Better = بهتر\n- Worse = بدتر\n- More beautiful = زیباتر\n- More expensive = گران‌تر\n- Cheaper = ارزان‌تر\n- Than = از (برای مقایسه)\n\n📝 گرامر: صفات مقایسه‌ای\nبرای صفات کوتاه (یک یا دو سیلابی): صفت + er\n- Big → Bigger\n- Tall → Taller\n- Fast → Faster\n\nبرای صفات بلند: more + صفت\n- Beautiful → More beautiful\n- Expensive → More expensive\n\nبی‌قاعده:\n- Good → Better\n- Bad → Worse\n\n📝 جملات کاربردی:\n- My car is faster than your car = ماشین من از ماشین تو سریع‌تر است\n- She is taller than me = او از من بلندتر است\n- This book is more interesting = این کتاب جالب‌تر است\n- Summer is better than winter = تابستان از زمستان بهتر است\n\n🗣️ تمرین مکالمه:\nA: \"Which city is bigger, Tehran or Isfahan?\"\nB: \"Tehran is bigger than Isfahan.\"\nA: \"Which season is better, spring or summer?\"\nB: \"I think spring is better.\"\n\n🔁 مرور:\nدرس ۲۱: توصیف\nدرس ۲۴: شهرها\nحالا ترکیب کن:\n\"Tehran is bigger than my village.\"\n\"Spring is more beautiful than winter.\"\n\n💡 نکته مادرانه:\nدرباره چیزهای مختلف مقایسه کن:\n\"... is bigger than ...\"\n\"... is better than ...\"",
+                                                              "Level":  4,
+                                                              "OrderNumber":  36,
+                                                              "EstimatedMinutes":  22,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "صفت مقایسه‌ای Big چیست؟",
+                                                                                    "OptionA":  "More big",
+                                                                                    "OptionB":  "Bigger",
+                                                                                    "OptionC":  "Biggest",
+                                                                                    "OptionD":  "Biger",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Big → Bigger (بزرگ‌تر)",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "Better مقایسه چه کلمه‌ای است؟",
+                                                                                    "OptionA":  "Big",
+                                                                                    "OptionB":  "Good",
+                                                                                    "OptionC":  "Bad",
+                                                                                    "OptionD":  "Beautiful",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Better مقایسه Good (خوب → بهتر) است",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۳۵ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "مقایسه کردن",
+                                                                                    "OptionB":  "احساسات و حالات",
+                                                                                    "OptionC":  "درخواست مؤدبانه",
+                                                                                    "OptionD":  "تلفن",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۳۵ احساسات و حالات را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۳۷: داستان بلند - سفر به شمال",
+                                                              "Content":  "📖 داستان این درس:\n\nیک داستان بلندتر! 🎉\n\n🎯 داستان:\n\n\"Last summer, Sara and her family went on a trip to the north of Iran. They went to a beautiful village near the Caspian Sea.\n\nThe weather was warm and sunny. The sky was blue and the sea was very beautiful. They stayed in a small hotel near the beach.\n\nEvery morning, Sara woke up early. She went for a walk on the beach. She collected seashells and watched the waves. The sound of the waves was relaxing.\n\nIn the afternoon, they went swimming in the sea. The water was cool and clean. Sara\u0027s father caught a fish! They cooked the fish for dinner. It was delicious!\n\nOne day, they visited a forest near the village. The forest was full of tall green trees. They saw many birds and heard their songs. Sara took many photos.\n\nOn the last day, Sara felt sad. She didn\u0027t want to go home. She loved the village, the sea, and the forest.\n\n\u0027Can we come here again next year?\u0027 Sara asked her mother.\n\u0027Of course, my dear! We will come again next summer,\u0027 her mother said.\n\nSara was happy. She said goodbye to the sea and promised to come back.\"\n\n📝 کلمات جدید داستان:\n- Trip = سفر\n- Sea = دریا\n- Beach = ساحل\n- Wave = موج\n- Collect = جمع کردن\n- Seashell = صدف دریایی\n- Swim = شنا کردن\n- Catch = گرفتن\n- Forest = جنگل\n- Bird = پرنده\n- Song = آواز\n- Photo = عکس\n- Promise = قول دادن\n\n🗣️ تمرین:\nداستان را بخوان و به این سوالات جواب بده:\n1. سارا کجا رفت؟\n2. هر روز صبح چه کار می‌کرد؟\n3. چه حیواناتی در جنگل دید؟\n\n🔁 مرور:\nدرس ۳۱: گذشته (went, stayed, woke up, caught)\nدرس ۳۲: آینده (will come)\n\n💡 نکته مادرانه:\nحالا می‌تونی یه داستان بلند رو بخونی و بفهمی! 🎉",
+                                                              "Level":  4,
+                                                              "OrderNumber":  37,
+                                                              "EstimatedMinutes":  30,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "سارا کجا رفت؟",
+                                                                                    "OptionA":  "به تهران",
+                                                                                    "OptionB":  "به شمال ایران نزدیک دریای خزر",
+                                                                                    "OptionC":  "به اصفهان",
+                                                                                    "OptionD":  "به مشهد",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "سارا به شمال ایران نزدیک دریای خزر رفت",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "سارا هر روز صبح چه کار می‌کرد؟",
+                                                                                    "OptionA":  "می‌خوابید",
+                                                                                    "OptionB":  "کنار ساحل قدم می‌زد",
+                                                                                    "OptionC":  "غذا می‌پخت",
+                                                                                    "OptionD":  "کتاب می‌خواند",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "هر روز صبح کنار ساحل قدم می‌زد و صدف جمع می‌کرد",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۳۶ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "داستان سفر",
+                                                                                    "OptionB":  "مقایسه کردن",
+                                                                                    "OptionC":  "احساسات",
+                                                                                    "OptionD":  "درخواست",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۳۶ مقایسه کردن را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۳۸: داستان بلند - اولین روز مدرسه",
+                                                              "Content":  "📖 داستان این درس:\n\nدومین داستان بلند!\n\n🎯 داستان:\n\n\"Yesterday was Alex\u0027s first day at a new school. He was nervous and excited at the same time.\n\nHe woke up at 6:30 in the morning. He put on his new blue shirt and black pants. He ate a quick breakfast and went to school.\n\nThe school was big and modern. There were many students in the yard. Alex didn\u0027t know anyone. He felt a little scared.\n\nA friendly girl came to him. \u0027Hi! Are you new here?\u0027 she asked.\n\u0027Yes, I am. My name is Alex,\u0027 he said.\n\u0027I\u0027m Mary. Nice to meet you! Come with me. I will show you around.\u0027\n\nMary showed Alex the classrooms, the library, and the cafeteria. The library was big and quiet. The cafeteria was clean and had good food.\n\nIn the first class, the teacher said, \u0027Welcome, Alex! Please sit next to Mary.\u0027\n\nDuring the break, Alex played football with some new friends. He was happy because everyone was friendly.\n\nAt the end of the day, Mary said, \u0027Did you like your first day?\u0027\n\u0027Yes! It was great! Thank you for your help,\u0027 Alex said.\n\u0027No problem! See you tomorrow!\u0027 Mary said.\n\nAlex went home with a big smile. He was no longer nervous. He was excited for the next day.\"\n\n📝 کلمات جدید داستان:\n- First day = اولین روز\n- Nervous = مضطرب\n- Put on = پوشید\n- Quick = سریع\n- Yard = حیاط\n- Show around = گردش دادن\n- Classroom = کلاس درس\n- Library = کتابخانه\n- Cafeteria = کافه‌تریا / غذاخوری\n- During = در طول\n- Break = زنگ تفریح\n- End = پایان\n- Smile = لبخند\n- No longer = دیگر نه\n\n🗣️ تمرین:\nداستان را بخوان و بگو:\n1. الکس چه احساسی داشت؟\n2. چه کسی به الکس کمک کرد؟\n3. آخر روز الکس چه احساسی داشت؟\n\n🔁 مرور:\nدرس ۳۱: گذشته (was, went, put on, ate, said)\nدرس ۳۵: احساسات (nervous, excited, scared, happy)\n\n💡 نکته مادرانه:\nدرباره اولین روز مدرسه‌ات بگو:\n\"My first day was ... I felt ...\"",
+                                                              "Level":  4,
+                                                              "OrderNumber":  38,
+                                                              "EstimatedMinutes":  30,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "الکس در اولین روز مدرسه چه احساسی داشت؟",
+                                                                                    "OptionA":  "فقط خوشحال",
+                                                                                    "OptionB":  "نگران و هیجان‌زده",
+                                                                                    "OptionC":  "فقط عصبانی",
+                                                                                    "OptionD":  "فقط خسته",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "الکس هم نگران (nervous) و هم هیجان‌زده (excited) بود",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چه کسی به الکس کمک کرد؟",
+                                                                                    "OptionA":  "معلم",
+                                                                                    "OptionB":  "مری (Mary)",
+                                                                                    "OptionC":  "مدیر مدرسه",
+                                                                                    "OptionD":  "پدرش",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "مری (Mary) به الکس کمک کرد و مدرسه را نشان داد",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۳۷ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "اولین روز مدرسه",
+                                                                                    "OptionB":  "داستان سفر به شمال",
+                                                                                    "OptionC":  "مقایسه",
+                                                                                    "OptionD":  "احساسات",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۳۷ داستان سفر به شمال را خواندیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۳۹: داستان بلند - مهمانی شام",
+                                                              "Content":  "📖 داستان این درس:\n\nسومین داستان بلند!\n\n🎯 داستان:\n\n\"Last Saturday, Sara\u0027s family had a dinner party. They invited Alex and his family.\n\nSara\u0027s mother cooked many delicious foods. She made chicken, rice, salad, and a big chocolate cake for dessert. The house smelled wonderful.\n\nAt 7 o\u0027clock, the doorbell rang. Alex and his parents arrived. Alex was holding a bouquet of flowers for Sara\u0027s mother.\n\n\u0027These are for you, Mrs. Sara. Thank you for inviting us!\u0027 Alex said.\n\u0027Oh, thank you, Alex! They are beautiful! Please come in.\u0027\n\nEveryone sat at the table. The table was beautiful. There were candles and flowers on it.\n\n\u0027Everything looks delicious!\u0027 Alex\u0027s father said.\n\u0027Please help yourselves!\u0027 Sara\u0027s mother said.\n\nDuring dinner, they talked about many things. Alex\u0027s father talked about his job. Sara\u0027s father talked about their trip to the north. Alex and Sara talked about school and their hobbies.\n\nAfter dinner, they had tea and cake. Alex\u0027s mother said, \u0027The cake is amazing! Can I have the recipe?\u0027\n\u0027Of course! I will write it for you,\u0027 Sara\u0027s mother said.\n\nAt 10 o\u0027clock, Alex\u0027s family said goodbye.\n\u0027Thank you for a wonderful evening!\u0027 Alex\u0027s father said.\n\u0027You\u0027re welcome! We should do this again next month,\u0027 Sara\u0027s father said.\n\nSara was happy. She loved having guests at home. She went to bed with a smile.\"\n\n📝 کلمات جدید داستان:\n- Dinner party = مهمانی شام\n- Invite = دعوت کردن\n- Smell = بو دادن\n- Wonderful = فوق‌العاده\n- Doorbell = زنگ در\n- Arrive = رسیدن\n- Hold = در دست داشتن\n- Candle = شمع\n- Help yourselves = کمک بگیرید (خودتان بردارید)\n- Recipe = دستور پخت\n- Evening = عصر / شب\n- Guest = مهمان\n\n🗣️ تمرین:\nداستان را بخوان و بگو:\n1. مهمانی چه روزی بود؟\n2. الکس چه هدیه‌ای آورد؟\n3. بعد از شام چه خوردند؟\n\n🔁 مرور:\nدرس ۳۱: گذشته (had, invited, cooked, made, said)\nدرس ۳۲: آینده (should do)\n\n💡 نکته مادرانه:\nدرباره آخرین مهمانی‌ که رفتی بگو:\n\"Last ... I went to a party. We had ...\"",
+                                                              "Level":  4,
+                                                              "OrderNumber":  39,
+                                                              "EstimatedMinutes":  30,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "الکس برای مادر سارا چه هدیه‌ای آورد؟",
+                                                                                    "OptionA":  "کیک",
+                                                                                    "OptionB":  "دسته گل",
+                                                                                    "OptionC":  "کتاب",
+                                                                                    "OptionD":  "شمع",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "الکس یک دسته گل (bouquet of flowers) آورد",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "بعد از شام چه خوردند؟",
+                                                                                    "OptionA":  "سالاد",
+                                                                                    "OptionB":  "چای و کیک",
+                                                                                    "OptionC":  "برنج",
+                                                                                    "OptionD":  "مرغ",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "بعد از شام چای و کیک خوردند",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۳۸ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "مهمانی شام",
+                                                                                    "OptionB":  "اولین روز مدرسه",
+                                                                                    "OptionC":  "سفر به شمال",
+                                                                                    "OptionD":  "مقایسه",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۳۸ داستان اولین روز مدرسه را خواندیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۴۰: جمع‌بندی جلد چهارم - سطح B1 🎉",
+                                                              "Content":  "📖 داستان این درس:\n\nتبریک! به آخر جلد چهارم رسیدی! 🎉\n\nحالا در سطح **B1 (Intermediate)** هستی! یعنی:\n- تافل: حدود **۴۰-۵۰**\n- آیلتس: حدود **۴-۴.۵**\n\n🎯 کارهایی که می‌تونی انجام بدی:\n✅ از زمان گذشته برای گفتن کارهای دیروز استفاده کنی\n✅ از زمان آینده برای برنامه‌های فردا بگی\n✅ مکالمه تلفنی انجام بدی\n✅ درخواست مؤدبانه بکنی\n✅ درباره احساساتت صحبت کنی\n✅ چیزها رو مقایسه کنی\n✅ داستان‌های بلند رو بخونی و بفهمی\n\n🎯 مکالمه نهایی:\n\nSara: \"Hi Alex! You look happy today!\"\nAlex: \"Yes! I\u0027m excited because I will go on a trip next week.\"\nSara: \"Really? Where will you go?\"\nAlex: \"I will go to the north with my family. We went there last year too. It was amazing!\"\nSara: \"That sounds great! The north is more beautiful than the city.\"\nAlex: \"Yes! Last time, I went swimming in the sea every day. The water was warm and clean.\"\nSara: \"Did you take photos?\"\nAlex: \"Yes! I took many photos. I will show you when I come back.\"\nSara: \"Could you bring me a souvenir?\"\nAlex: \"Of course! I will bring you something special.\"\nSara: \"Thank you! I will miss you.\"\nAlex: \"I will miss you too! I will call you every night.\"\nSara: \"Promise?\"\nAlex: \"Promise!\"\n\n🔁 مرور جلد چهارم:\n✅ درس ۳۱: زمان گذشته ساده\n✅ درس ۳۲: زمان آینده\n✅ درس ۳۳: مکالمه تلفنی\n✅ درس ۳۴: درخواست مؤدبانه\n✅ درس ۳۵: احساسات و حالات\n✅ درس ۳۶: مقایسه کردن\n✅ درس ۳۷: داستان سفر به شمال\n✅ درس ۳۸: داستان اولین روز مدرسه\n✅ درس ۳۹: داستان مهمانی شام\n✅ درس ۴۰: جمع‌بندی و سطح B1!\n\n💡 نکته مادرانه:\nتو الآن در سطح B1 هستی! 🎉\nیعنی می‌تونی:\n- درباره گذشته و آینده صحبت کنی ✨\n- مکالمه تلفنی انجام بدی ✨\n- درخواست مؤدبانه بکنی ✨\n- احساساتت رو بیان کنی ✨\n- چیزها رو مقایسه کنی ✨\n- داستان‌های بلند رو بخونی ✨\n\nادامه بده تا به سطح B2 برسی! 🚀\n\n\"I can talk about the past, present, and future!\"",
+                                                              "Level":  4,
+                                                              "OrderNumber":  40,
+                                                              "EstimatedMinutes":  25,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "بعد از ۴۰ درس در چه سطحی هستیم؟",
+                                                                                    "OptionA":  "A1 (مبتدی)",
+                                                                                    "OptionB":  "B1 (متوسط)",
+                                                                                    "OptionC":  "C1 (پیشرفته)",
+                                                                                    "OptionD":  "A2 (ابتدایی)",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "بعد از ۴۰ درس در سطح B1 (Intermediate) هستیم",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در این جلد چند داستان بلند خواندیم؟",
+                                                                                    "OptionA":  "۱ داستان",
+                                                                                    "OptionB":  "۳ داستان",
+                                                                                    "OptionC":  "۵ داستان",
+                                                                                    "OptionD":  "۱۰ داستان",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "سه داستان بلند: سفر به شمال، اولین روز مدرسه، مهمانی شام",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "نمره تافل تقریبی در سطح B1 چقدر است؟",
+                                                                                    "OptionA":  "۲۰-۳۰",
+                                                                                    "OptionB":  "۴۰-۵۰",
+                                                                                    "OptionC":  "۶۰-۷۰",
+                                                                                    "OptionD":  "۸۰-۹۰",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "سطح B1 معادل تافل ۴۰-۵۰ است",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          }
+                                                      ]
+                                      }
+                     }
+                 ],
+    "CategoryId":  "education",
+    "CategoryTitle":  "آموزشی و مهارتی"
+}

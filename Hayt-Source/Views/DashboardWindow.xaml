@@ -1,0 +1,1084 @@
+<Window x:Class="Hayt.Views.DashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="داشبورد تحلیلی پیشرفت"
+        Height="1080" Width="1500"
+        WindowStartupLocation="CenterOwner"
+        FlowDirection="RightToLeft"
+        Background="{DynamicResource HaytBackgroundBrush}"
+        FontFamily="{StaticResource HaytFontFamily}">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Grid Grid.Row="0" Margin="0,0,0,14">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="380"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="📊 داشبورد تحلیلی پیشرفت"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource HaytTextBrush}"/>
+                <TextBlock Text="{Binding DashboardStatusText}"
+                           FontSize="13"
+                           Foreground="{DynamicResource HaytMutedTextBrush}"
+                           Margin="0,4,0,0"/>
+                <TextBlock Text="{Binding FilterDescription}"
+                           FontSize="12"
+                           Foreground="{DynamicResource HaytPrimaryBrush}"
+                           Margin="0,4,0,0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <!-- Notifications -->
+                <Border Background="{DynamicResource HaytSurfaceBrush}"
+                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="12"
+                        Padding="12"
+                        Margin="0,0,0,10">
+                    <StackPanel>
+                        <DockPanel Margin="0,0,0,10">
+                            <TextBlock Text="اعلان‌ها"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytTextBrush}"
+                                       DockPanel.Dock="Right"/>
+                            <TextBlock Text="{Binding NotificationVM.UnreadCount, StringFormat='خوانده‌نشده: {0}'}"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"
+                                       FontSize="11"/>
+                        </DockPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <Button Content="اعلان تست"
+                                    Command="{Binding NotificationVM.AddTestInfoCommand}"
+                                    Padding="10,6"
+                                    Margin="0,0,6,0"/>
+                            <Button Content="دستاورد تست"
+                                    Command="{Binding NotificationVM.AddTestAchievementCommand}"
+                                    Padding="10,6"
+                                    Margin="0,0,6,0"/>
+                            <Button Content="خواندن همه"
+                                    Command="{Binding NotificationVM.MarkAllReadCommand}"
+                                    Padding="10,6"/>
+                        </StackPanel>
+
+                        <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto">
+                            <ItemsControl ItemsSource="{Binding NotificationVM.Notifications}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border BorderBrush="{DynamicResource HaytBorderBrush}"
+                                                BorderThickness="1"
+                                                CornerRadius="8"
+                                                Padding="8"
+                                                Margin="0,0,0,8"
+                                                Background="{DynamicResource HaytBackgroundBrush}">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <StackPanel Grid.Column="0">
+                                                    <TextBlock Text="{Binding Title}"
+                                                               FontWeight="Bold"
+                                                               Foreground="{DynamicResource HaytTextBrush}"/>
+                                                    <TextBlock Text="{Binding Message}"
+                                                               Margin="0,4,0,0"
+                                                               TextWrapping="Wrap"
+                                                               FontSize="11"
+                                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                                    <TextBlock Text="{Binding CreatedAt, StringFormat='{}{0:yyyy/MM/dd HH:mm}'}"
+                                                               Margin="0,4,0,0"
+                                                               FontSize="10"
+                                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                                </StackPanel>
+
+                                                <Button Grid.Column="1"
+                                                        Content="✕"
+                                                        Padding="8,4"
+                                                        Margin="8,0,0,0"
+                                                        VerticalAlignment="Top"
+                                                        Command="{Binding DataContext.NotificationVM.RemoveCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                        CommandParameter="{Binding}"/>
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+                    </StackPanel>
+                </Border>
+
+                <!-- License / DRM -->
+                <Border Background="{DynamicResource HaytSurfaceBrush}"
+                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="12"
+                        Padding="12"
+                        Margin="0,0,0,10">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Right">
+                            <TextBlock Text="🔐 لایسنس و فعال‌سازی"
+                                       FontSize="17"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytTextBrush}"/>
+                            <TextBlock Text="مدیریت Trial، Premium و اعتبارسنجی آفلاین لایسنس"
+                                       Margin="0,3,0,0"
+                                       FontSize="11"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                        </StackPanel>
+
+                        <Button DockPanel.Dock="Left"
+                                Content="مدیریت لایسنس"
+                                Click="OpenLicenseWindow_Click"
+                                Padding="12,6"
+                                HorizontalAlignment="Left"/>
+                    </DockPanel>
+                </Border>
+                <!-- AI Settings -->
+                <Border Background="{DynamicResource HaytSurfaceBrush}"
+                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="12"
+                        Padding="12"
+                        Margin="0,0,0,10">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Right">
+                            <TextBlock Text="🤖 تنظیمات AI واقعی"
+                                       FontSize="17"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytTextBrush}"/>
+                            <TextBlock Text="تنظیم API Key، مدل، تست اتصال و حالت پشتیبان"
+                                       Margin="0,3,0,0"
+                                       FontSize="11"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                        </StackPanel>
+
+                        <Button DockPanel.Dock="Left"
+                                Content="تنظیمات AI"
+                                Click="OpenAISettingsWindow_Click"
+                                Padding="12,6"
+                                HorizontalAlignment="Left"/>
+                    </DockPanel>
+                </Border>
+                <!-- Study Notes -->
+                <Border Background="{DynamicResource HaytSurfaceBrush}"
+                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="12"
+                        Padding="12"
+                        Margin="0,0,0,10">
+                    <DockPanel>
+                        <StackPanel DockPanel.Dock="Right">
+                            <TextBlock Text="📝 یادداشت‌ها"
+                                       FontSize="17"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytTextBrush}"/>
+                            <TextBlock Text="یادداشت‌های آموزشی، نکته‌ها و مرورهای سریع"
+                                       Margin="0,3,0,0"
+                                       FontSize="11"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                        </StackPanel>
+
+                        <Button DockPanel.Dock="Left"
+                                Content="مدیریت یادداشت‌ها"
+                                Click="OpenStudyNotesWindow_Click"
+                                Padding="12,6"
+                                HorizontalAlignment="Left"/>
+                    </DockPanel>
+                </Border>
+                <!-- Personal Goals -->
+                <Border Background="{DynamicResource HaytSurfaceBrush}"
+                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="12"
+                        Padding="12"
+                        Margin="0,0,0,10">
+                    <StackPanel>
+                        <DockPanel Margin="0,0,0,10">
+                            <StackPanel DockPanel.Dock="Right">
+                                <TextBlock Text="🎯 اهداف شخصی"
+                                           FontSize="17"
+                                           FontWeight="Bold"
+                                           Foreground="{DynamicResource HaytTextBrush}"/>
+                                <TextBlock Text="{Binding GoalsVM.HeaderText}"
+                                           Margin="0,3,0,0"
+                                           FontSize="11"
+                                           Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            </StackPanel>
+
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="12"
+                                    Padding="9,5"
+                                    HorizontalAlignment="Left">
+                                <TextBlock Text="{Binding GoalsVM.OverallPercentText}"
+                                           FontSize="13"
+                                           FontWeight="Bold"
+                                           Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                            </Border>
+                        </DockPanel>
+
+                        <ProgressBar Height="9"
+                                     Minimum="0"
+                                     Maximum="100"
+                                     Value="{Binding GoalsVM.OverallProgressPercent, Mode=OneWay}"
+                                     Foreground="{DynamicResource HaytPrimaryBrush}"
+                                     Background="{DynamicResource HaytBackgroundBrush}"
+                                     BorderBrush="{DynamicResource HaytBorderBrush}"
+                                     BorderThickness="1"
+                                     Margin="0,0,0,10"/>
+
+                        <UniformGrid Columns="3" Margin="0,0,0,10">
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="8"
+                                    Padding="8"
+                                    Margin="0,0,4,0">
+                                <StackPanel>
+                                    <TextBlock Text="کل اهداف"
+                                               FontSize="10"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding GoalsVM.TotalGoals}"
+                                               FontSize="18"
+                                               FontWeight="Bold"
+                                               Foreground="{DynamicResource HaytTextBrush}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="8"
+                                    Padding="8"
+                                    Margin="4,0">
+                                <StackPanel>
+                                    <TextBlock Text="انجام‌شده"
+                                               FontSize="10"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding GoalsVM.CompletedGoals}"
+                                               FontSize="18"
+                                               FontWeight="Bold"
+                                               Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="8"
+                                    Padding="8"
+                                    Margin="4,0,0,0">
+                                <StackPanel>
+                                    <TextBlock Text="در جریان"
+                                               FontSize="10"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding GoalsVM.InProgressGoals}"
+                                               FontSize="18"
+                                               FontWeight="Bold"
+                                               Foreground="{DynamicResource HaytTextBrush}"/>
+                                </StackPanel>
+                            </Border>
+                        </UniformGrid>
+
+                        <ItemsControl ItemsSource="{Binding GoalsVM.Goals}"
+                                      Margin="0,0,0,10">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                            BorderBrush="{DynamicResource HaytBorderBrush}"
+                                            BorderThickness="1"
+                                            CornerRadius="8"
+                                            Padding="8"
+                                            Margin="0,0,0,6">
+                                        <StackPanel>
+                                            <DockPanel>
+                                                <StackPanel DockPanel.Dock="Right"
+                                                            Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Icon}"
+                                                               FontSize="16"
+                                                               Margin="0,0,5,0"/>
+                                                    <TextBlock Text="{Binding Title}"
+                                                               FontWeight="Bold"
+                                                               Foreground="{DynamicResource HaytTextBrush}"/>
+                                                </StackPanel>
+
+                                                <TextBlock Text="{Binding StatusText}"
+                                                           HorizontalAlignment="Left"
+                                                           FontSize="10"
+                                                           FontWeight="Bold"
+                                                           Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                                            </DockPanel>
+
+                                            <TextBlock Text="{Binding Description}"
+                                                       Margin="0,4,0,6"
+                                                       FontSize="10"
+                                                       TextWrapping="Wrap"
+                                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+
+                                            <ProgressBar Height="7"
+                                                         Minimum="0"
+                                                         Maximum="100"
+                                                         Value="{Binding ProgressPercent, Mode=OneWay}"
+                                                         Foreground="{DynamicResource HaytPrimaryBrush}"
+                                                         Background="{DynamicResource HaytSurfaceBrush}"
+                                                         BorderBrush="{DynamicResource HaytBorderBrush}"
+                                                         BorderThickness="1"/>
+
+                                            <DockPanel Margin="0,4,0,0">
+                                                <TextBlock Text="{Binding ProgressText}"
+                                                           DockPanel.Dock="Right"
+                                                           FontSize="10"
+                                                           Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                                <TextBlock Text="{Binding PercentText}"
+                                                           HorizontalAlignment="Left"
+                                                           FontSize="10"
+                                                           FontWeight="Bold"
+                                                           Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                                            </DockPanel>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Left">
+                            <Button Content="بازخوانی"
+                                    Command="{Binding GoalsVM.RefreshStateCommand}"
+                                    Padding="10,5"
+                                    Margin="0,0,6,0"/>                            <Button Content="مدیریت اهداف"
+                                    Click="OpenPersonalGoalsWindow_Click"
+                                    Padding="10,5"
+                                    Margin="6,0,0,0"
+                                    ToolTip="بازکردن پنجره مدیریت اهداف شخصی"/>
+                            <Button Content="اهداف پیش‌فرض"
+                                    Command="{Binding GoalsVM.ResetToDefaultsCommand}"
+                                    Padding="10,5"/>
+                            <TextBlock Text="پنجره مدیریت اهداف از مسیر Views\PersonalGoalsWindow آماده است."
+                                       VerticalAlignment="Center"
+                                       Margin="10,0,0,0"
+                                       FontSize="10"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <!-- Cloud Sync -->
+                <Border Background="{DynamicResource HaytSurfaceBrush}"
+                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="12"
+                        Padding="12"
+                        Margin="0,0,0,10">
+                    <StackPanel>
+                        <DockPanel Margin="0,0,0,10">
+                            <StackPanel DockPanel.Dock="Right">
+                                <TextBlock Text="☁️ Cloud Sync"
+                                           FontSize="17"
+                                           FontWeight="Bold"
+                                           Foreground="{DynamicResource HaytTextBrush}"/>
+                                <TextBlock Text="{Binding CloudSyncVM.StatusText}"
+                                           Margin="0,3,0,0"
+                                           FontSize="11"
+                                           Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            </StackPanel>
+
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="12"
+                                    Padding="9,5"
+                                    HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding CloudSyncVM.StateEmoji}"
+                                               FontSize="13"
+                                               Margin="0,0,4,0"/>
+                                    <TextBlock Text="{Binding CloudSyncVM.StateText}"
+                                               FontSize="12"
+                                               FontWeight="Bold"
+                                               Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                                </StackPanel>
+                            </Border>
+                        </DockPanel>
+
+                        <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                BorderBrush="{DynamicResource HaytBorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="10"
+                                Padding="12"
+                                Margin="0,0,0,10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="12"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="آیتم‌های در انتظار"
+                                               FontSize="11"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding CloudSyncVM.PendingCount}"
+                                               FontSize="28"
+                                               FontWeight="Bold"
+                                               Foreground="#176B52"
+                                               Margin="0,5,0,0"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock Text="آخرین همگام‌سازی"
+                                               FontSize="11"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding CloudSyncVM.LastSyncText}"
+                                               FontSize="12"
+                                               FontWeight="Bold"
+                                               Foreground="#D6A84B"
+                                               TextWrapping="Wrap"
+                                               Margin="0,8,0,0"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <TextBlock Text="{Binding CloudSyncVM.PremiumStatusText}"
+                                   TextWrapping="Wrap"
+                                   FontSize="11"
+                                   Foreground="{DynamicResource HaytTextBrush}"
+                                   Margin="0,0,0,8"/>
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Left">
+                            <Button Content="همگام‌سازی"
+                                    Command="{Binding CloudSyncVM.SynchronizeCommand}"
+                                    Padding="10,5"
+                                    Margin="0,0,6,0"/>
+                            <Button Content="بازخوانی"
+                                    Command="{Binding CloudSyncVM.RefreshCommand}"
+                                    Padding="10,5"
+                                    Margin="0,0,6,0"/>
+                            <Button Content="همگام‌سازی خودکار"
+                                    Command="{Binding CloudSyncVM.ToggleAutoSyncCommand}"
+                                    Padding="10,5"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <!-- Streaks -->
+                <Border Background="{DynamicResource HaytSurfaceBrush}"
+                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="12"
+                        Padding="12"
+                        Margin="0,0,0,10">
+                    <StackPanel>
+                        <DockPanel Margin="0,0,0,10">
+                            <StackPanel DockPanel.Dock="Right">
+                                <TextBlock Text="🔥 زنجیره یادگیری"
+                                           FontSize="17"
+                                           FontWeight="Bold"
+                                           Foreground="{DynamicResource HaytTextBrush}"/>
+                                <TextBlock Text="{Binding StreakVM.StatusTitle}"
+                                           Margin="0,3,0,0"
+                                           FontSize="11"
+                                           Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            </StackPanel>
+
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="12"
+                                    Padding="9,5"
+                                    HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding StreakVM.StateEmoji}"
+                                               FontSize="13"
+                                               Margin="0,0,4,0"/>
+                                    <TextBlock Text="{Binding StreakVM.StateBadgeText}"
+                                               FontSize="12"
+                                               FontWeight="Bold"
+                                               Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                                </StackPanel>
+                            </Border>
+                        </DockPanel>
+
+                        <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                BorderBrush="{DynamicResource HaytBorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="10"
+                                Padding="12"
+                                Margin="0,0,0,10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="12"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="زنجیره فعلی"
+                                               FontSize="11"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding StreakVM.CurrentStreakText}"
+                                               FontSize="28"
+                                               FontWeight="Bold"
+                                               Foreground="#176B52"
+                                               Margin="0,5,0,0"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock Text="بهترین رکورد"
+                                               FontSize="11"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding StreakVM.BestStreakText}"
+                                               FontSize="18"
+                                               FontWeight="Bold"
+                                               Foreground="#D6A84B"
+                                               Margin="0,8,0,0"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <TextBlock Text="{Binding StreakVM.StatusMessage}"
+                                   TextWrapping="Wrap"
+                                   FontSize="12"
+                                   Foreground="{DynamicResource HaytTextBrush}"
+                                   Margin="0,0,0,8"/>
+
+                        <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                BorderBrush="{DynamicResource HaytBorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="8"
+                                Padding="9"
+                                Margin="0,0,0,10">
+                            <StackPanel>
+                                <TextBlock Text="🎯 Milestone بعدی"
+                                           FontSize="11"
+                                           FontWeight="Bold"
+                                           Foreground="{DynamicResource HaytTextBrush}"/>
+                                <TextBlock Text="{Binding StreakVM.NextMilestoneText}"
+                                           Margin="0,4,0,0"
+                                           FontSize="11"
+                                           TextWrapping="Wrap"
+                                           Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                            </StackPanel>
+                        </Border>
+
+                        <TextBlock Text="Milestoneهای زنجیره"
+                                   FontSize="12"
+                                   FontWeight="Bold"
+                                   Foreground="{DynamicResource HaytTextBrush}"
+                                   Margin="0,0,0,7"/>
+
+                        <ItemsControl ItemsSource="{Binding StreakVM.Milestones}"
+                                      Margin="0,0,0,10">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <UniformGrid Columns="5"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border x:Name="MilestoneCard"
+                                            Background="{DynamicResource HaytBackgroundBrush}"
+                                            BorderBrush="{DynamicResource HaytBorderBrush}"
+                                            BorderThickness="1"
+                                            CornerRadius="8"
+                                            Padding="6"
+                                            Margin="2"
+                                            Opacity="0.55">
+                                        <StackPanel HorizontalAlignment="Center">
+                                            <TextBlock Text="{Binding Icon}"
+                                                       FontSize="18"
+                                                       HorizontalAlignment="Center"/>
+                                            <TextBlock Text="{Binding RequiredText}"
+                                                       Margin="0,3,0,0"
+                                                       FontSize="10"
+                                                       FontWeight="Bold"
+                                                       TextAlignment="Center"
+                                                       Foreground="{DynamicResource HaytTextBrush}"/>
+                                            <TextBlock x:Name="MilestoneStateText"
+                                                       Text="{Binding StatusText}"
+                                                       Margin="0,2,0,0"
+                                                       FontSize="9"
+                                                       TextAlignment="Center"
+                                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                        </StackPanel>
+                                    </Border>
+
+                                    <DataTemplate.Triggers>
+                                        <DataTrigger Binding="{Binding IsUnlocked}"
+                                                     Value="True">
+                                            <Setter TargetName="MilestoneCard"
+                                                    Property="Opacity"
+                                                    Value="1"/>
+                                            <Setter TargetName="MilestoneCard"
+                                                    Property="BorderBrush"
+                                                    Value="{DynamicResource HaytPrimaryBrush}"/>
+                                            <Setter TargetName="MilestoneStateText"
+                                                    Property="Foreground"
+                                                    Value="{DynamicResource HaytPrimaryBrush}"/>
+                                        </DataTrigger>
+                                    </DataTemplate.Triggers>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                        <UniformGrid Columns="2" Margin="0,0,0,10">
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="8"
+                                    Padding="8"
+                                    Margin="0,0,4,0">
+                                <StackPanel>
+                                    <TextBlock Text="روزهای فعال"
+                                               FontSize="10"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding StreakVM.TotalActiveDaysText}"
+                                               FontSize="13"
+                                               FontWeight="Bold"
+                                               Foreground="{DynamicResource HaytTextBrush}"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="8"
+                                    Padding="8"
+                                    Margin="4,0,0,0">
+                                <StackPanel>
+                                    <TextBlock Text="رکورد بعدی"
+                                               FontSize="10"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding StreakVM.DaysToBeatBestText}"
+                                               FontSize="12"
+                                               FontWeight="Bold"
+                                               Foreground="{DynamicResource HaytPrimaryBrush}"
+                                               TextWrapping="Wrap"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </Border>
+                        </UniformGrid>
+
+                        <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                BorderBrush="{DynamicResource HaytBorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="8"
+                                Padding="8"
+                                Margin="0,0,0,10">
+                            <StackPanel>
+                                <TextBlock Text="{Binding StreakVM.LastActivityText}"
+                                           FontSize="10"
+                                           Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                <TextBlock Text="{Binding StreakVM.FirstActivityText}"
+                                           FontSize="10"
+                                           Foreground="{DynamicResource HaytMutedTextBrush}"
+                                           Margin="0,3,0,0"/>
+                            </StackPanel>
+                        </Border>
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Left">
+                            <Button Content="بازخوانی"
+                                    Command="{Binding StreakVM.RefreshStateCommand}"
+                                    Padding="10,5"
+                                    Margin="0,0,6,0"
+                                    ToolTip="بازخوانی وضعیت Runtime زنجیره"/>
+                            <Button Content="ریست موقت"
+                                    Command="{Binding StreakVM.ResetRuntimeStateCommand}"
+                                    Padding="10,5"
+                                    ToolTip="فقط وضعیت Runtime را ریست می‌کند و دیتابیس را تغییر نمی‌دهد"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <!-- Achievements -->
+                <Border Background="{DynamicResource HaytSurfaceBrush}"
+                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="12"
+                        Padding="12">
+                    <StackPanel>
+                        <!-- Achievement header -->
+                        <DockPanel Margin="0,0,0,10">
+                            <StackPanel DockPanel.Dock="Right">
+                                <TextBlock Text="🏆 دستاوردها"
+                                           FontSize="17"
+                                           FontWeight="Bold"
+                                           Foreground="{DynamicResource HaytTextBrush}"/>
+                                <TextBlock Text="{Binding AchievementVM.CompletionText}"
+                                           Margin="0,3,0,0"
+                                           FontSize="11"
+                                           Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            </StackPanel>
+
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="12"
+                                    Padding="9,5"
+                                    HorizontalAlignment="Left">
+                                <TextBlock Text="{Binding AchievementVM.CompletionPercentText, Mode=OneWay}"
+                                           FontSize="13"
+                                           FontWeight="Bold"
+                                           Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                            </Border>
+                        </DockPanel>
+
+                        <!-- Overall progress -->
+                        <Grid Margin="0,0,0,10">
+                            <ProgressBar Height="9"
+                                         Minimum="0"
+                                         Maximum="100"
+                                         Value="{Binding AchievementVM.CompletionPercent, Mode=OneWay}"
+                                         Foreground="{DynamicResource HaytPrimaryBrush}"
+                                         Background="{DynamicResource HaytBackgroundBrush}"
+                                         BorderBrush="{DynamicResource HaytBorderBrush}"
+                                         BorderThickness="1"/>
+                        </Grid>
+
+                        <!-- Counts -->
+                        <UniformGrid Columns="3" Margin="0,0,0,10">
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="8"
+                                    Padding="8"
+                                    Margin="0,0,4,0">
+                                <StackPanel>
+                                    <TextBlock Text="کل"
+                                               FontSize="10"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding AchievementVM.TotalCount}"
+                                               FontSize="19"
+                                               FontWeight="Bold"
+                                               Foreground="{DynamicResource HaytTextBrush}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="8"
+                                    Padding="8"
+                                    Margin="4,0">
+                                <StackPanel>
+                                    <TextBlock Text="آزادشده"
+                                               FontSize="10"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding AchievementVM.UnlockedCount}"
+                                               FontSize="19"
+                                               FontWeight="Bold"
+                                               Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="8"
+                                    Padding="8"
+                                    Margin="4,0,0,0">
+                                <StackPanel>
+                                    <TextBlock Text="قفل‌شده"
+                                               FontSize="10"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    <TextBlock Text="{Binding AchievementVM.LockedCount}"
+                                               FontSize="19"
+                                               FontWeight="Bold"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                </StackPanel>
+                            </Border>
+                        </UniformGrid>
+
+                        <!-- Recent unlocks -->
+                        <StackPanel Visibility="{Binding AchievementVM.HasRecentUnlocks,
+                                                        Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <TextBlock Text="✨ آخرین دستاوردهای آزادشده"
+                                       FontSize="13"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytTextBrush}"
+                                       Margin="0,0,0,7"/>
+
+                            <ItemsControl ItemsSource="{Binding AchievementVM.RecentUnlocks}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                                BorderBrush="{DynamicResource HaytPrimaryBrush}"
+                                                BorderThickness="1"
+                                                CornerRadius="8"
+                                                Padding="8"
+                                                Margin="0,0,0,6">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="8"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Border Grid.Column="0"
+                                                        Width="38"
+                                                        Height="38"
+                                                        CornerRadius="19"
+                                                        Background="{DynamicResource HaytSurfaceBrush}"
+                                                        BorderBrush="{DynamicResource HaytPrimaryBrush}"
+                                                        BorderThickness="1">
+                                                    <TextBlock Text="{Binding Icon}"
+                                                               FontSize="20"
+                                                               HorizontalAlignment="Center"
+                                                               VerticalAlignment="Center"/>
+                                                </Border>
+
+                                                <StackPanel Grid.Column="2"
+                                                            VerticalAlignment="Center">
+                                                    <TextBlock Text="{Binding Title}"
+                                                               FontWeight="Bold"
+                                                               Foreground="{DynamicResource HaytTextBrush}"/>
+                                                    <TextBlock Text="{Binding UnlockedAt,
+                                                                             StringFormat='آزادشده در {0:yyyy/MM/dd HH:mm}'}"
+                                                               Margin="0,2,0,0"
+                                                               FontSize="10"
+                                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                                </StackPanel>
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+
+                        <!-- No unlocked achievements empty state -->
+                        <Border Visibility="{Binding AchievementVM.HasNoUnlockedAchievements,
+                                                    Converter={StaticResource BooleanToVisibilityConverter}}"
+                                Background="{DynamicResource HaytBackgroundBrush}"
+                                BorderBrush="{DynamicResource HaytBorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="8"
+                                Padding="12"
+                                Margin="0,0,0,10">
+                            <StackPanel HorizontalAlignment="Center">
+                                <TextBlock Text="🔒"
+                                           FontSize="25"
+                                           HorizontalAlignment="Center"/>
+                                <TextBlock Text="هنوز دستاوردی آزاد نشده است"
+                                           Margin="0,5,0,0"
+                                           FontWeight="Bold"
+                                           TextAlignment="Center"
+                                           Foreground="{DynamicResource HaytTextBrush}"/>
+                                <TextBlock Text="با ادامه یادگیری، اولین نشان خود را آزاد کن."
+                                           Margin="0,3,0,0"
+                                           FontSize="10"
+                                           TextAlignment="Center"
+                                           TextWrapping="Wrap"
+                                           Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- All achievements -->
+                        <TextBlock Text="همه دستاوردها"
+                                   FontSize="13"
+                                   FontWeight="Bold"
+                                   Foreground="{DynamicResource HaytTextBrush}"
+                                   Margin="0,2,0,7"/>
+
+                        <ScrollViewer MaxHeight="285"
+                                      VerticalScrollBarVisibility="Auto"
+                                      HorizontalScrollBarVisibility="Disabled">
+                            <ItemsControl ItemsSource="{Binding AchievementVM.Achievements}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border x:Name="AchievementCard"
+                                                Background="{DynamicResource HaytBackgroundBrush}"
+                                                BorderBrush="{DynamicResource HaytBorderBrush}"
+                                                BorderThickness="1"
+                                                CornerRadius="9"
+                                                Padding="9"
+                                                Margin="0,0,0,7"
+                                                Opacity="0.62">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="9"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Border x:Name="IconContainer"
+                                                        Grid.Column="0"
+                                                        Width="42"
+                                                        Height="42"
+                                                        CornerRadius="21"
+                                                        Background="{DynamicResource HaytSurfaceBrush}"
+                                                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                                                        BorderThickness="1">
+                                                    <TextBlock Text="{Binding Icon}"
+                                                               FontSize="21"
+                                                               HorizontalAlignment="Center"
+                                                               VerticalAlignment="Center"/>
+                                                </Border>
+
+                                                <StackPanel Grid.Column="2"
+                                                            VerticalAlignment="Center">
+                                                    <TextBlock Text="{Binding Title}"
+                                                               FontWeight="Bold"
+                                                               Foreground="{DynamicResource HaytTextBrush}"/>
+                                                    <TextBlock Text="{Binding Description}"
+                                                               Margin="0,3,0,0"
+                                                               FontSize="10"
+                                                               TextWrapping="Wrap"
+                                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                                    <TextBlock x:Name="ProgressText"
+                                                               Text="{Binding ProgressText}"
+                                                               Margin="0,4,0,0"
+                                                               FontSize="10"
+                                                               FontWeight="SemiBold"
+                                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                                </StackPanel>
+
+                                                <Border x:Name="StateBadge"
+                                                        Grid.Column="3"
+                                                        Background="{DynamicResource HaytSurfaceBrush}"
+                                                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                                                        BorderThickness="1"
+                                                        CornerRadius="9"
+                                                        Padding="7,3"
+                                                        Margin="8,0,0,0"
+                                                        VerticalAlignment="Top">
+                                                    <TextBlock x:Name="StateText"
+                                                               Text="قفل"
+                                                               FontSize="9"
+                                                               FontWeight="Bold"
+                                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                                </Border>
+                                            </Grid>
+                                        </Border>
+
+                                        <DataTemplate.Triggers>
+                                            <DataTrigger Binding="{Binding IsUnlocked}"
+                                                         Value="True">
+                                                <Setter TargetName="AchievementCard"
+                                                        Property="Opacity"
+                                                        Value="1"/>
+                                                <Setter TargetName="AchievementCard"
+                                                        Property="BorderBrush"
+                                                        Value="{DynamicResource HaytPrimaryBrush}"/>
+                                                <Setter TargetName="IconContainer"
+                                                        Property="BorderBrush"
+                                                        Value="{DynamicResource HaytPrimaryBrush}"/>
+                                                <Setter TargetName="StateBadge"
+                                                        Property="BorderBrush"
+                                                        Value="{DynamicResource HaytPrimaryBrush}"/>
+                                                <Setter TargetName="StateText"
+                                                        Property="Text"
+                                                        Value="آزاد شد"/>
+                                                <Setter TargetName="StateText"
+                                                        Property="Foreground"
+                                                        Value="{DynamicResource HaytPrimaryBrush}"/>
+                                                <Setter TargetName="ProgressText"
+                                                        Property="Foreground"
+                                                        Value="{DynamicResource HaytPrimaryBrush}"/>
+                                            </DataTrigger>
+                                        </DataTemplate.Triggers>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+
+                        <!-- Controls -->
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Left"
+                                    Margin="0,4,0,0">
+                            <Button Content="بازخوانی"
+                                    Command="{Binding AchievementVM.RefreshStateCommand}"
+                                    Padding="10,5"
+                                    Margin="0,0,6,0"
+                                    ToolTip="بازخوانی نمای دستاوردها"/>
+                            <Button Content="ریست موقت"
+                                    Command="{Binding AchievementVM.ResetRuntimeStateCommand}"
+                                    Padding="10,5"
+                                    ToolTip="فقط وضعیت runtime را ریست می‌کند و دیتابیس را تغییر نمی‌دهد"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+
+        <!-- Busy bar -->
+        <ProgressBar Grid.Row="1"
+                     Height="4"
+                     IsIndeterminate="True"
+                     Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"
+                     Foreground="#176B52"
+                     Background="Transparent"
+                     BorderThickness="0"
+                     Margin="0,0,0,14"/>
+
+        <!-- Summary -->
+        <UniformGrid Grid.Row="2" Columns="5" Margin="0,0,0,14">
+            <Border Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1" CornerRadius="12" Padding="16" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="مجموع XP" FontSize="12" Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                    <TextBlock Text="{Binding Snapshot.Summary.TotalXp}" FontSize="28" FontWeight="Bold" Foreground="#D6A84B" Margin="0,8,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1" CornerRadius="12" Padding="16" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="سطح فعلی" FontSize="12" Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                    <TextBlock Text="{Binding Snapshot.Summary.CurrentLevel}" FontSize="28" FontWeight="Bold" Foreground="#176B52" Margin="0,8,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1" CornerRadius="12" Padding="16" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="روزهای پیوسته" FontSize="12" Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                    <TextBlock Text="{Binding Snapshot.Summary.CurrentStreakDays}" FontSize="28" FontWeight="Bold" Foreground="#0E4939" Margin="0,8,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1" CornerRadius="12" Padding="16" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="میانگین پیشرفت" FontSize="12" Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                    <TextBlock Text="{Binding FilteredAverageProgressPercent, StringFormat='{}{0:0.##}%'}" FontSize="28" FontWeight="Bold" Foreground="#176B52" Margin="0,8,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1" CornerRadius="12" Padding="16" Margin="5">
+                <StackPanel>
+                    <TextBlock Text="فعالیت‌های اخیر" FontSize="12" Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                    <TextBlock Text="{Binding FilteredActivityCount}" FontSize="28" FontWeight="Bold" Foreground="#4B6B6A" Margin="0,8,0,0"/>
+                </StackPanel>
+            </Border>
+        </UniformGrid>
+
+        <!-- Info -->
+        <Border Grid.Row="3"
+                Background="{DynamicResource HaytSurfaceBrush}"
+                BorderBrush="{DynamicResource HaytBorderBrush}"
+                BorderThickness="1"
+                CornerRadius="12"
+                Padding="18">
+            <StackPanel>
+                <TextBlock Text="مرحله ۱۶-A1: هسته دستاوردها"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource HaytTextBrush}"/>
+                <TextBlock Text="در این مرحله، زیرساخت Badges / Achievements بدون تغییر دیتابیس اضافه شده است. ارزیابی دستاوردها بر اساس داده‌های فعلی داشبورد انجام می‌شود و اعلان دستاورد جدید نیز نمایش داده می‌شود."
+                           Margin="0,10,0,0"
+                           TextWrapping="Wrap"
+                           Foreground="{DynamicResource HaytMutedTextBrush}"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
+

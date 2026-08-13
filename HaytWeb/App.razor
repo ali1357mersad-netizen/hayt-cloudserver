@@ -1,0 +1,22 @@
+﻿<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(App).Assembly">
+        <Found Context="routeData">
+            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+                <NotAuthorized>
+                    <div class="alert alert-warning m-4" dir="rtl">
+                        شما اجازه دسترسی به این صفحه را ندارید. لطفاً <a href="/login">وارد شوید</a>.
+                    </div>
+                </NotAuthorized>
+            </AuthorizeRouteView>
+            <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        </Found>
+        <NotFound>
+            <PageTitle>پیدا نشد</PageTitle>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <div class="alert alert-danger m-4" dir="rtl">
+                    <p role="alert">متأسفانه در این آدرس چیزی یافت نشد.</p>
+                </div>
+            </LayoutView>
+        </NotFound>
+    </Router>
+</CascadingAuthenticationState>

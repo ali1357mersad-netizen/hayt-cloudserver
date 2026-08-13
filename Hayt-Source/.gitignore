@@ -1,0 +1,33 @@
+﻿# Build outputs
+bin/
+obj/
+*.user
+*.suo
+
+# Visual Studio
+.vs/
+*.userosscache
+*.sln.docstates
+
+# IDE
+.idea/
+.vscode/
+
+# Database files
+*.db
+*.db-journal
+*.sqlite
+
+# Logs
+*.log
+startup-log.txt
+
+# Phase reports
+_phase_reports/
+_backups_*/
+
+# License state
+license-state.json
+
+# Local settings
+appsettings.Local.json

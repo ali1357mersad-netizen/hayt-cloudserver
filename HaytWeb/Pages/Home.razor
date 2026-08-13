@@ -1,0 +1,287 @@
+﻿@page "/"
+@using Hayt.Shared
+
+<PageTitle>اندیشکده حیات طیبه</PageTitle>
+
+<div class="hayt-root">
+    <div class="deco-orb deco-orb-tl"></div>
+    <div class="deco-orb deco-orb-br"></div>
+
+    <header class="main-header">
+        <div class="header-glow"></div>
+        <button class="btn btn-surface btn-menu" @onclick="ToggleMenu"><span>☰</span> منو</button>
+        <div class="header-center">
+            <div class="logo-badge">ح</div>
+            <div class="header-titles">
+                <h1>اندیشکده حیات طیبه</h1>
+                <span>کانون فرهنگی تبلیغی مرصاد قم</span>
+            </div>
+        </div>
+        <div class="header-actions">
+            <div class="status-chip"><span class="status-dot"></span><span>اتصال برقرار است</span></div>
+            <div class="status-chip"><span>کاربر حیات طیبه</span></div>
+            <button class="btn btn-icon" title="تغییر پوسته">◐</button>
+            <button class="btn btn-gold">↻ به‌روزرسانی</button>
+        </div>
+    </header>
+
+    @if (_menuOpen)
+    {
+        <div class="menu-overlay" @onclick="CloseMenu"></div>
+        <aside class="main-menu">
+            <div class="menu-title">منوی اصلی</div>
+            <div class="menu-separator"></div>
+            <div class="menu-section-label">مرکز فرمان</div>
+            <button class="btn btn-sidebar">🏠 داشبورد</button>
+            <details class="menu-group">
+                <summary>📚 آموزش و کتاب‌ها</summary>
+                <div class="menu-sub">
+                    <button class="btn btn-sidebar">📖 کتاب‌ها و درس‌ها</button>
+                    <button class="btn btn-sidebar">✦ اجرای تمرین</button>
+                    <button class="btn btn-sidebar">▶ رسانه آموزشی</button>
+                    <button class="btn btn-sidebar">درس بعدی ›</button>
+                </div>
+            </details>
+            <details class="menu-group">
+                <summary>📊 رشد و گزارش‌ها</summary>
+                <div class="menu-sub">
+                    <button class="btn btn-sidebar">📊 گزارش پیشرفت</button>
+                    <button class="btn btn-sidebar">↻ شروع دوباره درس</button>
+                    <button class="btn btn-sidebar">▥ داشبورد</button>
+                </div>
+            </details>
+            <details class="menu-group">
+                <summary>👤 حساب کاربری</summary>
+                <div class="menu-sub">
+                    <button class="btn btn-sidebar">👤 پروفایل من</button>
+                    <button class="btn btn-sidebar">⇄ تغییر کاربر</button>
+                    <button class="btn btn-sidebar">＋ ورود و مدیریت کتاب</button>
+                    <button class="btn btn-sidebar">⚙️ تنظیمات</button>
+                </div>
+            </details>
+            <button class="btn btn-sidebar btn-close-menu" @onclick="CloseMenu">✖ بستن منو</button>
+        </aside>
+    }
+
+    <main class="main-content">
+        <section class="card card-path">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">مسیر آموزشی</h2>
+                    <p class="card-subtitle">مسیر مطالعه را هوشمندانه انتخاب کنید</p>
+                </div>
+                <div class="card-icon">⌘</div>
+            </div>
+            <label class="field-label">کتاب و ساختار آموزشی</label>
+            <button class="combo combo-button" @onclick="ToggleCategoryPopup">
+                <span>انتخاب کتاب...</span>
+                <span class="combo-arrow">▾</span>
+            </button>
+
+            @if (_categoryOpen)
+            {
+                <div class="popup-overlay" @onclick="CloseCategoryPopup"></div>
+                <div class="category-popup">
+                    <div class="popup-header">
+                        <div>
+                            <div class="popup-title">کتابخانه آموزشی</div>
+                            <div class="popup-subtitle">با نگه‌داشتن نشانگر روی هر شاخه، زیرشاخه آن باز می‌شود.</div>
+                        </div>
+                        <div class="popup-actions">
+                            <button class="btn btn-compact">همه</button>
+                            <button class="btn btn-gold btn-compact">اشتراک</button>
+                            <button class="btn btn-compact btn-danger" @onclick="CloseCategoryPopup">×</button>
+                        </div>
+                    </div>
+                    <div class="popup-separator"></div>
+                    <div class="popup-tree">
+                        <details class="tree-category" open>
+                            <summary>
+                                <span class="tree-cat-icon">📚</span>
+                                <span class="tree-cat-title">معارف و اندیشه اسلامی</span>
+                                <span class="tree-cat-desc">کتاب‌های بنیادین معارف</span>
+                                <span class="tree-arrow">‹</span>
+                            </summary>
+                            <details class="tree-book">
+                                <summary>
+                                    <span class="tree-book-icon">▥</span>
+                                    <span class="tree-book-title">طرح کلی اندیشه اسلامی در قرآن</span>
+                                </summary>
+                                <details class="tree-section">
+                                    <summary>
+                                        <span class="tree-section-icon">▰</span>
+                                        <span class="tree-section-title">ایمان</span>
+                                    </summary>
+                                    <details class="tree-chapter">
+                                        <summary>
+                                            <span class="tree-chapter-icon">▤</span>
+                                            <span class="tree-chapter-title">معنای ایمان</span>
+                                        </summary>
+                                        <div class="tree-lesson">
+                                            <span class="tree-lesson-icon">◈</span>
+                                            <span class="tree-lesson-title">ایمان؛ سرچشمه حرکت</span>
+                                        </div>
+                                        <div class="tree-lesson">
+                                            <span class="tree-lesson-icon">◈</span>
+                                            <span class="tree-lesson-title">شناخت هدف</span>
+                                        </div>
+                                    </details>
+                                    <details class="tree-chapter">
+                                        <summary>
+                                            <span class="tree-chapter-icon">▤</span>
+                                            <span class="tree-chapter-title">آگاهی و مسئولیت</span>
+                                        </summary>
+                                        <div class="tree-lesson">
+                                            <span class="tree-lesson-icon">◈</span>
+                                            <span class="tree-lesson-title">مسئولیت انسان مؤمن</span>
+                                        </div>
+                                    </details>
+                                </details>
+                                <details class="tree-section">
+                                    <summary>
+                                        <span class="tree-section-icon">▰</span>
+                                        <span class="tree-section-title">توحید</span>
+                                    </summary>
+                                    <details class="tree-chapter">
+                                        <summary>
+                                            <span class="tree-chapter-icon">▤</span>
+                                            <span class="tree-chapter-title">معنای توحید</span>
+                                        </summary>
+                                        <div class="tree-lesson">
+                                            <span class="tree-lesson-icon">◈</span>
+                                            <span class="tree-lesson-title">توحید در اندیشه</span>
+                                        </div>
+                                    </details>
+                                </details>
+                            </details>
+                            <details class="tree-book">
+                                <summary>
+                                    <span class="tree-book-icon">▥</span>
+                                    <span class="tree-book-title">انسان ۲۵۰ ساله</span>
+                                </summary>
+                                <details class="tree-section">
+                                    <summary>
+                                        <span class="tree-section-icon">▰</span>
+                                        <span class="tree-section-title">نبوت</span>
+                                    </summary>
+                                    <details class="tree-chapter">
+                                        <summary>
+                                            <span class="tree-chapter-icon">▤</span>
+                                            <span class="tree-chapter-title">حرکت ایمانی</span>
+                                        </summary>
+                                        <div class="tree-lesson">
+                                            <span class="tree-lesson-icon">◈</span>
+                                            <span class="tree-lesson-title">حرکت در مسیر حق</span>
+                                        </div>
+                                    </details>
+                                </details>
+                            </details>
+                        </details>
+                    </div>
+                    <div class="popup-footer">
+                        <span>راهنما: پس از انتخاب درس، این پنجره بسته شده و محتوای آن نمایش داده می‌شود.</span>
+                    </div>
+                </div>
+            }
+
+            <div class="inner-card">
+                <div class="inner-icon">✓</div>
+                <div>
+                    <div class="inner-label">دسته فعال</div>
+                    <div class="inner-value">معارف و اندیشه اسلامی</div>
+                </div>
+            </div>
+            <label class="field-label">بخش</label>
+            <select class="combo"><option>ایمان</option><option>توحید</option><option>نبوت</option></select>
+            <label class="field-label">فصل</label>
+            <select class="combo"><option>معنای ایمان</option><option>آگاهی و مسئولیت</option><option>حرکت ایمانی</option></select>
+            <label class="field-label">درس</label>
+            <select class="combo"><option>ایمان؛ سرچشمه حرکت</option><option>شناخت هدف</option><option>مسئولیت انسان مؤمن</option></select>
+            <div class="inner-card media-status">
+                <div class="media-title"><span class="media-dot">◉</span> وضعیت رسانه</div>
+                <p class="media-text">محتوای متنی درس آماده است. برای مشاهده فایل‌های صوتی و تصویری، گزینه رسانه آموزشی را انتخاب کنید.</p>
+            </div>
+        </section>
+
+        <section class="card card-lesson">
+            <div class="lesson-header">
+                <div>
+                    <div class="lesson-eyebrow">درس جاری</div>
+                    <h2 class="lesson-title">ایمان؛ سرچشمه حرکت و مسئولیت</h2>
+                </div>
+                <div class="step-badge"><span class="step-icon">◌</span><span>درس ۱ از ۱۲</span></div>
+            </div>
+            <div class="inner-card lesson-status">
+                <p>شما در مسیر «معارف و اندیشه اسلامی» قرار دارید. مطالعه این درس مقدمه ورود به تمرین‌های مفهومی است.</p>
+            </div>
+            <div class="lesson-content">
+                <div class="lesson-text">
+                    <p>ایمان در نگاه اسلامی تنها دانستن یک حقیقت یا پذیرفتن ذهنی یک گزاره نیست؛ ایمان نیرویی زنده است که در جان انسان ریشه می‌گیرد، به انتخاب‌های او جهت می‌دهد و او را برای حرکت در مسیر حق آماده می‌سازد.</p>
+                    <p>هنگامی که معرفت با تعهد همراه شود، انسان از حالت انفعال خارج می‌شود. او جهان، جامعه و مسئولیت خویش را با نگاهی تازه می‌بیند و می‌کوشد میان باور، اخلاق و عمل خود هماهنگی برقرار کند.</p>
+                    <p>حیات طیبه نتیجه همین پیوند میان معرفت و عمل است؛ حیاتی که در آن انسان هدف خود را می‌شناسد، برای رشد خویش برنامه دارد و نسبت به جامعه و آینده بی‌تفاوت باقی نمی‌ماند.</p>
+                </div>
+            </div>
+            <div class="lesson-nav">
+                <button class="btn btn-secondary">‹ درس قبلی</button>
+                <button class="btn btn-gold">↻ شروع دوباره</button>
+                <button class="btn btn-primary">درس بعدی ›</button>
+            </div>
+        </section>
+
+        <section class="card card-exercises">
+            <div class="card-header">
+                <div>
+                    <h2 class="card-title">تمرین‌های درس</h2>
+                    <p class="card-subtitle">یکی از پرسش‌ها را انتخاب کنید</p>
+                </div>
+                <div class="card-icon card-icon-q">؟</div>
+            </div>
+            <div class="question-list">
+                <div class="question-item">
+                    <span class="question-bullet">•</span>
+                    <span class="question-text">تفاوت میان دانستن و ایمان داشتن چیست؟</span>
+                </div>
+                <div class="question-item">
+                    <span class="question-bullet">•</span>
+                    <span class="question-text">ایمان چگونه به رفتار انسان جهت می‌دهد؟</span>
+                </div>
+                <div class="question-item">
+                    <span class="question-bullet">•</span>
+                    <span class="question-text">رابطه معرفت، تعهد و مسئولیت را توضیح دهید.</span>
+                </div>
+                <div class="question-item">
+                    <span class="question-bullet">•</span>
+                    <span class="question-text">یک نمونه از اثر ایمان در انتخاب روزانه بیان کنید.</span>
+                </div>
+            </div>
+            <div class="exercise-actions">
+                <button class="btn btn-gold btn-block">✦ اجرای تمرین</button>
+                <div class="action-grid">
+                    <button class="btn btn-sidebar">▶ رسانه</button>
+                    <button class="btn btn-sidebar">▥ داشبورد</button>
+                    <button class="btn btn-sidebar">◔ گزارش پیشرفت</button>
+                    <button class="btn btn-sidebar">♙ پروفایل من</button>
+                    <button class="btn btn-sidebar">⇄ تغییر کاربر</button>
+                    <button class="btn btn-sidebar">＋ ورود کتاب</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="status-bar">
+        <div class="status-left"><span class="status-dot"></span><span>حیات طیبه؛ آموزش، معرفت و حرکت</span></div>
+        <div class="status-right">
+            <div class="progress-track"><div class="progress-fill"></div></div>
+            <span class="status-ready">آماده</span>
+        </div>
+    </footer>
+</div>
+
+@code {
+    private bool _menuOpen = false;
+    private bool _categoryOpen = false;
+    private void ToggleMenu() => _menuOpen = !_menuOpen;
+    private void CloseMenu() => _menuOpen = false;
+    private void ToggleCategoryPopup() => _categoryOpen = !_categoryOpen;
+    private void CloseCategoryPopup() => _categoryOpen = false;
+}

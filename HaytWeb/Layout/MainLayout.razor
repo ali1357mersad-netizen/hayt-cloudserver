@@ -1,0 +1,104 @@
+﻿@inherits LayoutComponentBase
+
+<div class="hayt-app-shell" dir="rtl">
+    <aside class="hayt-sidebar @(isMobileMenuOpen ? "open" : "")">
+        <div class="hayt-sidebar-header">
+            <div class="hayt-brand-mark">ح</div>
+            <div>
+                <div class="hayt-brand-title">Hayt</div>
+                <div class="hayt-brand-subtitle">اندیشکده حیات طیبه</div>
+            </div>
+        </div>
+
+        <nav class="hayt-nav">
+            <NavLink class="hayt-nav-link" href="" Match="NavLinkMatch.All" @onclick="CloseMobileMenu">
+                <span class="hayt-nav-icon">🏠</span>
+                <span>خانه</span>
+            </NavLink>
+
+            <NavLink class="hayt-nav-link" href="dashboard" @onclick="CloseMobileMenu">
+                <span class="hayt-nav-icon">📊</span>
+                <span>داشبورد</span>
+            </NavLink>
+
+            <NavLink class="hayt-nav-link" href="game" @onclick="CloseMobileMenu">
+                <span class="hayt-nav-icon">🎮</span>
+                <span>بازی</span>
+            </NavLink>
+
+            <NavLink class="hayt-nav-link" href="competition" @onclick="CloseMobileMenu">
+                <span class="hayt-nav-icon">🏁</span>
+                <span>مسابقه</span>
+            </NavLink>
+            <NavLink class="hayt-nav-link" href="install" @onclick="CloseMobileMenu">
+                <span class="hayt-nav-icon">📲</span>
+                <span>نصب اپ</span>
+            </NavLink>
+
+            <NavLink class="hayt-nav-link" href="profile" @onclick="CloseMobileMenu">
+                <span class="hayt-nav-icon">👤</span>
+                <span>پروفایل</span>
+            </NavLink>
+
+
+            <NavLink class="hayt-nav-link" href="login" @onclick="CloseMobileMenu">
+                <span class="hayt-nav-icon">🔐</span>
+                <span>ورود</span>
+            </NavLink>
+        </nav>
+
+        <div class="hayt-sidebar-footer">
+            <div class="hayt-mini-status">
+                <span>Cloud:</span>
+                <strong>localhost:5088</strong>
+            </div>
+            <div class="hayt-mini-status">
+                <span>Web:</span>
+                <strong>localhost:5090</strong>
+            </div>
+        </div>
+    </aside>
+
+    @if (isMobileMenuOpen)
+    {
+        <button type="button" class="hayt-backdrop" @onclick="CloseMobileMenu" aria-label="بستن منو"></button>
+    }
+
+    <main class="hayt-main">
+        <header class="hayt-topbar">
+            <button type="button" class="hayt-menu-button" @onclick="ToggleMobileMenu" aria-label="باز کردن منو">
+                ☰
+            </button>
+
+            <div class="hayt-topbar-title">
+                <strong>اندیشکده حیات طیبه</strong>
+                <small>سامانه وب ابری Hayt</small>
+            </div>
+
+            <div class="hayt-topbar-actions">
+                <span class="hayt-cloud-pill">Cloud: localhost:5088</span>
+                <span class="hayt-web-pill">Web: localhost:5090</span>
+            </div>
+        </header>
+
+        <section class="hayt-content">
+            @Body
+        </section>
+    </main>
+</div>
+
+@code {
+    private bool isMobileMenuOpen;
+
+    private void ToggleMobileMenu()
+    {
+        isMobileMenuOpen = !isMobileMenuOpen;
+    }
+
+    private void CloseMobileMenu()
+    {
+        isMobileMenuOpen = false;
+    }
+}
+
+

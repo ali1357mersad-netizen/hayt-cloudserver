@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Hayt.Controls.ThemeToggleButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="Root">
+    <Button x:Name="ToggleButton"
+            MinWidth="128"
+            ToolTip="تغییر تم روشن و تاریک"
+            Click="ToggleButton_Click">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock x:Name="ThemeIcon"
+                       Margin="0,0,7,0"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Text="🌙"/>
+            <TextBlock x:Name="ThemeText"
+                       VerticalAlignment="Center"
+                       Text="تم تاریک"/>
+        </StackPanel>
+    </Button>
+</UserControl>

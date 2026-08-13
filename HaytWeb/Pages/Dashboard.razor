@@ -1,0 +1,77 @@
+﻿@page "/dashboard"
+
+<PageTitle>داشبورد - حیات طیبه</PageTitle>
+
+<div class="hayt-page" dir="rtl">
+    <div class="hayt-page-header">
+        <div>
+            <div class="hayt-kicker">Dashboard</div>
+            <h1>داشبورد مدیریتی</h1>
+            <p>نمای کلی وضعیت سامانه، اتصال‌ها و بخش‌های اصلی پروژه.</p>
+        </div>
+    </div>
+
+    <section class="hayt-stat-grid">
+        <div class="hayt-stat-card">
+            <span>وضعیت وب</span>
+            <strong>فعال</strong>
+            <small>Blazor WebAssembly</small>
+        </div>
+
+        <div class="hayt-stat-card">
+            <span>وضعیت سرور</span>
+            <strong>آماده</strong>
+            <small>Cloud Server API</small>
+        </div>
+
+        <div class="hayt-stat-card">
+            <span>SignalR</span>
+            <strong>فعال</strong>
+            <small>Real-time Enabled</small>
+        </div>
+
+        <div class="hayt-stat-card">
+            <span>Responsive</span>
+            <strong>فعال</strong>
+            <small>Mobile Layout</small>
+        </div>
+    </section>
+
+    <section class="hayt-section-card">
+        <h2>مسیرهای اصلی</h2>
+
+        <div class="hayt-action-list">
+            <a href="/" class="hayt-action-item">
+                <span>🏠</span>
+                <div>
+                    <strong>خانه</strong>
+                    <small>صفحه اصلی و وضعیت زنده</small>
+                </div>
+            </a>
+
+            <a href="/game" class="hayt-action-item">
+                <span>🎮</span>
+                <div>
+                    <strong>بازی آموزشی</strong>
+                    <small>آماده اتصال به منطق بازی</small>
+                </div>
+            </a>
+
+            <a href="/competition" class="hayt-action-item">
+                <span>🏁</span>
+                <div>
+                    <strong>مسابقه</strong>
+                    <small>آماده اتصال به سیستم امتیازدهی</small>
+                </div>
+            </a>
+
+            <a href="/profile" class="hayt-action-item">
+                <span>👤</span>
+                <div>
+                    <strong>پروفایل</strong>
+                    <small>آماده اتصال به Auth</small>
+                </div>
+            </a>
+        </div>
+    </section>
+</div>

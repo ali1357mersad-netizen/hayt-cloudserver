@@ -1,0 +1,319 @@
+﻿<Window x:Class="Hayt.Views.StudyNotesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Binding WindowTitleText}"
+        Width="1080"
+        Height="730"
+        MinWidth="880"
+        MinHeight="610"
+        WindowStartupLocation="CenterOwner"
+        FlowDirection="RightToLeft"
+        Background="{DynamicResource HaytBackgroundBrush}">
+
+    <Grid Margin="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="14"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="14"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0"
+                Background="{DynamicResource HaytSurfaceBrush}"
+                BorderBrush="{DynamicResource HaytBorderBrush}"
+                BorderThickness="1"
+                CornerRadius="14"
+                Padding="16">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right">
+                    <TextBlock Text="📝 یادداشت‌ها"
+                               FontSize="23"
+                               FontWeight="Bold"
+                               Foreground="{DynamicResource HaytTextBrush}"/>
+                    <TextBlock Text="{Binding ContextTitle}"
+                               Margin="0,6,0,0"
+                               FontSize="13"
+                               FontWeight="Bold"
+                               Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                    <TextBlock Text="{Binding SummaryText}"
+                               Margin="0,4,0,0"
+                               FontSize="12"
+                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                </StackPanel>
+
+                <StackPanel DockPanel.Dock="Left"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Left">
+                    <Border Background="{DynamicResource HaytBackgroundBrush}"
+                            BorderBrush="{DynamicResource HaytBorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="10"
+                            Padding="10"
+                            Margin="0,0,8,0">
+                        <StackPanel>
+                            <TextBlock Text="{Binding ContextBadgeText}"
+                                       FontSize="10"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            <TextBlock Text="{Binding TotalNotes}"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytTextBrush}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="{DynamicResource HaytBackgroundBrush}"
+                            BorderBrush="{DynamicResource HaytBorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="10"
+                            Padding="10"
+                            Margin="0,0,8,0">
+                        <StackPanel>
+                            <TextBlock Text="مهم"
+                                       FontSize="10"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            <TextBlock Text="{Binding ImportantNotes}"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="{DynamicResource HaytBackgroundBrush}"
+                            BorderBrush="{DynamicResource HaytBorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="10"
+                            Padding="10">
+                        <StackPanel>
+                            <TextBlock Text="سنجاق"
+                                       FontSize="10"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            <TextBlock Text="{Binding PinnedNotes}"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- Body -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="370"/>
+                <ColumnDefinition Width="14"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Notes List -->
+            <Border Grid.Column="0"
+                    Background="{DynamicResource HaytSurfaceBrush}"
+                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="12"
+                    Padding="12">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                                 Height="34"
+                                 Padding="8"
+                                 ToolTip="جستجو در یادداشت‌های همین محدوده"/>
+
+                        <CheckBox Content="فقط یادداشت‌های مهم"
+                                  IsChecked="{Binding ImportantOnly}"
+                                  Margin="0,8,0,0"
+                                  Foreground="{DynamicResource HaytTextBrush}"/>
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,8,0,0">
+                            <Button Content="جدید"
+                                    Command="{Binding NewNoteCommand}"
+                                    Padding="10,5"
+                                    Margin="0,0,6,0"/>
+                            <Button Content="پاک کردن جستجو"
+                                    Command="{Binding ClearSearchCommand}"
+                                    Padding="10,5"
+                                    Margin="0,0,6,0"/>
+                            <Button Content="همه"
+                                    Command="{Binding ShowAllNotesCommand}"
+                                    Padding="10,5"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <ListBox Grid.Row="2"
+                             ItemsSource="{Binding Notes}"
+                             SelectedItem="{Binding SelectedNote}"
+                             BorderThickness="0"
+                             Background="Transparent"
+                             ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                                        BorderThickness="1"
+                                        CornerRadius="9"
+                                        Padding="9"
+                                        Margin="0,0,0,8">
+                                    <StackPanel>
+                                        <DockPanel>
+                                            <TextBlock DockPanel.Dock="Right"
+                                                       Text="{Binding DisplayTitle}"
+                                                       FontWeight="Bold"
+                                                       FontSize="13"
+                                                       Foreground="{DynamicResource HaytTextBrush}"/>
+                                            <TextBlock DockPanel.Dock="Left"
+                                                       Text="{Binding FlagsText}"
+                                                       FontSize="10"
+                                                       HorizontalAlignment="Left"
+                                                       Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                                        </DockPanel>
+
+                                        <TextBlock Text="{Binding ShortContent}"
+                                                   Margin="0,5,0,0"
+                                                   TextWrapping="Wrap"
+                                                   FontSize="11"
+                                                   Foreground="{DynamicResource HaytMutedTextBrush}"/>
+
+                                        <TextBlock Text="{Binding LocationText}"
+                                                   Margin="0,6,0,0"
+                                                   FontSize="10"
+                                                   Foreground="{DynamicResource HaytMutedTextBrush}"/>
+
+                                        <TextBlock Text="{Binding UpdatedText}"
+                                                   Margin="0,3,0,0"
+                                                   FontSize="10"
+                                                   Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Border>
+
+            <!-- Editor -->
+            <Border Grid.Column="2"
+                    Background="{DynamicResource HaytSurfaceBrush}"
+                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="12"
+                    Padding="14">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="14"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <DockPanel Grid.Row="0">
+                        <TextBlock DockPanel.Dock="Right"
+                                   Text="ویرایش یادداشت"
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   Foreground="{DynamicResource HaytTextBrush}"/>
+
+                        <TextBlock DockPanel.Dock="Left"
+                                   Text="{Binding SelectedNote.LocationText}"
+                                   FontSize="11"
+                                   HorizontalAlignment="Left"
+                                   Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                    </DockPanel>
+
+                    <TextBox Grid.Row="2"
+                             Text="{Binding EditorTitle, UpdateSourceTrigger=PropertyChanged}"
+                             Height="36"
+                             Padding="8"
+                             FontSize="14"
+                             ToolTip="عنوان یادداشت"/>
+
+                    <TextBox Grid.Row="4"
+                             Text="{Binding EditorContent, UpdateSourceTrigger=PropertyChanged}"
+                             AcceptsReturn="True"
+                             TextWrapping="Wrap"
+                             VerticalScrollBarVisibility="Auto"
+                             Padding="10"
+                             FontSize="13"
+                             ToolTip="متن یادداشت"/>
+
+                    <Grid Grid.Row="6">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="12"/>
+                            <ColumnDefinition Width="180"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox Grid.Column="0"
+                                 Text="{Binding EditorTags, UpdateSourceTrigger=PropertyChanged}"
+                                 Height="34"
+                                 Padding="8"
+                                 ToolTip="تگ‌ها، مثال: مرور، آزمون، مهم"/>
+
+                        <CheckBox Grid.Column="2"
+                                  Content="یادداشت مهم"
+                                  IsChecked="{Binding EditorIsImportant}"
+                                  VerticalAlignment="Center"
+                                  Foreground="{DynamicResource HaytTextBrush}"/>
+                    </Grid>
+
+                    <StackPanel Grid.Row="8"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left">
+                        <Button Content="ذخیره"
+                                Command="{Binding SaveNoteCommand}"
+                                Padding="14,7"
+                                Margin="0,0,8,0"/>
+
+                        <Button Content="سنجاق / برداشتن"
+                                Command="{Binding TogglePinnedCommand}"
+                                Padding="14,7"
+                                Margin="0,0,8,0"/>
+
+                        <Button Content="مهم / معمولی"
+                                Command="{Binding ToggleImportantCommand}"
+                                Padding="14,7"
+                                Margin="0,0,8,0"/>
+
+                        <Button Content="حذف"
+                                Command="{Binding DeleteSelectedNoteCommand}"
+                                Padding="14,7"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!-- Footer -->
+        <DockPanel Grid.Row="4">
+            <StackPanel DockPanel.Dock="Right"
+                        Orientation="Horizontal">
+                <Button Content="بازخوانی"
+                        Command="{Binding RefreshCommand}"
+                        Padding="14,7"
+                        Margin="0,0,8,0"/>
+
+                <Button Content="یادداشت جدید"
+                        Command="{Binding NewNoteCommand}"
+                        Padding="14,7"/>
+            </StackPanel>
+
+            <Button DockPanel.Dock="Left"
+                    Content="بستن"
+                    Click="CloseButton_Click"
+                    Padding="18,7"
+                    HorizontalAlignment="Left"/>
+        </DockPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,55 @@
+﻿@page "/register"
+
+<PageTitle>ثبت‌نام - حیات طیبه</PageTitle>
+
+<div class="hayt-auth-page" dir="rtl">
+    <section class="hayt-auth-shell hayt-auth-shell-single">
+        <div class="hayt-auth-card">
+            <div class="hayt-kicker">Create Account</div>
+            <h1>ایجاد حساب کاربری</h1>
+            <p class="hayt-auth-muted">
+                این صفحه برای توسعه بعدی ثبت‌نام، فعال‌سازی حساب و اتصال به لایسنس آماده شده است.
+            </p>
+
+            <div class="hayt-form-group">
+                <label>نام و نام خانوادگی</label>
+                <input class="form-control" placeholder="نام کاربر" />
+            </div>
+
+            <div class="hayt-form-group">
+                <label>ایمیل</label>
+                <input class="form-control" placeholder="user@hayt.local" />
+            </div>
+
+            <div class="hayt-form-group">
+                <label>رمز عبور</label>
+                <input class="form-control" type="password" placeholder="رمز عبور" />
+            </div>
+
+            <button class="btn btn-primary btn-lg w-100" @onclick="ShowPendingMessage">
+                ثبت‌نام آزمایشی
+            </button>
+
+            @if (!string.IsNullOrWhiteSpace(message))
+            {
+                <div class="alert alert-info mt-3 mb-0">
+                    @message
+                </div>
+            }
+
+            <div class="hayt-auth-actions mt-3">
+                <a class="btn btn-outline-secondary" href="/login">قبلاً حساب دارم</a>
+                <a class="btn btn-outline-secondary" href="/">خانه</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+@code {
+    private string message = "";
+
+    private void ShowPendingMessage()
+    {
+        message = "UI ثبت‌نام آماده است. منطق نهایی در فاز Auth تکمیل می‌شود.";
+    }
+}

@@ -1,0 +1,445 @@
+﻿{
+    "Title":  "انگلیسی را قورت بده - جلد سوم",
+    "Subtitle":  "توصیف و داستان‌های کوتاه در ۱۰ درس",
+    "Description":  "دوره سوم آموزش انگلیسی - توصیف افراد، اشیا، مکان‌ها و داستان‌های کوتاه",
+    "Author":  "Hayt Academy",
+    "Language":  "fa",
+    "Level":  3,
+    "Version":  "1.0.0",
+    "IsActive":  true,
+    "BookKey":  "english_made_easy_03",
+    "Sections":  [
+                     {
+                         "Title":  "بخش اول: توصیف و داستان",
+                         "OrderNumber":  1,
+                         "Chapters":  {
+                                          "Title":  "فصل اول: توصیف کردن",
+                                          "OrderNumber":  1,
+                                          "Lessons":  [
+                                                          {
+                                                              "Title":  "درس ۲۱: توصیف ظاهر افراد",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا از دوست جدیدش می‌گه:\n\n\"I have a new friend. Her name is Mary.\"\n\"What does she look like?\"\n\"She is tall and thin. She has long brown hair and blue eyes.\"\n\n🎯 کلمات جدید:\n- Tall = قدبلند\n- Short = قدکوتاه\n- Thin = لاغر\n- Fat = چاق\n- Young = جوان\n- Old = پیر\n- Beautiful = زیبا\n- Handsome = خوش‌تیپ\n- Hair = مو\n- Eyes = چشم‌ها\n- Long = بلند\n- Short = کوتاه\n\n📝 جملات کاربردی:\n- She is tall and thin = او قدبلند و لاغر است\n- He has short black hair = او موهای کوتاه سیاه دارد\n- She has blue eyes = او چشم‌های آبی دارد\n- He is young and handsome = او جوان و خوش‌تیپ است\n\n🗣️ تمرین مکالمه:\nA: \"What does your brother look like?\"\nB: \"He is tall and thin. He has short brown hair.\"\nA: \"Does he have glasses?\"\nB: \"Yes, he wears glasses.\"\n\n🔁 مرور:\nدرس ۷: He/She has = او دارد\nدرس ۱۳: رنگ‌ها\nحالا ترکیب کن:\n\"She has long brown hair.\"\n\"He has blue eyes.\"\n\n💡 نکته مادرانه:\nبه عکس خانواده‌ات نگاه کن و هر کس رو توصیف کن:\n\"My mother has long black hair. My father is tall.\"",
+                                                              "Level":  3,
+                                                              "OrderNumber":  21,
+                                                              "EstimatedMinutes":  20,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Tall یعنی چه؟",
+                                                                                    "OptionA":  "قدکوتاه",
+                                                                                    "OptionB":  "قدبلند",
+                                                                                    "OptionC":  "لاغر",
+                                                                                    "OptionD":  "چاق",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Tall یعنی قدبلند",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «او موهای بلند قهوه‌ای دارد»؟",
+                                                                                    "OptionA":  "He has short hair",
+                                                                                    "OptionB":  "She has long brown hair",
+                                                                                    "OptionC":  "She has blue eyes",
+                                                                                    "OptionD":  "He is tall",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "She has long brown hair یعنی او موهای بلند قهوه‌ای دارد",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۲۰ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "توصیف ظاهر",
+                                                                                    "OptionB":  "مکالمه کامل روزمره",
+                                                                                    "OptionC":  "رنگ‌ها",
+                                                                                    "OptionD":  "اعداد",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۲۰ یک مکالمه کامل روزمره داشتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۲۲: توصیف شخصیت و اخلاق",
+                                                              "Content":  "📖 داستان این درس:\n\nالکس درباره دوستش می‌گه:\n\n\"My best friend is John. He is very kind and funny.\"\n\"What is he like?\"\n\"He is always happy and helpful. Everyone loves him.\"\n\n🎯 کلمات جدید:\n- Kind = مهربان\n- Funny = بامزه\n- Friendly = خوش‌برخورد\n- Helpful = کمک‌کننده\n- Smart = باهوش\n- Lazy = تنبل\n- Hardworking = سخت‌کوش\n- Shy = خجالتی\n- Brave = شجاع\n- Honest = صادق\n- Generous = سخاوتمند\n- Polite = مؤدب\n\n📝 جملات کاربردی:\n- She is very kind = او خیلی مهربان است\n- He is funny and friendly = او بامزه و خوش‌برخورد است\n- My teacher is helpful = معلم من کمک‌کننده است\n- He is a hardworking student = او دانش‌آموز سخت‌کوشی است\n\n🗣️ تمرین مکالمه:\nA: \"What is your mother like?\"\nB: \"She is very kind and helpful.\"\nA: \"Is she funny?\"\nB: \"Yes, she is funny too!\"\n\n🔁 مرور:\nدرس ۷: He/She is = او هست\nدرس ۸: فعل بودن\nحالا ترکیب کن:\n\"She is kind and friendly.\"\n\"He is smart and hardworking.\"\n\n💡 نکته مادرانه:\nدرباره دوستات به انگلیسی بگو:\n\"My friend is kind. She is funny.\"",
+                                                              "Level":  3,
+                                                              "OrderNumber":  22,
+                                                              "EstimatedMinutes":  20,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Kind یعنی چه؟",
+                                                                                    "OptionA":  "باهوش",
+                                                                                    "OptionB":  "مهربان",
+                                                                                    "OptionC":  "تنبل",
+                                                                                    "OptionD":  "شجاع",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Kind یعنی مهربان",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «او بامزه و خوش‌برخورد است»؟",
+                                                                                    "OptionA":  "He is kind and helpful",
+                                                                                    "OptionB":  "He is funny and friendly",
+                                                                                    "OptionC":  "He is smart and lazy",
+                                                                                    "OptionD":  "He is shy and polite",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "He is funny and friendly یعنی او بامزه و خوش‌برخورد است",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۲۱ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "توصیف شخصیت",
+                                                                                    "OptionB":  "توصیف ظاهر افراد",
+                                                                                    "OptionC":  "داستان کوتاه",
+                                                                                    "OptionD":  "خرید",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۲۱ توصیف ظاهر افراد را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۲۳: توصیف آب و هوا و فصل‌ها",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا به الکس زنگ می‌زنه:\n\n\"Hello! What is the weather like there?\"\n\"It\u0027s sunny and hot. Summer is my favorite season!\"\n\"Really? Here it\u0027s cold and snowy. I love winter!\"\n\n🎯 کلمات جدید:\n- Weather = آب و هوا\n- Sunny = آفتابی\n- Rainy = بارانی\n- Cloudy = ابری\n- Windy = بادی\n- Snowy = برفی\n- Hot = گرم\n- Cold = سرد\n- Warm = نسبتاً گرم\n- Cool = خنک\n- Spring = بهار\n- Summer = تابستان\n- Autumn / Fall = پاییز\n- Winter = زمستان\n\n📝 جملات کاربردی:\n- The weather is sunny today = امروز هوا آفتابی است\n- It is cold in winter = در زمستان هوا سرد است\n- Spring is beautiful = بهار زیباست\n- I love summer because it\u0027s hot = من تابستان را دوست دارم چون گرم است\n\n🗣️ تمرین مکالمه:\nA: \"What is your favorite season?\"\nB: \"I love spring. The weather is warm and beautiful.\"\nA: \"I like winter because of the snow.\"\nB: \"Snow is beautiful!\"\n\n🔁 مرور:\nدرس ۸: It is = آن است\nدرس ۱۳: رنگ‌ها\nحالا ترکیب کن:\n\"The sky is blue in spring.\"\n\"The snow is white in winter.\"\n\n💡 نکته مادرانه:\nهر روز به هوای بیرون نگاه کن و بگو:\n\"Today is sunny.\"\n\"It is cold today.\"",
+                                                              "Level":  3,
+                                                              "OrderNumber":  23,
+                                                              "EstimatedMinutes":  20,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Sunny یعنی چه؟",
+                                                                                    "OptionA":  "بارانی",
+                                                                                    "OptionB":  "آفتابی",
+                                                                                    "OptionC":  "ابری",
+                                                                                    "OptionD":  "برفی",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Sunny یعنی آفتابی",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چهار فصل به انگلیسی کدامند؟",
+                                                                                    "OptionA":  "Spring, Summer, Autumn, Winter",
+                                                                                    "OptionB":  "Sunny, Rainy, Cloudy, Snowy",
+                                                                                    "OptionC":  "Hot, Cold, Warm, Cool",
+                                                                                    "OptionD":  "Monday, Tuesday, Wednesday, Thursday",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Spring (بهار)، Summer (تابستان)، Autumn (پاییز)، Winter (زمستان)",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۲۲ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "آب و هوا",
+                                                                                    "OptionB":  "توصیف شخصیت و اخلاق",
+                                                                                    "OptionC":  "ظاهر افراد",
+                                                                                    "OptionD":  "داستان کوتاه",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۲۲ توصیف شخصیت و اخلاق را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۲۴: توصیف مکان‌ها و شهرها",
+                                                              "Content":  "📖 داستان این درس:\n\nالکس از سفرش به تهران می‌گه:\n\n\"I visited Tehran last week.\"\n\"What is Tehran like?\"\n\"It\u0027s a big and busy city. There are many beautiful parks and museums.\"\n\n🎯 کلمات جدید:\n- City = شهر\n- Village = روستا\n- Big = بزرگ\n- Small = کوچک\n- Busy = شلوغ\n- Quiet = آرام\n- Beautiful = زیبا\n- Dirty = کثیف\n- Clean = تمیز\n- Modern = مدرن\n- Old = قدیمی\n- Crowded = شلوغ (جمعیت زیاد)\n\n📝 جملات کاربردی:\n- Tehran is a big city = تهران شهر بزرگی است\n- My village is small and quiet = روستای من کوچک و آرام است\n- There are many parks here = اینجا پارک‌های زیادی وجود دارد\n- The streets are clean = خیابان‌ها تمیز هستند\n\n🗣️ تمرین مکالمه:\nA: \"Where do you live?\"\nB: \"I live in a small village.\"\nA: \"What is it like?\"\nB: \"It\u0027s quiet and beautiful. I love it!\"\n\n🔁 مرور:\nدرس ۱۲: خانه و مکان\nدرس ۲۱: توصیف\nحالا ترکیب کن:\n\"My city is big and busy.\"\n\"The park is beautiful and clean.\"\n\n💡 نکته مادرانه:\nدرباره شهر یا روستای خودت بگو:\n\"I live in ... It is ...\"",
+                                                              "Level":  3,
+                                                              "OrderNumber":  24,
+                                                              "EstimatedMinutes":  20,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Busy یعنی چه؟",
+                                                                                    "OptionA":  "آرام",
+                                                                                    "OptionB":  "شلوغ",
+                                                                                    "OptionC":  "تمیز",
+                                                                                    "OptionD":  "قدیمی",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Busy یعنی شلوغ",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «روستای من کوچک و آرام است»؟",
+                                                                                    "OptionA":  "My city is big and busy",
+                                                                                    "OptionB":  "My village is small and quiet",
+                                                                                    "OptionC":  "My house is clean and modern",
+                                                                                    "OptionD":  "My street is long and dirty",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "My village is small and quiet یعنی روستای من کوچک و آرام است",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۲۳ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "توصیف مکان‌ها",
+                                                                                    "OptionB":  "آب و هوا و فصل‌ها",
+                                                                                    "OptionC":  "ظاهر افراد",
+                                                                                    "OptionD":  "شخصیت",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۲۳ آب و هوا و فصل‌ها را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۲۵: شغل‌ها و حرفه‌ها",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا درباره شغل آینده‌اش می‌گه:\n\n\"What do you want to be when you grow up?\"\n\"I want to be a doctor. I want to help people.\"\n\"That\u0027s great! My father is a doctor too.\"\n\n🎯 کلمات جدید:\n- Doctor = دکتر\n- Teacher = معلم\n- Engineer = مهندس\n- Nurse = پرستار\n- Police officer = افسر پلیس\n- Firefighter = آتش‌نشان\n- Driver = راننده\n- Farmer = کشاورز\n- Artist = هنرمند\n- Writer = نویسنده\n- Chef = آشپز\n- Student = دانش‌آموز / دانشجو\n\n📝 جملات کاربردی:\n- I want to be a doctor = من می‌خواهم دکتر شوم\n- She is a teacher = او معلم است\n- He works in a hospital = او در بیمارستان کار می‌کند\n- What is your job? = شغل شما چیست؟\n\n🗣️ تمرین مکالمه:\nA: \"What is your father\u0027s job?\"\nB: \"He is an engineer.\"\nA: \"Where does he work?\"\nB: \"He works in a big company.\"\n\n🔁 مرور:\nدرس ۷: He/She is = او هست\nدرس ۸: I want = من می‌خواهم\nحالا ترکیب کن:\n\"I want to be a teacher.\"\n\"My mother is a nurse.\"\n\n💡 نکته مادرانه:\nدرباره شغل‌های خانواده‌ات بگو:\n\"My father is a ... My mother is a ...\"",
+                                                              "Level":  3,
+                                                              "OrderNumber":  25,
+                                                              "EstimatedMinutes":  20,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Engineer یعنی چه؟",
+                                                                                    "OptionA":  "دکتر",
+                                                                                    "OptionB":  "مهندس",
+                                                                                    "OptionC":  "معلم",
+                                                                                    "OptionD":  "پرستار",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Engineer یعنی مهندس",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «من می‌خواهم معلم شوم»؟",
+                                                                                    "OptionA":  "I am a teacher",
+                                                                                    "OptionB":  "I want to be a teacher",
+                                                                                    "OptionC":  "I was a teacher",
+                                                                                    "OptionD":  "I like teacher",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "I want to be a teacher یعنی من می‌خواهم معلم شوم",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۲۴ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "شغل‌ها",
+                                                                                    "OptionB":  "توصیف مکان‌ها و شهرها",
+                                                                                    "OptionC":  "آب و هوا",
+                                                                                    "OptionD":  "شخصیت",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۲۴ توصیف مکان‌ها و شهرها را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۲۶: سرگرمی‌ها و علایق",
+                                                              "Content":  "📖 داستان این درس:\n\nالکس می‌پرسه:\n\n\"What do you do in your free time?\"\n\"I like reading books and listening to music.\"\n\"Really? I love playing football!\"\n\n🎯 کلمات جدید:\n- Hobby = سرگرمی\n- Reading = کتاب خواندن\n- Writing = نوشتن\n- Drawing = نقاشی کردن\n- Singing = آواز خواندن\n- Dancing = رقصیدن\n- Playing football = فوتبال بازی کردن\n- Swimming = شنا کردن\n- Cooking = آشپزی کردن\n- Traveling = سفر کردن\n- Watching movies = فیلم دیدن\n- Listening to music = موسیقی گوش دادن\n\n📝 جملات کاربردی:\n- I like reading books = من کتاب خواندن را دوست دارم\n- My hobby is swimming = سرگرمی من شنا است\n- I love playing football in my free time = من دوست دارم در وقت آزادم فوتبال بازی کنم\n- What is your hobby? = سرگرمی تو چیست؟\n\n🗣️ تمرین مکالمه:\nA: \"What is your hobby?\"\nB: \"I love cooking. What about you?\"\nA: \"I like watching movies.\"\nB: \"What kind of movies do you like?\"\n\n🔁 مرور:\nدرس ۸: I like = من دوست دارم\nدرس ۲۵: شغل‌ها\nحالا ترکیب کن:\n\"I like reading books in my free time.\"\n\"My hobby is playing football.\"\n\n💡 نکته مادرانه:\nدرباره کارهایی که دوست داری بگو:\n\"I like ... in my free time.\"\n\"My hobby is ...\"",
+                                                              "Level":  3,
+                                                              "OrderNumber":  26,
+                                                              "EstimatedMinutes":  20,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Hobby یعنی چه؟",
+                                                                                    "OptionA":  "شغل",
+                                                                                    "OptionB":  "سرگرمی",
+                                                                                    "OptionC":  "مدرسه",
+                                                                                    "OptionD":  "خانه",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Hobby یعنی سرگرمی",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «من فوتبال بازی کردن را دوست دارم»؟",
+                                                                                    "OptionA":  "I like watching football",
+                                                                                    "OptionB":  "I like playing football",
+                                                                                    "OptionC":  "I like reading football",
+                                                                                    "OptionD":  "I like cooking football",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "I like playing football یعنی من فوتبال بازی کردن را دوست دارم",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۲۵ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "سرگرمی‌ها",
+                                                                                    "OptionB":  "شغل‌ها و حرفه‌ها",
+                                                                                    "OptionC":  "مکان‌ها",
+                                                                                    "OptionD":  "آب و هوا",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۲۵ شغل‌ها و حرفه‌ها را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۲۷: داستان کوتاه - سارا و گربه‌اش",
+                                                              "Content":  "📖 داستان این درس:\n\nاولین داستان کوتاه! 🎉\n\n🎯 داستان:\n\n\"Sara has a cat. The cat\u0027s name is Lily. Lily is white and black. She is very cute. Sara loves Lily very much.\n\nEvery morning, Sara gives food to Lily. Lily likes fish and milk. After eating, Lily sleeps on the sofa.\n\nIn the afternoon, Sara plays with Lily. Lily likes to play with a red ball. She runs after the ball. It\u0027s very funny!\n\nAt night, Lily sleeps next to Sara\u0027s bed. Sara says, \u0027Good night, Lily!\u0027 and Lily purrs.\n\nSara is happy because she has a lovely cat.\"\n\n📝 کلمات جدید داستان:\n- Cat = گربه\n- Cute = ناز / بامزه\n- Give = دادن\n- Food = غذا\n- Eat = خوردن\n- Sleep = خوابیدن\n- Sofa = مبل\n- Play = بازی کردن\n- Ball = توپ\n- Run = دویدن\n- Next to = کنار\n- Purr = خرخر کردن (صدای گربه)\n- Lovely = دوست‌داشتنی\n\n🗣️ تمرین:\nداستان را با صدای بلند بخوان و سعی کن معنی هر جمله را بفهمی.\n\n🔁 مرور:\nدرس ۸: has = دارد\nدرس ۱۳: رنگ‌ها (white, black, red)\nدرس ۲۶: likes = دوست دارد\n\n💡 نکته مادرانه:\nحالا می‌تونی یه داستان کوتاه رو بخونی و بفهمی! آفرین! 🎉",
+                                                              "Level":  3,
+                                                              "OrderNumber":  27,
+                                                              "EstimatedMinutes":  25,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "توی داستان، اسم گربه سارا چیست؟",
+                                                                                    "OptionA":  "Sara",
+                                                                                    "OptionB":  "Lily",
+                                                                                    "OptionC":  "Ball",
+                                                                                    "OptionD":  "Sofa",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "اسم گربه Lily است",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "Lily کجا می‌خوابد؟",
+                                                                                    "OptionA":  "روی تخت",
+                                                                                    "OptionB":  "روی مبل",
+                                                                                    "OptionC":  "روی زمین",
+                                                                                    "OptionD":  "کنار تخت سارا",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Lily روی مبل (sofa) می‌خوابد",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۲۶ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "داستان کوتاه",
+                                                                                    "OptionB":  "سرگرمی‌ها و علایق",
+                                                                                    "OptionC":  "شغل‌ها",
+                                                                                    "OptionD":  "مکان‌ها",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۲۶ سرگرمی‌ها و علایق را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۲۸: داستان کوتاه - الکس در پارک",
+                                                              "Content":  "📖 داستان این درس:\n\nدومین داستان کوتاه!\n\n🎯 داستان:\n\n\"Alex goes to the park every Saturday. He loves the park because it is big and beautiful. There are many green trees and colorful flowers in the park.\n\nAlex takes his dog, Max, with him. Max is a big brown dog. He is very friendly. Alex throws a stick and Max runs to get it. Max loves to play in the park.\n\nSometimes, Alex sees his friends at the park. They sit on a bench and talk. They talk about their jobs, hobbies, and families.\n\nAfter one hour, Alex goes home. He is tired but happy. He says, \u0027See you next Saturday, park!\u0027\n\nMax barks and wags his tail. He is happy too.\"\n\n📝 کلمات جدید داستان:\n- Park = پارک\n- Tree = درخت\n- Flower = گل\n- Colorful = رنگارنگ\n- Dog = سگ\n- Throw = پرتاب کردن\n- Stick = چوب\n- Bench = نیمکت\n- Talk = صحبت کردن\n- Hour = ساعت\n- Tired = خسته\n- Bark = پارس کردن\n- Wag = تکان دادن (دم)\n- Tail = دم\n\n🗣️ تمرین:\nداستان را بخوان و سعی کن به سوالات زیر جواب بدی:\n1. Alex کجا می‌رود؟\n2. اسم سگش چیست؟\n3. آنها در پارک چه کار می‌کنند؟\n\n🔁 مرور:\nدرس ۲۳: آب و هوا\nدرس ۲۶: سرگرمی‌ها\nحالا ترکیب کن:\n\"Alex goes to the park on Saturday.\"\n\"He plays with his dog.\"\n\n💡 نکته مادرانه:\nداستان دوم رو هم خوندی! حالا می‌تونی درباره پارک مورد علاقه‌ات بگی:\n\"I go to the park on ...\"",
+                                                              "Level":  3,
+                                                              "OrderNumber":  28,
+                                                              "EstimatedMinutes":  25,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Alex هر شنبه کجا می‌رود؟",
+                                                                                    "OptionA":  "مدرسه",
+                                                                                    "OptionB":  "پارک",
+                                                                                    "OptionC":  "فروشگاه",
+                                                                                    "OptionD":  "رستوران",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Alex هر شنبه به پارک می‌رود",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "اسم سگ الکس چیست؟",
+                                                                                    "OptionA":  "Lily",
+                                                                                    "OptionB":  "Max",
+                                                                                    "OptionC":  "Ball",
+                                                                                    "OptionD":  "Stick",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "اسم سگ الکس Max است",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۲۷ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "داستان سارا و گربه‌اش",
+                                                                                    "OptionB":  "داستان الکس در پارک",
+                                                                                    "OptionC":  "سرگرمی‌ها",
+                                                                                    "OptionD":  "شغل‌ها",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۲۷ داستان سارا و گربه‌اش را خواندیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۲۹: داستان کوتاه - خرید تولد",
+                                                              "Content":  "📖 داستان این درس:\n\nسومین داستان کوتاه!\n\n🎯 داستان:\n\n\"Tomorrow is Sara\u0027s mother\u0027s birthday. Sara wants to buy a gift for her mother. She goes to the mall with Alex.\n\nFirst, they go to a clothing store. Sara sees a beautiful blue scarf. \u0027How much is this scarf?\u0027 she asks. The seller says, \u0027It\u0027s fifteen dollars.\u0027 Sara thinks it\u0027s a good price. She buys the scarf.\n\nThen, they go to a flower shop. Sara buys a bouquet of red and white flowers. Her mother loves flowers.\n\nFinally, they go to a bakery. Sara buys a small chocolate cake.\n\nAt home, Sara wraps the gifts. She writes a card: \u0027Happy Birthday, Mom! I love you!\u0027\n\nThe next day, Sara\u0027s mother sees the gifts. She is very happy. She hugs Sara and says, \u0027Thank you, my dear! This is the best birthday ever!\u0027\n\nSara is happy because she made her mother happy.\"\n\n📝 کلمات جدید داستان:\n- Tomorrow = فردا\n- Birthday = تولد\n- Gift = هدیه\n- Mall = مرکز خرید\n- Scarf = شال\n- Seller = فروشنده\n- Price = قیمت\n- Bouquet = دسته گل\n- Bakery = نانوایی / شیرینی‌فروشی\n- Cake = کیک\n- Wrap = بسته‌بندی کردن\n- Card = کارت\n- Hug = بغل کردن\n- Dear = عزیز\n\n🗣️ تمرین:\nداستان را بخوان و بگو:\n1. سارا برای مادرش چه خرید؟\n2. قیمت شال چقدر بود؟\n3. مادر سارا چه احساسی داشت؟\n\n🔁 مرور:\nدرس ۱۶: خرید\nدرس ۲۱: توصیف\nحالا ترکیب کن:\n\"She buys a blue scarf.\"\n\"The flowers are red and white.\"\n\n💡 نکته مادرانه:\nدرباره آخرین هدیه‌ای که خریدی بگو:\n\"I bought a ... for ...\"",
+                                                              "Level":  3,
+                                                              "OrderNumber":  29,
+                                                              "EstimatedMinutes":  25,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "سارا برای مادرش چه خرید؟",
+                                                                                    "OptionA":  "فقط گل",
+                                                                                    "OptionB":  "شال، گل و کیک",
+                                                                                    "OptionC":  "فقط کیک",
+                                                                                    "OptionD":  "کتاب و گل",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "سارا شال آبی، دسته گل و کیک شکلاتی خرید",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "قیمت شال چقدر بود؟",
+                                                                                    "OptionA":  "۱۰ دلار",
+                                                                                    "OptionB":  "۱۵ دلار",
+                                                                                    "OptionC":  "۲۰ دلار",
+                                                                                    "OptionD":  "۵ دلار",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "قیمت شال ۱۵ دلار بود",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۲۸ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "داستان خرید تولد",
+                                                                                    "OptionB":  "داستان الکس در پارک",
+                                                                                    "OptionC":  "سرگرمی‌ها",
+                                                                                    "OptionD":  "شغل‌ها",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۲۸ داستان الکس در پارک را خواندیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۳۰: جمع‌بندی جلد سوم - توصیف و داستان 🎉",
+                                                              "Content":  "📖 داستان این درس:\n\nتبریک! به آخر جلد سوم رسیدی! 🎉\n\nحالا می‌تونی:\n- ظاهر افراد رو توصیف کنی\n- شخصیت و اخلاق رو بگی\n- درباره آب و هوا و فصل‌ها حرف بزنی\n- مکان‌ها و شهرها رو توصیف کنی\n- از شغل‌ها و سرگرمی‌هات بگی\n- داستان‌های کوتاه رو بخونی و بفهمی\n\n🎯 مکالمه نهایی:\n\nAlex: \"Hi Sara! You look happy today!\"\nSara: \"Yes! It\u0027s a beautiful sunny day. I love spring!\"\nAlex: \"Me too! What do you want to do today?\"\nSara: \"I want to go to the park with my dog.\"\nAlex: \"You have a dog? What does it look like?\"\nSara: \"She is a small white dog. She is very cute and friendly.\"\nAlex: \"That\u0027s nice! What is her name?\"\nSara: \"Her name is Lily. She loves to play with a ball.\"\nAlex: \"Can I come with you?\"\nSara: \"Of course! Let\u0027s go together!\"\n\n(At the park)\nSara: \"This park is beautiful. There are many green trees.\"\nAlex: \"Yes, and the flowers are colorful!\"\nSara: \"Look! Lily is running after the ball.\"\nAlex: \"She is so funny! What is your hobby, Sara?\"\nSara: \"I like reading books and listening to music.\"\nAlex: \"I love playing football. Maybe we can play together sometime.\"\nSara: \"That sounds great!\"\n\n🔁 مرور جلد سوم:\n✅ درس ۲۱: توصیف ظاهر افراد\n✅ درس ۲۲: توصیف شخصیت و اخلاق\n✅ درس ۲۳: آب و هوا و فصل‌ها\n✅ درس ۲۴: توصیف مکان‌ها و شهرها\n✅ درس ۲۵: شغل‌ها و حرفه‌ها\n✅ درس ۲۶: سرگرمی‌ها و علایق\n✅ درس ۲۷: داستان کوتاه - سارا و گربه‌اش\n✅ درس ۲۸: داستان کوتاه - الکس در پارک\n✅ درس ۲۹: داستان کوتاه - خرید تولد\n✅ درس ۳۰: جمع‌بندی و مکالمه نهایی!\n\n💡 نکته مادرانه:\nتو الآن در سطح A2 هستی! 🎉\nیعنی می‌تونی:\n- درباره خودت و دیگران صحبت کنی ✨\n- مکان‌ها و چیزها رو توصیف کنی ✨\n- داستان‌های کوتاه رو بخونی ✨\n- مکالمات روزمره رو انجام بدی ✨\n\nادامه بده تا به سطح B1 برسی! 🚀\n\n\"I can describe people, places, and things!\"",
+                                                              "Level":  3,
+                                                              "OrderNumber":  30,
+                                                              "EstimatedMinutes":  25,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "بعد از ۳۰ درس در چه سطحی هستیم؟",
+                                                                                    "OptionA":  "A1 (مبتدی)",
+                                                                                    "OptionB":  "A2 (ابتدایی)",
+                                                                                    "OptionC":  "B1 (متوسط)",
+                                                                                    "OptionD":  "C1 (پیشرفته)",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "بعد از ۳۰ درس در سطح A2 هستیم",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در این جلد چند داستان کوتاه خواندیم؟",
+                                                                                    "OptionA":  "۱ داستان",
+                                                                                    "OptionB":  "۳ داستان",
+                                                                                    "OptionC":  "۵ داستان",
+                                                                                    "OptionD":  "۱۰ داستان",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "سه داستان کوتاه: سارا و گربه، الکس در پارک، خرید تولد",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "بعد از ۳۰ درس، نمره تافل تقریبی چقدر است؟",
+                                                                                    "OptionA":  "۱۰-۲۰",
+                                                                                    "OptionB":  "۲۰-۳۰",
+                                                                                    "OptionC":  "۴۰-۵۰",
+                                                                                    "OptionD":  "۶۰-۷۰",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "سطح A2 معادل تافل ۲۰-۳۰ است",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          }
+                                                      ]
+                                      }
+                     }
+                 ],
+    "CategoryId":  "education",
+    "CategoryTitle":  "آموزشی و مهارتی"
+}

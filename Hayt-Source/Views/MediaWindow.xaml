@@ -1,0 +1,605 @@
+﻿<Window x:Class="Hayt.Views.MediaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="رسانه درس"
+        Width="980"
+        Height="720"
+        MinWidth="850"
+        MinHeight="620"
+        WindowStartupLocation="CenterOwner"
+        FlowDirection="RightToLeft"
+        Background="{DynamicResource HaytBackgroundBrush}">
+
+    <Window.Resources>
+
+        <LinearGradientBrush x:Key="MainBackgroundBrush"
+                             StartPoint="0,0"
+                             EndPoint="1,1">
+            <GradientStop Color="#07130F" Offset="0"/>
+            <GradientStop Color="#0B2A22" Offset="0.45"/>
+            <GradientStop Color="#111827" Offset="1"/>
+        </LinearGradientBrush>
+
+        <SolidColorBrush x:Key="GlassBrush" Color="#332D3D35"/>
+        <SolidColorBrush x:Key="GlassBorderBrush" Color="#55D9B85C"/>
+        <SolidColorBrush x:Key="GoldBrush" Color="#D9B85C"/>
+        <SolidColorBrush x:Key="GoldLightBrush" Color="#F2DC91"/>
+        <SolidColorBrush x:Key="GreenBrush" Color="#31D69B"/>
+        <SolidColorBrush x:Key="MutedTextBrush" Color="#A8BBB4"/>
+        <SolidColorBrush x:Key="WhiteTextBrush" Color="#F8FAFC"/>
+
+        <DropShadowEffect x:Key="SoftGlowEffect"
+                          Color="#31D69B"
+                          BlurRadius="22"
+                          ShadowDepth="0"
+                          Opacity="0.28"/>
+
+        <DropShadowEffect x:Key="GoldGlowEffect"
+                          Color="#D9B85C"
+                          BlurRadius="20"
+                          ShadowDepth="0"
+                          Opacity="0.30"/>
+
+        <Style x:Key="GlassButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="MinWidth" Value="92"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="12,0"/>
+            <Setter Property="Foreground" Value="#F8FAFC"/>
+            <Setter Property="Background" Value="#253B4A40"/>
+            <Setter Property="BorderBrush" Value="#55D9B85C"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Root"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="12">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Root" Property="Background" Value="#3D9B7B33"/>
+                                <Setter TargetName="Root" Property="BorderBrush" Value="#D9B85C"/>
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Root" Property="Background" Value="#5531D69B"/>
+                            </Trigger>
+
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.45"/>
+                                <Setter Property="Cursor" Value="Arrow"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="PrimaryButtonStyle"
+               TargetType="Button"
+               BasedOn="{StaticResource GlassButtonStyle}">
+            <Setter Property="Background" Value="#D9B85C"/>
+            <Setter Property="Foreground" Value="#07130F"/>
+            <Setter Property="BorderBrush" Value="#F2DC91"/>
+            <Setter Property="Effect" Value="{StaticResource GoldGlowEffect}"/>
+        </Style>
+
+        <Style x:Key="DangerButtonStyle"
+               TargetType="Button"
+               BasedOn="{StaticResource GlassButtonStyle}">
+            <Setter Property="Background" Value="#7FDC2626"/>
+            <Setter Property="BorderBrush" Value="#F87171"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+
+        <Style x:Key="SpeedButtonStyle"
+               TargetType="Button"
+               BasedOn="{StaticResource GlassButtonStyle}">
+            <Setter Property="MinWidth" Value="58"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Padding" Value="8,0"/>
+        </Style>
+
+        <Style TargetType="Slider">
+            <Setter Property="Foreground" Value="#31D69B"/>
+            <Setter Property="Background" Value="#334B5563"/>
+            <Setter Property="Height" Value="24"/>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid Background="{DynamicResource MainBackgroundBrush}">
+
+        <Grid>
+            <Ellipse Width="360"
+                     Height="360"
+                     Fill="{DynamicResource HaytPrimaryLightBrush}"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Top"
+                     Margin="0,-150,-120,0"/>
+
+            <Ellipse Width="300"
+                     Height="300"
+                     Fill="{DynamicResource HaytAccentBrush}"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Bottom"
+                     Margin="-100,0,0,-120"/>
+        </Grid>
+
+        <Grid Margin="22">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Border Grid.Row="0"
+                    Background="{DynamicResource HaytSurfaceBrush}"
+                    BorderBrush="{DynamicResource HaytAccentBrush}"
+                    BorderThickness="1"
+                    CornerRadius="24"
+                    Padding="18"
+                    Margin="0,0,0,16"
+                    Effect="{StaticResource SoftGlowEffect}">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <TextBlock x:Name="TitleTextBlock"
+                                   Text="رسانه درس"
+                                   FontSize="24"
+                                   FontWeight="Bold"
+                                   Foreground="{DynamicResource GoldLightBrush}"/>
+
+                        <TextBlock x:Name="StatusTextBlock"
+                                   Text="در حال بررسی فایل‌های رسانه..."
+                                   Margin="0,8,0,0"
+                                   FontSize="14"
+                                   Foreground="{DynamicResource MutedTextBrush}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1"
+                                Orientation="Horizontal"
+                                VerticalAlignment="Center">
+
+                        <Border x:Name="VideoBadge"
+                                Background="{DynamicResource HaytPrimaryLightBrush}"
+                                BorderBrush="{DynamicResource HaytPrimaryLightBrush}"
+                                BorderThickness="1"
+                                CornerRadius="14"
+                                Padding="12,8"
+                                Margin="6,0">
+                            <TextBlock x:Name="VideoBadgeText"
+                                       Text="ویدئو"
+                                       Foreground="{DynamicResource WhiteTextBrush}"
+                                       FontWeight="SemiBold"/>
+                        </Border>
+
+                        <Border x:Name="AudioBadge"
+                                Background="{DynamicResource HaytPrimaryLightBrush}"
+                                BorderBrush="{DynamicResource HaytPrimaryLightBrush}"
+                                BorderThickness="1"
+                                CornerRadius="14"
+                                Padding="12,8"
+                                Margin="6,0">
+                            <TextBlock x:Name="AudioBadgeText"
+                                       Text="صوت"
+                                       Foreground="{DynamicResource WhiteTextBrush}"
+                                       FontWeight="SemiBold"/>
+                        </Border>
+
+                        <Border x:Name="PdfBadge"
+                                Background="{DynamicResource HaytPrimaryLightBrush}"
+                                BorderBrush="{DynamicResource HaytPrimaryLightBrush}"
+                                BorderThickness="1"
+                                CornerRadius="14"
+                                Padding="12,8"
+                                Margin="6,0">
+                            <TextBlock x:Name="PdfBadgeText"
+                                       Text="PDF"
+                                       Foreground="{DynamicResource WhiteTextBrush}"
+                                       FontWeight="SemiBold"/>
+                        </Border>
+
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Content -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Video Panel -->
+                <Border Grid.Column="0"
+                        Background="{DynamicResource HaytSurfaceBrush}"
+                        BorderBrush="{DynamicResource HaytAccentBrush}"
+                        BorderThickness="1"
+                        CornerRadius="24"
+                        Padding="16"
+                        Margin="0,0,14,0">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <DockPanel Grid.Row="0"
+                                   Margin="0,0,0,12">
+                            <TextBlock Text="🎬 پخش ویدئو"
+                                       FontSize="19"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource GoldLightBrush}"
+                                       DockPanel.Dock="Right"/>
+
+                            <TextBlock x:Name="VideoStateTextBlock"
+                                       Text="آماده"
+                                       FontSize="13"
+                                       Foreground="{DynamicResource MutedTextBrush}"
+                                       HorizontalAlignment="Left"
+                                       DockPanel.Dock="Left"/>
+                        </DockPanel>
+
+                        <Border Grid.Row="1"
+                                Background="{DynamicResource HaytBackgroundBrush}"
+                                BorderBrush="{DynamicResource HaytBorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="18"
+                                ClipToBounds="True">
+                            <Grid>
+                                <MediaElement x:Name="VideoPlayer"
+                                              LoadedBehavior="Manual"
+                                              UnloadedBehavior="Manual"
+                                              Stretch="Uniform"
+                                              ScrubbingEnabled="True"
+                                              MediaOpened="VideoPlayer_MediaOpened"
+                                              MediaEnded="VideoPlayer_MediaEnded"
+                                              MediaFailed="VideoPlayer_MediaFailed"/>
+
+                                <TextBlock x:Name="VideoEmptyTextBlock"
+                                           Text="برای این درس ویدئو پیدا نشد"
+                                           Foreground="{DynamicResource HaytMutedTextBrush}"
+                                           FontSize="18"
+                                           FontWeight="SemiBold"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+
+                        <StackPanel Grid.Row="2"
+                                    Margin="0,14,0,0">
+
+                            <Grid Margin="0,0,0,6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock x:Name="CurrentTimeTextBlock"
+                                           Grid.Column="0"
+                                           Text="۰۰:۰۰"
+                                           Foreground="{DynamicResource MutedTextBrush}"
+                                           VerticalAlignment="Center"
+                                           Margin="0,0,8,0"/>
+
+                                <Slider x:Name="PositionSlider"
+                                        Grid.Column="1"
+                                        Minimum="0"
+                                        Maximum="1"
+                                        Value="0"
+                                        PreviewMouseDown="PositionSlider_PreviewMouseDown"
+                                        PreviewMouseUp="PositionSlider_PreviewMouseUp"
+                                        ValueChanged="PositionSlider_ValueChanged"/>
+
+                                <TextBlock x:Name="DurationTimeTextBlock"
+                                           Grid.Column="2"
+                                           Text="۰۰:۰۰"
+                                           Foreground="{DynamicResource MutedTextBrush}"
+                                           VerticalAlignment="Center"
+                                           Margin="8,0,0,0"/>
+                            </Grid>
+
+                            <WrapPanel HorizontalAlignment="Center">
+                                <Button x:Name="PlayPauseVideoButton"
+                                        Content="▶ پخش"
+                                        Style="{StaticResource PrimaryButtonStyle}"
+                                        Click="PlayPauseVideoButton_Click"/>
+
+                                <Button x:Name="StopVideoButton"
+                                        Content="■ توقف"
+                                        Style="{StaticResource GlassButtonStyle}"
+                                        Click="StopVideoButton_Click"/>
+
+                                <Button x:Name="BackVideoButton"
+                                        Content="⏪ ۱۰ث"
+                                        Style="{StaticResource GlassButtonStyle}"
+                                        Click="BackVideoButton_Click"/>
+
+                                <Button x:Name="ForwardVideoButton"
+                                        Content="۱۰ث ⏩"
+                                        Style="{StaticResource GlassButtonStyle}"
+                                        Click="ForwardVideoButton_Click"/>
+
+                                <Button x:Name="RestartVideoButton"
+                                        Content="↺ از اول"
+                                        Style="{StaticResource GlassButtonStyle}"
+                                        Click="RestartVideoButton_Click"/>
+                            </WrapPanel>
+
+                            <Grid Margin="0,12,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Column="0"
+                                           Text="صدا"
+                                           Foreground="{DynamicResource MutedTextBrush}"
+                                           VerticalAlignment="Center"
+                                           Margin="0,0,8,0"/>
+
+                                <Slider x:Name="VolumeSlider"
+                                        Grid.Column="1"
+                                        Minimum="0"
+                                        Maximum="1"
+                                        Value="0.75"
+                                        ValueChanged="VolumeSlider_ValueChanged"/>
+
+                                <TextBlock Grid.Column="2"
+                                           Text="سرعت"
+                                           Foreground="{DynamicResource MutedTextBrush}"
+                                           VerticalAlignment="Center"
+                                           Margin="18,0,8,0"/>
+
+                                <WrapPanel Grid.Column="3">
+                                    <Button Content="0.5x"
+                                            Style="{StaticResource SpeedButtonStyle}"
+                                            Click="Speed05Button_Click"/>
+                                    <Button Content="1x"
+                                            Style="{StaticResource SpeedButtonStyle}"
+                                            Click="Speed1Button_Click"/>
+                                    <Button Content="1.25x"
+                                            Style="{StaticResource SpeedButtonStyle}"
+                                            Click="Speed125Button_Click"/>
+                                    <Button Content="1.5x"
+                                            Style="{StaticResource SpeedButtonStyle}"
+                                            Click="Speed15Button_Click"/>
+                                    <Button Content="2x"
+                                            Style="{StaticResource SpeedButtonStyle}"
+                                            Click="Speed2Button_Click"/>
+                                </WrapPanel>
+                            </Grid>
+
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Right Panel -->
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.1*"/>
+                        <RowDefinition Height="0.9*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Audio -->
+                    <Border Grid.Row="0"
+                            Background="{DynamicResource HaytSurfaceBrush}"
+                            BorderBrush="{DynamicResource HaytAccentBrush}"
+                            BorderThickness="1"
+                            CornerRadius="24"
+                            Padding="16"
+                            Margin="0,0,0,14">
+
+                        <StackPanel>
+                            <TextBlock Text="🎧 پخش صوت"
+                                       FontSize="19"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource GoldLightBrush}"
+                                       Margin="0,0,0,8"/>
+
+                            <TextBlock x:Name="AudioStateTextBlock"
+                                       Text="آماده"
+                                       FontSize="13"
+                                       Foreground="{DynamicResource MutedTextBrush}"
+                                       Margin="0,0,0,14"/>
+
+                            <MediaElement x:Name="AudioPlayer"
+                                          LoadedBehavior="Manual"
+                                          UnloadedBehavior="Manual"
+                                          Height="0"
+                                          ScrubbingEnabled="True"
+                                          MediaOpened="AudioPlayer_MediaOpened"
+                                          MediaEnded="AudioPlayer_MediaEnded"
+                                          MediaFailed="AudioPlayer_MediaFailed"/>
+
+                            <Border Background="{DynamicResource HaytBorderBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="18"
+                                    Padding="18"
+                                    Margin="0,0,0,12">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <TextBlock Text="♪"
+                                               FontSize="52"
+                                               Foreground="{DynamicResource GreenBrush}"
+                                               HorizontalAlignment="Center"
+                                               Effect="{StaticResource SoftGlowEffect}"/>
+
+                                    <TextBlock x:Name="AudioTitleTextBlock"
+                                               Text="فایل صوتی"
+                                               TextWrapping="Wrap"
+                                               TextAlignment="Center"
+                                               Foreground="{DynamicResource WhiteTextBrush}"
+                                               FontWeight="SemiBold"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Grid Margin="0,0,0,8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock x:Name="AudioCurrentTimeTextBlock"
+                                           Grid.Column="0"
+                                           Text="۰۰:۰۰"
+                                           Foreground="{DynamicResource MutedTextBrush}"
+                                           VerticalAlignment="Center"
+                                           Margin="0,0,8,0"/>
+
+                                <Slider x:Name="AudioPositionSlider"
+                                        Grid.Column="1"
+                                        Minimum="0"
+                                        Maximum="1"
+                                        Value="0"
+                                        PreviewMouseDown="AudioPositionSlider_PreviewMouseDown"
+                                        PreviewMouseUp="AudioPositionSlider_PreviewMouseUp"
+                                        ValueChanged="AudioPositionSlider_ValueChanged"/>
+
+                                <TextBlock x:Name="AudioDurationTimeTextBlock"
+                                           Grid.Column="2"
+                                           Text="۰۰:۰۰"
+                                           Foreground="{DynamicResource MutedTextBrush}"
+                                           VerticalAlignment="Center"
+                                           Margin="8,0,0,0"/>
+                            </Grid>
+
+                            <WrapPanel HorizontalAlignment="Center">
+                                <Button x:Name="PlayPauseAudioButton"
+                                        Content="▶ صوت"
+                                        Style="{StaticResource PrimaryButtonStyle}"
+                                        Click="PlayPauseAudioButton_Click"/>
+
+                                <Button x:Name="StopAudioButton"
+                                        Content="■ توقف"
+                                        Style="{StaticResource GlassButtonStyle}"
+                                        Click="StopAudioButton_Click"/>
+
+                                <Button x:Name="RestartAudioButton"
+                                        Content="↺ از اول"
+                                        Style="{StaticResource GlassButtonStyle}"
+                                        Click="RestartAudioButton_Click"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- PDF -->
+                    <Border Grid.Row="1"
+                            Background="{DynamicResource HaytSurfaceBrush}"
+                            BorderBrush="{DynamicResource HaytAccentBrush}"
+                            BorderThickness="1"
+                            CornerRadius="24"
+                            Padding="16">
+
+                        <StackPanel>
+                            <TextBlock Text="📄 فایل PDF"
+                                       FontSize="19"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource GoldLightBrush}"
+                                       Margin="0,0,0,8"/>
+
+                            <TextBlock x:Name="PdfStatusTextBlock"
+                                       Text="نمایش PDF فعلاً با برنامه پیش‌فرض ویندوز انجام می‌شود."
+                                       TextWrapping="Wrap"
+                                       FontSize="14"
+                                       LineHeight="24"
+                                       Foreground="{DynamicResource MutedTextBrush}"
+                                       Margin="0,0,0,16"/>
+                <Border Background="{DynamicResource HaytSurfaceBrush}"
+                        BorderBrush="{DynamicResource HaytBorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="14"
+                        Height="300"
+                        Margin="0,10,0,10"
+                        ClipToBounds="True">
+                    <Grid>
+                        <wv2:WebView2 x:Name="PdfWebView"
+                                      Visibility="Collapsed"/>
+
+                        <TextBlock x:Name="PdfWebViewFallbackTextBlock"
+                                   Text="نمایش داخلی PDF آماده نیست. اگر WebView2 Runtime نصب نباشد، از دکمه باز کردن PDF استفاده کنید."
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Foreground="{DynamicResource HaytMutedTextBrush}"
+                                   FontSize="13"
+                                   Margin="24"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Grid>
+                </Border>
+
+                            <Button x:Name="OpenPdfButton"
+                                    Content="باز کردن PDF"
+                                    Style="{StaticResource PrimaryButtonStyle}"
+                                    HorizontalAlignment="Stretch"
+                                    Click="OpenPdfButton_Click"/>
+
+                            <Button x:Name="OpenPdfFolderButton"
+                                    Content="باز کردن پوشه PDF"
+                                    Style="{StaticResource GlassButtonStyle}"
+                                    HorizontalAlignment="Stretch"
+                                    Click="OpenPdfFolderButton_Click"/>
+
+                            <TextBlock Text="در مرحله بعد می‌توانیم نمایش داخلی PDF را با WebView2 اضافه کنیم."
+                                       TextWrapping="Wrap"
+                                       FontSize="12"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"
+                                       Margin="0,14,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Grid>
+
+            <!-- Footer -->
+            <Border Grid.Row="2"
+                    Background="{DynamicResource HaytSurfaceBrush}"
+                    BorderBrush="{DynamicResource HaytAccentBrush}"
+                    BorderThickness="1"
+                    CornerRadius="20"
+                    Padding="12"
+                    Margin="0,16,0,0">
+
+                <DockPanel LastChildFill="False">
+                    <TextBlock x:Name="FooterStatusTextBlock"
+                               Text="آماده"
+                               DockPanel.Dock="Right"
+                               Foreground="{DynamicResource MutedTextBrush}"
+                               VerticalAlignment="Center"
+                               FontSize="13"/>
+
+                    <Button Content="بستن"
+                            DockPanel.Dock="Left"
+                            Style="{StaticResource DangerButtonStyle}"
+                            Width="110"
+                            Click="CloseButton_Click"/>
+                </DockPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
+

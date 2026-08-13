@@ -1,0 +1,908 @@
+﻿<Window x:Class="Hayt.MainWindow" x:Name="RootWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:Hayt" Title="اندیشکده حیات طیبه" Width="1400" Height="860" MinWidth="1120" MinHeight="700" WindowStartupLocation="CenterScreen" FlowDirection="RightToLeft" Background="{DynamicResource HaytBackgroundBrush}" Foreground="{DynamicResource HaytTextBrush}" FontFamily="{DynamicResource HaytFontFamily}" UseLayoutRounding="True" SnapsToDevicePixels="True">
+
+    <Window.Resources>
+
+        <!-- ======================================================
+             ابزارها
+             ====================================================== -->
+
+        <local:CategoryBooksConverter x:Key="CategoryBooksConverter" />
+
+        <DropShadowEffect x:Key="SoftShadow" BlurRadius="26" ShadowDepth="5" Direction="270" Color="#24000000" Opacity="0.34" />
+
+        <DropShadowEffect x:Key="PopupShadow" BlurRadius="38" ShadowDepth="10" Direction="270" Color="#50000000" Opacity="0.45" />
+
+        <DropShadowEffect x:Key="AccentGlow" BlurRadius="20" ShadowDepth="0" Color="#5514B8A6" Opacity="0.72" />
+
+        <LinearGradientBrush x:Key="MainHeaderGradient" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#071F20" Offset="0" />
+            <GradientStop Color="#0B3D3D" Offset="0.48" />
+            <GradientStop Color="#0D756D" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="PrimaryActionGradient" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#12B8A6" Offset="0" />
+            <GradientStop Color="#0B7E78" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="GoldActionGradient" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#F8D36A" Offset="0" />
+            <GradientStop Color="#E9A72E" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="DangerActionGradient" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#F87171" Offset="0" />
+            <GradientStop Color="#C2413A" Offset="1" />
+        </LinearGradientBrush>
+
+        <!-- ======================================================
+             کارت‌ها
+             ====================================================== -->
+
+        <Style x:Key="ModernCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="{DynamicResource HaytSurfaceBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource HaytBorderBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="22" />
+            <Setter Property="Padding" Value="18" />
+            <Setter Property="Effect" Value="{StaticResource SoftShadow}" />
+        </Style>
+
+        <Style x:Key="InnerCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="{DynamicResource HaytBackgroundBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource HaytBorderBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="14" />
+            <Setter Property="Padding" Value="12" />
+        </Style>
+
+        <!-- ======================================================
+             متن‌ها
+             ====================================================== -->
+
+        <Style x:Key="PageTitleStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource HaytTextBrush}" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+        </Style>
+
+        <Style x:Key="CardTitleStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource HaytTextBrush}" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+        </Style>
+
+        <Style x:Key="MutedTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource HaytMutedTextBrush}" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+        </Style>
+
+        <Style x:Key="FieldLabelStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource HaytMutedTextBrush}" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Margin" Value="3,8,3,4" />
+        </Style>
+
+        <!-- ======================================================
+             دکمه مدرن با انیمیشن Hover
+             ====================================================== -->
+
+        <Style x:Key="ModernButtonStyle" TargetType="{x:Type Button}">
+    <Setter Property="MinHeight" Value="42" />
+    <Setter Property="MinWidth" Value="100" />
+    <Setter Property="Padding" Value="16,8" />
+    <Setter Property="Margin" Value="4" />
+    <Setter Property="Foreground" Value="White" />
+    <Setter Property="Background" Value="{StaticResource PrimaryActionGradient}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource HaytPrimaryLightBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="FontSize" Value="13" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="{x:Type Button}">
+                <Grid x:Name="Root" RenderTransformOrigin="0.5,0.5">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                            <TranslateTransform Y="0" />
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <Border x:Name="ButtonShadow" Margin="2,5,2,0" CornerRadius="12" Background="#25000000" />
+                    <Border x:Name="ButtonBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="12" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+                    </Border>
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter TargetName="ButtonBorder" Property="Effect" Value="{StaticResource AccentGlow}" />
+                        <Trigger.EnterActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" To="1.025" Duration="0:0:0.15" />
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" To="1.025" Duration="0:0:0.15" />
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(TranslateTransform.Y)" To="-2" Duration="0:0:0.15" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </Trigger.EnterActions>
+                        <Trigger.ExitActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" To="1" Duration="0:0:0.18" />
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" To="1" Duration="0:0:0.18" />
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(TranslateTransform.Y)" To="0" Duration="0:0:0.18" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </Trigger.ExitActions>
+                    </Trigger>
+                    <Trigger Property="IsPressed" Value="True">
+                        <Setter TargetName="ButtonShadow" Property="Opacity" Value="0.35" />
+                        <Trigger.EnterActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" To="0.97" Duration="0:0:0.06" />
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" To="0.97" Duration="0:0:0.06" />
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(TranslateTransform.Y)" To="1" Duration="0:0:0.06" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </Trigger.EnterActions>
+                        <Trigger.ExitActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" To="1" Duration="0:0:0.12" />
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" To="1" Duration="0:0:0.12" />
+                                    <DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(TranslateTransform.Y)" To="0" Duration="0:0:0.12" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </Trigger.ExitActions>
+                    </Trigger>
+                    <Trigger Property="IsKeyboardFocused" Value="True">
+                        <Setter TargetName="ButtonBorder" Property="BorderBrush" Value="{DynamicResource HaytAccentLightBrush}" />
+                        <Setter TargetName="ButtonBorder" Property="BorderThickness" Value="2" />
+                    </Trigger>
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter TargetName="Root" Property="Opacity" Value="0.42" />
+                        <Setter Property="Cursor" Value="Arrow" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+
+        <Style x:Key="SecondaryButtonStyle" TargetType="Button" BasedOn="{StaticResource ModernButtonStyle}">
+            <Setter Property="Background" Value="{DynamicResource HaytSurfaceBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource HaytTextBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource HaytBorderBrush}" />
+        </Style>
+
+        <Style x:Key="GoldButtonStyle" TargetType="Button" BasedOn="{StaticResource ModernButtonStyle}">
+            <Setter Property="Background" Value="{StaticResource GoldActionGradient}" />
+            <Setter Property="Foreground" Value="#2B2414" />
+            <Setter Property="BorderBrush" Value="#FFE49A" />
+        </Style>
+
+        <Style x:Key="CompactButtonStyle" TargetType="Button" BasedOn="{StaticResource ModernButtonStyle}">
+            <Setter Property="MinWidth" Value="38" />
+            <Setter Property="MinHeight" Value="38" />
+            <Setter Property="Padding" Value="9,5" />
+            <Setter Property="Margin" Value="3" />
+        </Style>
+
+        <Style x:Key="NavigationButtonStyle" TargetType="Button" BasedOn="{StaticResource ModernButtonStyle}">
+            <Setter Property="MinWidth" Value="125" />
+            <Setter Property="MinHeight" Value="44" />
+        </Style>
+
+        <Style x:Key="SidebarActionButtonStyle" TargetType="Button" BasedOn="{StaticResource SecondaryButtonStyle}">
+            <Setter Property="HorizontalContentAlignment" Value="Right" />
+            <Setter Property="MinHeight" Value="44" />
+            <Setter Property="Margin" Value="0,4" />
+            <Setter Property="Padding" Value="13,8" />
+        </Style>
+
+        <!-- ======================================================
+             ComboBox
+             ====================================================== -->
+
+        <Style x:Key="ModernComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="MinHeight" Value="42" />
+            <Setter Property="Padding" Value="10,5" />
+            <Setter Property="Margin" Value="0,0,0,4" />
+            <Setter Property="Foreground" Value="{DynamicResource HaytTextBrush}" />
+            <Setter Property="Background" Value="{DynamicResource HaytBackgroundBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource HaytBorderBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+
+        <!-- ======================================================
+             ListBox
+             ====================================================== -->
+
+        <Style x:Key="QuestionItemStyle" TargetType="{x:Type ListBoxItem}">
+    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="Margin" Value="0,3" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                <Border x:Name="QuestionContainer" Margin="0" Padding="12" Background="{DynamicResource HaytBackgroundBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1" CornerRadius="13" RenderTransformOrigin="0.5,0.5">
+                    <Border.RenderTransform>
+                        <TranslateTransform X="0" />
+                    </Border.RenderTransform>
+                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </Border>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter TargetName="QuestionContainer" Property="BorderBrush" Value="{DynamicResource HaytAccentBrush}" />
+                        <Setter TargetName="QuestionContainer" Property="Background" Value="{DynamicResource HaytSurfaceBrush}" />
+                        <Trigger.EnterActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="QuestionContainer" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" To="-3" Duration="0:0:0.14" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </Trigger.EnterActions>
+                        <Trigger.ExitActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="QuestionContainer" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" To="0" Duration="0:0:0.16" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </Trigger.ExitActions>
+                    </Trigger>
+                    <Trigger Property="IsSelected" Value="True">
+                        <Setter TargetName="QuestionContainer" Property="Background" Value="{DynamicResource HaytPrimaryBrush}" />
+                        <Setter TargetName="QuestionContainer" Property="BorderBrush" Value="{DynamicResource HaytAccentLightBrush}" />
+                    </Trigger>
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter TargetName="QuestionContainer" Property="Opacity" Value="0.45" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+
+        <!-- ======================================================
+             درخت آموزشی
+             ====================================================== -->
+
+        <Style x:Key="EducationTreeItemStyle" TargetType="TreeViewItem">
+            <Setter Property="IsExpanded" Value="False" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Margin" Value="0,2" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="FontSize" Value="12" />
+
+            <EventSetter Event="PreviewMouseLeftButtonDown" Handler="EducationTreeItem_PreviewMouseLeftButtonDown" />
+            <EventSetter Event="MouseEnter" Handler="EducationTreeItem_MouseEnter" />
+            <EventSetter Event="Selected" Handler="EducationTreeItem_Selected" />
+        </Style>
+
+        <DataTemplate x:Key="LessonTemplate">
+            <Border x:Name="LessonBorder" Margin="22,2,2,2" Padding="10,7" MinHeight="34" CornerRadius="10" Background="{DynamicResource HaytBackgroundBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0" Width="27" Height="27" Margin="0,0,8,0" CornerRadius="8" Background="{DynamicResource HaytSurfaceBrush}">
+                        <TextBlock Text="◈" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource HaytAccentBrush}" FontSize="12" />
+                    </Border>
+
+                    <TextBlock Grid.Column="1" Text="{Binding Title}" VerticalAlignment="Center" Foreground="{DynamicResource HaytTextBrush}" FontSize="12" TextTrimming="CharacterEllipsis" />
+                </Grid>
+            </Border>
+
+            <DataTemplate.Triggers>
+                <Trigger SourceName="LessonBorder" Property="IsMouseOver" Value="True">
+                    <Setter TargetName="LessonBorder" Property="BorderBrush" Value="{DynamicResource HaytAccentBrush}" />
+                    <Setter TargetName="LessonBorder" Property="Background" Value="{DynamicResource HaytSurfaceBrush}" />
+                </Trigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+
+        <HierarchicalDataTemplate x:Key="ChapterTemplate" ItemsSource="{Binding Lessons}" ItemTemplate="{StaticResource LessonTemplate}">
+            <Border x:Name="ChapterBorder" Margin="16,2,2,2" Padding="10,7" MinHeight="36" CornerRadius="11" Background="{DynamicResource HaytBackgroundBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="▤" Margin="0,0,8,0" VerticalAlignment="Center" Foreground="{DynamicResource HaytAccentBrush}" FontSize="15" />
+
+                    <TextBlock Grid.Column="1" Text="{Binding Title}" VerticalAlignment="Center" Foreground="{DynamicResource HaytTextBrush}" FontWeight="SemiBold" FontSize="12" TextTrimming="CharacterEllipsis" />
+                </Grid>
+            </Border>
+
+            <HierarchicalDataTemplate.Triggers>
+                <Trigger SourceName="ChapterBorder" Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ChapterBorder" Property="BorderBrush" Value="{DynamicResource HaytAccentBrush}" />
+                    <Setter TargetName="ChapterBorder" Property="Background" Value="{DynamicResource HaytSurfaceBrush}" />
+                </Trigger>
+            </HierarchicalDataTemplate.Triggers>
+        </HierarchicalDataTemplate>
+
+        <HierarchicalDataTemplate x:Key="SectionTemplate" ItemsSource="{Binding Chapters}" ItemTemplate="{StaticResource ChapterTemplate}">
+            <Border x:Name="SectionBorder" Margin="10,2,2,2" Padding="10,8" MinHeight="38" CornerRadius="12" Background="{DynamicResource HaytBackgroundBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="▰" Margin="0,0,8,0" VerticalAlignment="Center" Foreground="{DynamicResource HaytPrimaryLightBrush}" FontSize="14" />
+
+                    <TextBlock Grid.Column="1" Text="{Binding Title}" VerticalAlignment="Center" Foreground="{DynamicResource HaytTextBrush}" FontWeight="SemiBold" FontSize="12" TextTrimming="CharacterEllipsis" />
+                </Grid>
+            </Border>
+
+            <HierarchicalDataTemplate.Triggers>
+                <Trigger SourceName="SectionBorder" Property="IsMouseOver" Value="True">
+                    <Setter TargetName="SectionBorder" Property="BorderBrush" Value="{DynamicResource HaytAccentBrush}" />
+                    <Setter TargetName="SectionBorder" Property="Background" Value="{DynamicResource HaytSurfaceBrush}" />
+                </Trigger>
+            </HierarchicalDataTemplate.Triggers>
+        </HierarchicalDataTemplate>
+
+        <HierarchicalDataTemplate x:Key="BookTreeTemplate" ItemsSource="{Binding Sections}" ItemTemplate="{StaticResource SectionTemplate}">
+            <Border x:Name="BookBorder" Margin="4,3,2,3" Padding="11,9" MinHeight="42" CornerRadius="13" Background="{DynamicResource HaytBackgroundBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0" Width="30" Height="30" Margin="0,0,9,0" CornerRadius="9" Background="{DynamicResource HaytSurfaceBrush}">
+                        <TextBlock Text="▥" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource HaytAccentBrush}" FontSize="15" />
+                    </Border>
+
+                    <TextBlock Grid.Column="1" Text="{Binding Title}" VerticalAlignment="Center" Foreground="{DynamicResource HaytTextBrush}" FontWeight="Bold" FontSize="13" TextTrimming="CharacterEllipsis" />
+                </Grid>
+            </Border>
+
+            <HierarchicalDataTemplate.Triggers>
+                <Trigger SourceName="BookBorder" Property="IsMouseOver" Value="True">
+                    <Setter TargetName="BookBorder" Property="BorderBrush" Value="{DynamicResource HaytAccentBrush}" />
+                    <Setter TargetName="BookBorder" Property="Background" Value="{DynamicResource HaytSurfaceBrush}" />
+                </Trigger>
+            </HierarchicalDataTemplate.Triggers>
+        </HierarchicalDataTemplate>
+
+        <HierarchicalDataTemplate x:Key="CategoryTreeTemplate" ItemTemplate="{StaticResource BookTreeTemplate}">
+            <HierarchicalDataTemplate.ItemsSource>
+                <MultiBinding Converter="{StaticResource CategoryBooksConverter}">
+                    <Binding />
+                    <Binding Path="DataContext.Books" RelativeSource="{RelativeSource AncestorType={x:Type TreeView}}" />
+                </MultiBinding>
+            </HierarchicalDataTemplate.ItemsSource>
+
+            <Border x:Name="CategoryBorder" Margin="0,4" Padding="12,10" MinHeight="54" CornerRadius="15" Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0" Width="38" Height="38" Margin="0,0,10,0" CornerRadius="12" Background="{DynamicResource HaytBackgroundBrush}">
+                        <TextBlock Text="{Binding Icon}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" />
+                    </Border>
+
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Title}" Foreground="{DynamicResource HaytTextBrush}" FontSize="13" FontWeight="Bold" TextTrimming="CharacterEllipsis" />
+
+                        <TextBlock Text="{Binding Description}" Margin="0,3,0,0" MaxHeight="32" Foreground="{DynamicResource HaytMutedTextBrush}" FontSize="10" TextTrimming="CharacterEllipsis" />
+                    </StackPanel>
+
+                    <TextBlock Grid.Column="2" Text="‹" Margin="8,0,0,0" VerticalAlignment="Center" Foreground="{DynamicResource HaytAccentBrush}" FontSize="22" FontWeight="Light" />
+                </Grid>
+            </Border>
+
+            <HierarchicalDataTemplate.Triggers>
+                <Trigger SourceName="CategoryBorder" Property="IsMouseOver" Value="True">
+                    <Setter TargetName="CategoryBorder" Property="BorderBrush" Value="{DynamicResource HaytAccentBrush}" />
+                    <Setter TargetName="CategoryBorder" Property="Effect" Value="{StaticResource AccentGlow}" />
+                </Trigger>
+            </HierarchicalDataTemplate.Triggers>
+        </HierarchicalDataTemplate>
+
+    </Window.Resources>
+
+    <!-- ==========================================================
+         ساختار اصلی
+         ========================================================== -->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="86" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="48" />
+        </Grid.RowDefinitions>
+
+        <!-- هاله‌های تزئینی پس‌زمینه -->
+
+        <Ellipse Grid.RowSpan="3" Width="470" Height="470" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-220,-230,0,0" Fill="{DynamicResource HaytAccentBrush}" Opacity="0.055" IsHitTestVisible="False" />
+
+        <Ellipse Grid.RowSpan="3" Width="380" Height="380" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,-190,-210" Fill="{DynamicResource HaytPrimaryLightBrush}" Opacity="0.05" IsHitTestVisible="False" />
+
+        <!-- ======================================================
+             سربرگ
+             ====================================================== -->
+
+        
+        <!-- ======================================================
+             دکمه منوی اصلی
+             ====================================================== -->
+
+        <Button x:Name="MainMenuButton" Content="☰  منو" Grid.Row="0" Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16,0,0,0" Padding="18,10" FontSize="15" FontWeight="SemiBold" Background="{DynamicResource HaytSurfaceBrush}" Foreground="{DynamicResource HaytTextBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1" Cursor="Hand" Click="MainMenuButton_Click" ToolTip="باز و بسته کردن منوی اصلی">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="12" Padding="{TemplateBinding Padding}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="Bd" Property="Background" Value="{DynamicResource HaytAccentBrush}" />
+                                        <Setter TargetName="Bd" Property="BorderBrush" Value="{DynamicResource HaytAccentBrush}" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter TargetName="Bd" Property="Opacity" Value="0.8" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button><Border Grid.Row="0" Margin="14,12,14,0" Padding="20,10" CornerRadius="22" Background="{StaticResource MainHeaderGradient}" Effect="{StaticResource SoftShadow}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Panel.ZIndex="1">
+                    <StackPanel Orientation="Horizontal">
+                        <Border Width="46" Height="46" Margin="0,0,12,0" CornerRadius="15" Background="#20FFFFFF" BorderBrush="#36FFFFFF" BorderThickness="1">
+                            <TextBlock Text="ح" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="24" FontWeight="Bold" />
+                        </Border>
+
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
+                            <TextBlock Text="اندیشکده حیات طیبه" Foreground="White" FontSize="23" FontWeight="Bold" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="NoWrap" />
+
+                            <TextBlock Text="کانون فرهنگی تبلیغی مرصاد قم" Margin="0,3,0,0" Foreground="#CDE7E4" FontSize="12" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" TextWrapping="NoWrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+
+                    <Border Margin="4" Padding="12,7" CornerRadius="13" Background="#16FFFFFF" BorderBrush="#30FFFFFF" BorderThickness="1">
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Width="8" Height="8" Margin="0,0,7,0" VerticalAlignment="Center" Fill="#4ADE80" />
+                            <TextBlock Text="{Binding OfflineStatus}" VerticalAlignment="Center" Foreground="#E4F3F1" FontSize="12" />
+                        </StackPanel>
+                    </Border>
+
+                    <Border Margin="4" Padding="12,7" CornerRadius="13" Background="#16FFFFFF" BorderBrush="#30FFFFFF" BorderThickness="1">
+                        <TextBlock Text="{Binding CurrentUserDisplayName}" Foreground="White" FontSize="12" FontWeight="SemiBold" />
+                    </Border>
+
+                    <Button Width="44" Height="42" MinWidth="44" Margin="4" Padding="0" Content="◐" ToolTip="تغییر پوسته" Style="{StaticResource SecondaryButtonStyle}" Click="ThemeToggleButton_Click" />
+
+                    <Button Content="↻  به‌روزرسانی" Command="{Binding RefreshCommand}" Style="{StaticResource GoldButtonStyle}" MinWidth="125" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- ======================================================
+             محتوای اصلی
+             ====================================================== -->
+
+        
+        <!-- ======================================================
+             منوی اصلی (کشویی)
+             ====================================================== -->
+
+        <Border x:Name="MainMenuPanel" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,14,0,0" Padding="0" CornerRadius="16" Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1" Visibility="Collapsed" Panel.ZIndex="100" MinWidth="240">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" ShadowDepth="8" Direction="270" Color="#40000000" Opacity="0.5" />
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="منوی اصلی" FontSize="16" FontWeight="Bold" Foreground="{DynamicResource HaytAccentBrush}" Margin="16,14,16,8" />
+                <Separator Margin="12,0,12,8" Background="{DynamicResource HaytBorderBrush}" />
+                <StackPanel x:Name="SmartSidebarRootV3" Margin="7,8,7,12">
+
+    <TextBlock Text="مرکز فرمان" Margin="13,8,13,8" FontSize="11" FontWeight="Bold" Opacity="0.65" Foreground="{DynamicResource HaytTextBrush}" />
+
+    <Button Content="🏠  داشبورد" Click="DashboardButton_Click" Style="{StaticResource SidebarActionButtonStyle}" Margin="8,3" ToolTip="بازگشت به داشبورد اصلی" />
+
+    <Expander Margin="8,4" ToolTip="برای نمایش گزینه‌های آموزشی، نشانگر را نگه دارید" x:Name="EducationHoverExpander" MouseEnter="SidebarHoverExpander_MouseEnter" MouseLeave="SidebarHoverExpander_MouseLeave" IsExpanded="False">
+
+        <Expander.Header>
+            <TextBlock Text="📚  آموزش و کتاب‌ها" FontWeight="SemiBold" Foreground="{DynamicResource HaytTextBrush}" />
+        </Expander.Header>
+
+        <Border Margin="5,7,5,3" Padding="7" CornerRadius="12" Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1">
+
+            <StackPanel>
+                <Button Content="📖  کتاب‌ها و درس‌ها" Click="MainMenuButton_Click" Style="{StaticResource SidebarActionButtonStyle}" Margin="2" />
+
+                <Button Content="✦  اجرای تمرین" Command="{Binding ExerciseCommand}" Style="{StaticResource SidebarActionButtonStyle}" Margin="2" />
+
+                <Button Content="▶  رسانه آموزشی" Command="{Binding MediaCommand}" Style="{StaticResource SidebarActionButtonStyle}" Margin="2" />
+
+                <Button Content="درس بعدی  ›" Command="{Binding NextLessonCommand}" Style="{StaticResource SidebarActionButtonStyle}" Margin="2" />
+            </StackPanel>
+        </Border>
+    </Expander>
+
+    <Expander Margin="8,4" ToolTip="برای نمایش گزارش‌ها، نشانگر را نگه دارید" x:Name="ReportsHoverExpander" MouseEnter="SidebarHoverExpander_MouseEnter" MouseLeave="SidebarHoverExpander_MouseLeave" IsExpanded="False">
+
+        <Expander.Header>
+            <TextBlock Text="📊  رشد و گزارش‌ها" FontWeight="SemiBold" Foreground="{DynamicResource HaytTextBrush}" />
+        </Expander.Header>
+
+        <Border Margin="5,7,5,3" Padding="7" CornerRadius="12" Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1">
+
+            <StackPanel>
+                <Button Content="📊  گزارش پیشرفت" Command="{Binding ProgressReportCommand}" Style="{StaticResource SidebarActionButtonStyle}" Margin="2" />
+
+                <Button Content="↻  شروع دوباره درس" Command="{Binding RestartCommand}" Style="{StaticResource SidebarActionButtonStyle}" Margin="2" />
+
+                <Button Content="▥  داشبورد" Click="DashboardButton_Click" Style="{StaticResource SidebarActionButtonStyle}" Margin="2" />
+            </StackPanel>
+        </Border>
+    </Expander>
+
+    <Expander Margin="8,4" ToolTip="برای نمایش حساب و تنظیمات، نشانگر را نگه دارید" x:Name="AccountHoverExpander" MouseEnter="SidebarHoverExpander_MouseEnter" MouseLeave="SidebarHoverExpander_MouseLeave" IsExpanded="False">
+
+        <Expander.Header>
+            <TextBlock Text="👤  حساب کاربری" FontWeight="SemiBold" Foreground="{DynamicResource HaytTextBrush}" />
+        </Expander.Header>
+
+        <Border Margin="5,7,5,3" Padding="7" CornerRadius="12" Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1">
+
+            <StackPanel>
+                <Button Content="👤  پروفایل من" Command="{Binding ProfileCommand}" Style="{StaticResource SidebarActionButtonStyle}" Margin="2" />
+
+                <Button Content="⇄  تغییر کاربر" Command="{Binding ChangeUserCommand}" Style="{StaticResource SidebarActionButtonStyle}" Margin="2" />
+
+                <Button Content="＋  ورود و مدیریت کتاب" Command="{Binding ManageCommand}" Style="{StaticResource SidebarActionButtonStyle}" Margin="2" />
+
+                <Button Content="⚙️  تنظیمات" Click="MainMenuButton_Click" Style="{StaticResource SidebarActionButtonStyle}" Margin="2" />
+            </StackPanel>
+        </Border>
+    </Expander>
+
+    <Button Content="✖  بستن منو" Click="MainMenuButton_Click" Style="{StaticResource SidebarActionButtonStyle}" Margin="8,18,8,4" Opacity="0.78" ToolTip="بستن منوی اصلی" />
+
+</StackPanel>
+            </StackPanel>
+        </Border><Grid Grid.Row="1" Margin="14,14,14,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="292" />
+                <ColumnDefinition Width="14" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="14" />
+                <ColumnDefinition Width="300" />
+            </Grid.ColumnDefinitions>
+
+            <!-- ==================================================
+                 مسیر آموزشی
+                 ================================================== -->
+
+            <Border Grid.Column="0" Style="{StaticResource ModernCardStyle}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <Grid Margin="0,0,0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="مسیر آموزشی" Style="{StaticResource CardTitleStyle}" />
+                                <TextBlock Text="مسیر مطالعه را هوشمندانه انتخاب کنید" Margin="0,4,0,0" Style="{StaticResource MutedTextStyle}" />
+                            </StackPanel>
+
+                            <Border Grid.Column="1" Width="44" Height="44" CornerRadius="14" Background="{DynamicResource HaytBackgroundBrush}">
+                                <TextBlock Text="⌘" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource HaytAccentBrush}" FontSize="21" />
+                            </Border>
+                        </Grid>
+
+                        <TextBlock Text="کتاب و ساختار آموزشی" Style="{StaticResource FieldLabelStyle}" />
+
+                        <ComboBox x:Name="BookComboBox" ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook, Mode=TwoWay}" DisplayMemberPath="Title" IsReadOnly="True" IsTextSearchEnabled="False" Style="{StaticResource ModernComboBoxStyle}" PreviewMouseLeftButtonDown="BookComboBox_PreviewMouseLeftButtonDown" PreviewKeyDown="BookComboBox_PreviewKeyDown" GotKeyboardFocus="BookComboBox_GotKeyboardFocus" />
+
+                        <Border Margin="0,7,0,8" Style="{StaticResource InnerCardStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Column="0" Width="29" Height="29" Margin="0,0,8,0" CornerRadius="9" Background="{DynamicResource HaytSurfaceBrush}">
+                                    <TextBlock Text="✓" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource HaytSuccessBrush}" FontWeight="Bold" />
+                                </Border>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="دسته فعال" Foreground="{DynamicResource HaytMutedTextBrush}" FontSize="10" />
+                                    <TextBlock Text="{Binding SelectedCategoryTitle}" Margin="0,2,0,0" Foreground="{DynamicResource HaytTextBrush}" FontSize="12" FontWeight="Bold" TextTrimming="CharacterEllipsis" />
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <TextBlock Text="بخش" Style="{StaticResource FieldLabelStyle}" />
+
+                        <ComboBox ItemsSource="{Binding Sections}" SelectedItem="{Binding SelectedSection, Mode=TwoWay}" DisplayMemberPath="Title" Style="{StaticResource ModernComboBoxStyle}" />
+
+                        <TextBlock Text="فصل" Style="{StaticResource FieldLabelStyle}" />
+
+                        <ComboBox ItemsSource="{Binding Chapters}" SelectedItem="{Binding SelectedChapter, Mode=TwoWay}" DisplayMemberPath="Title" Style="{StaticResource ModernComboBoxStyle}" />
+
+                        <TextBlock Text="درس" Style="{StaticResource FieldLabelStyle}" />
+
+                        <ComboBox ItemsSource="{Binding Lessons}" SelectedItem="{Binding SelectedLesson, Mode=TwoWay}" DisplayMemberPath="Title" Style="{StaticResource ModernComboBoxStyle}" />
+                    </StackPanel>
+
+                    <Border Grid.Row="2" Margin="0,12,0,0" Style="{StaticResource InnerCardStyle}">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="◉" Margin="0,0,7,0" Foreground="{DynamicResource HaytAccentBrush}" FontSize="15" />
+                                <TextBlock Text="وضعیت رسانه" Foreground="{DynamicResource HaytTextBrush}" FontWeight="Bold" />
+                            </StackPanel>
+
+                            <TextBlock Text="{Binding MediaStatus}" Margin="0,7,0,0" Foreground="{DynamicResource HaytMutedTextBrush}" FontSize="11" LineHeight="19" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!-- ==================================================
+                 پنجره انتخاب ساختار آموزشی
+                 ================================================== -->
+
+            <Popup x:Name="CategoryPopup" IsOpen="{Binding CategoryPanelOpen,                                     Mode=TwoWay,                                     UpdateSourceTrigger=PropertyChanged}" PlacementTarget="{Binding ElementName=BookComboBox}" Placement="Right" HorizontalOffset="10" VerticalOffset="-65" AllowsTransparency="True" StaysOpen="False" Opened="CategoryPopup_Opened" Closed="CategoryPopup_Closed">
+
+                <Border Width="480" Height="630" MaxHeight="720" Padding="14" CornerRadius="22" Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1" Effect="{StaticResource PopupShadow}">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="1" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0" Margin="2,0,2,12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="کتابخانه آموزشی" Style="{StaticResource CardTitleStyle}" />
+
+                                <TextBlock Text="با نگه‌داشتن نشانگر روی هر شاخه، زیرشاخه آن باز می‌شود." Margin="0,4,0,0" Style="{StaticResource MutedTextStyle}" />
+
+                                <Border Margin="0,9,0,0" Padding="10,6" CornerRadius="10" Background="{DynamicResource HaytBackgroundBrush}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="مسیر فعال: " Foreground="{DynamicResource HaytMutedTextBrush}" FontSize="11" />
+                                        <TextBlock Text="{Binding SelectedCategoryTitle}" Foreground="{DynamicResource HaytAccentBrush}" FontSize="11" FontWeight="Bold" />
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Top">
+
+                                <Button Content="همه" ToolTip="نمایش همه کتاب‌ها" Command="{Binding SelectCategoryCommand}" CommandParameter="" Style="{StaticResource CompactButtonStyle}" />
+
+                                <Button Content="اشتراک" ToolTip="مدیریت Premium و اشتراک" Click="OpenSubscriptionMenuItem_Click" Style="{StaticResource GoldButtonStyle}" MinWidth="72" MinHeight="38" Padding="10,5" />
+
+                                <Button Content="×" ToolTip="بستن" Click="CloseCategoryPopup_Click" Style="{StaticResource CompactButtonStyle}" Background="{StaticResource DangerActionGradient}" FontSize="17" />
+                            </StackPanel>
+                        </Grid>
+
+                        <Border Grid.Row="1" Background="{DynamicResource HaytBorderBrush}" />
+
+                        <TreeView x:Name="EducationTreeView" Grid.Row="2" Margin="0,9,0,0" Padding="5" ItemsSource="{Binding Categories}" ItemTemplate="{StaticResource CategoryTreeTemplate}" ItemContainerStyle="{StaticResource EducationTreeItemStyle}" Background="Transparent" BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" />
+
+                        <Border Grid.Row="3" Margin="0,10,0,0" Padding="10" CornerRadius="12" Background="{DynamicResource HaytBackgroundBrush}">
+                            <TextBlock Text="راهنما: پس از انتخاب درس، این پنجره بسته شده و محتوای آن نمایش داده می‌شود." TextAlignment="Center" Foreground="{DynamicResource HaytMutedTextBrush}" FontSize="10" LineHeight="17" TextWrapping="Wrap" />
+                        </Border>
+                    </Grid>
+                </Border>
+            </Popup>
+
+            <!-- ==================================================
+                 محتوای درس
+                 ================================================== -->
+
+            <Border Grid.Column="2" Style="{StaticResource ModernCardStyle}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Margin="2,0,2,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="درس جاری" Foreground="{DynamicResource HaytAccentBrush}" FontSize="11" FontWeight="SemiBold" />
+
+                            <TextBlock Text="{Binding LessonTitle}" Margin="0,4,0,0" Style="{StaticResource PageTitleStyle}" />
+                        </StackPanel>
+
+                        <Border Grid.Column="1" Padding="13,8" CornerRadius="14" Background="{DynamicResource HaytBackgroundBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="◌" Margin="0,0,7,0" Foreground="{DynamicResource HaytAccentBrush}" FontSize="16" />
+                                <TextBlock Text="{Binding StepInfo}" VerticalAlignment="Center" Foreground="{DynamicResource HaytTextBrush}" FontWeight="Bold" FontSize="12" />
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                    <Border Grid.Row="1" Margin="0,0,0,12" Style="{StaticResource InnerCardStyle}">
+                        <TextBlock Text="{Binding LessonStatus}" Foreground="{DynamicResource HaytMutedTextBrush}" FontSize="12" LineHeight="20" TextWrapping="Wrap" />
+                    </Border>
+
+                    <Border Grid.Row="2" Padding="5" CornerRadius="16" Background="{DynamicResource HaytBackgroundBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1">
+                        <ScrollViewer Padding="18,15" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                            <TextBlock Text="{Binding LessonContent}" Foreground="{DynamicResource HaytTextBrush}" FontSize="16" LineHeight="31" TextAlignment="Justify" TextWrapping="Wrap" />
+                        </ScrollViewer>
+                    </Border>
+
+                    <Grid Grid.Row="3" Margin="0,14,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="1" Content="‹  درس قبلی" Command="{Binding PreviousLessonCommand}" Style="{StaticResource NavigationButtonStyle}" Background="{DynamicResource HaytSurfaceBrush}" Foreground="{DynamicResource HaytTextBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" />
+
+                        <Button Grid.Column="2" Content="↻  شروع دوباره" Command="{Binding RestartCommand}" Style="{StaticResource GoldButtonStyle}" MinWidth="130" />
+
+                        <Button Grid.Column="3" Content="درس بعدی  ›" Command="{Binding NextLessonCommand}" Style="{StaticResource NavigationButtonStyle}" />
+                    </Grid>
+                </Grid>
+            </Border>
+
+            <!-- ==================================================
+                 تمرین‌ها و امکانات
+                 ================================================== -->
+
+            <Border Grid.Column="4" Style="{StaticResource ModernCardStyle}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Margin="0,0,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="تمرین‌های درس" Style="{StaticResource CardTitleStyle}" />
+
+                            <TextBlock Text="یکی از پرسش‌ها را انتخاب کنید" Margin="0,4,0,0" Style="{StaticResource MutedTextStyle}" />
+                        </StackPanel>
+
+                        <Border Grid.Column="1" Width="42" Height="42" CornerRadius="14" Background="{DynamicResource HaytBackgroundBrush}">
+                            <TextBlock Text="؟" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource HaytAccentBrush}" FontSize="20" FontWeight="Bold" />
+                        </Border>
+                    </Grid>
+
+                    <ListBox Grid.Row="1" ItemsSource="{Binding Questions}" SelectedItem="{Binding SelectedQuestion, Mode=TwoWay}" ItemContainerStyle="{StaticResource QuestionItemStyle}" Background="Transparent" BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Border Grid.Column="0" Width="25" Height="25" Margin="0,0,8,0" CornerRadius="8" Background="{DynamicResource HaytSurfaceBrush}">
+                                        <TextBlock Text="•" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource HaytAccentBrush}" FontSize="18" />
+                                    </Border>
+
+                                    <TextBlock Grid.Column="1" Text="{Binding QuestionText}" VerticalAlignment="Center" Foreground="{DynamicResource HaytTextBrush}" FontSize="12" LineHeight="19" TextWrapping="Wrap" />
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <StackPanel Grid.Row="2" Margin="0,12,0,0">
+
+                        <Button Content="✦  اجرای تمرین" Command="{Binding ExerciseCommand}" Style="{StaticResource GoldButtonStyle}" Margin="0,3" />
+
+                        <UniformGrid Columns="2" Margin="0,2">
+                            <Button Content="▶  رسانه" Command="{Binding MediaCommand}" Style="{StaticResource SidebarActionButtonStyle}" />
+
+                            <Button Content="▥  داشبورد" Click="DashboardButton_Click" Style="{StaticResource SidebarActionButtonStyle}" />
+
+                            <Button Content="◔  گزارش پیشرفت" Command="{Binding ProgressReportCommand}" Style="{StaticResource SidebarActionButtonStyle}" />
+
+                            <Button Content="♙  پروفایل من" Command="{Binding ProfileCommand}" Style="{StaticResource SidebarActionButtonStyle}" />
+
+                            <Button Content="⇄  تغییر کاربر" Command="{Binding ChangeUserCommand}" Style="{StaticResource SidebarActionButtonStyle}" />
+
+                            <Button Content="＋  ورود کتاب" Command="{Binding ManageCommand}" Style="{StaticResource SidebarActionButtonStyle}" />
+                        </UniformGrid>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!-- ======================================================
+             نوار وضعیت
+             ====================================================== -->
+
+        <Border Grid.Row="2" Margin="14,0,14,10" Padding="16,6" CornerRadius="15" Background="{DynamicResource HaytSurfaceBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Ellipse Width="7" Height="7" Margin="0,0,8,0" Fill="{DynamicResource HaytSuccessBrush}" />
+
+                    <TextBlock Text="حیات طیبه؛ آموزش، معرفت و حرکت" VerticalAlignment="Center" Foreground="{DynamicResource HaytMutedTextBrush}" FontSize="11" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+
+                    <ProgressBar Width="105" Height="7" Margin="8,0" IsIndeterminate="{Binding IsBusy}" Foreground="{DynamicResource HaytAccentBrush}" Background="{DynamicResource HaytBackgroundBrush}" />
+
+                    <TextBlock Text="آماده" VerticalAlignment="Center" Foreground="{DynamicResource HaytSuccessBrush}" FontSize="11" FontWeight="SemiBold" />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
+
+

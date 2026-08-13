@@ -1,0 +1,229 @@
+﻿.hayt-auth-page {
+    min-height: calc(100vh - 110px);
+    display: grid;
+    align-items: center;
+}
+
+.hayt-auth-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.hayt-auth-shell-single {
+    grid-template-columns: minmax(0, 520px);
+    justify-content: center;
+}
+
+.hayt-auth-info,
+.hayt-auth-card {
+    background: rgba(255,255,255,0.94);
+    border: 1px solid #e4e7ec;
+    border-radius: 28px;
+    box-shadow: 0 18px 48px rgba(16,24,40,0.10);
+}
+
+.hayt-auth-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(circle at top right, rgba(37,99,235,0.14), transparent 24rem),
+        radial-gradient(circle at bottom left, rgba(22,163,74,0.12), transparent 24rem),
+        #ffffff;
+}
+
+.hayt-auth-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #2563eb, #16a34a);
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 900;
+    box-shadow: 0 14px 32px rgba(37,99,235,0.25);
+    margin-bottom: 1rem;
+}
+
+.hayt-auth-info h1,
+.hayt-auth-card h1,
+.hayt-auth-card h2 {
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
+.hayt-auth-info p,
+.hayt-auth-muted {
+    color: #667085;
+    line-height: 1.9;
+}
+
+.hayt-auth-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+}
+
+.hayt-auth-badges span {
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #dbeafe;
+    padding: 0.45rem 0.75rem;
+    font-weight: 800;
+    font-size: 0.8rem;
+}
+
+.hayt-auth-card {
+    padding: 1.5rem;
+}
+
+.hayt-auth-center {
+    text-align: center;
+}
+
+.hayt-form-group {
+    margin-top: 1rem;
+}
+
+.hayt-form-group label {
+    display: block;
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+    color: #344054;
+}
+
+.hayt-form-group .form-control {
+    min-height: 48px;
+    border-radius: 16px;
+}
+
+.hayt-form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.hayt-check-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #344054;
+}
+
+.hayt-check-inline input {
+    width: 17px;
+    height: 17px;
+}
+
+.hayt-auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+    color: #98a2b3;
+}
+
+.hayt-auth-divider::before,
+.hayt-auth-divider::after {
+    content: "";
+    height: 1px;
+    background: #e4e7ec;
+    flex: 1;
+}
+
+.hayt-auth-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.hayt-auth-actions .btn {
+    flex: 1 1 auto;
+}
+
+.hayt-auth-test-box {
+    margin-top: 1rem;
+    border: 1px dashed #cbd5e1;
+    border-radius: 18px;
+    padding: 0.9rem;
+    background: #f8fafc;
+    display: grid;
+    gap: 0.25rem;
+    direction: ltr;
+    text-align: left;
+    font-size: 0.85rem;
+    color: #475467;
+}
+
+.hayt-auth-test-box strong {
+    color: #101828;
+}
+
+.hayt-profile-layout {
+    display: grid;
+    gap: 1rem;
+}
+
+.hayt-profile-stats {
+    margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+    .hayt-auth-page {
+        min-height: auto;
+        align-items: start;
+    }
+
+    .hayt-auth-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .hayt-auth-info,
+    .hayt-auth-card {
+        border-radius: 24px;
+    }
+
+    .hayt-auth-info {
+        padding: 1.35rem;
+    }
+
+    .hayt-auth-card {
+        padding: 1.15rem;
+    }
+
+    .hayt-auth-info h1,
+    .hayt-auth-card h1 {
+        font-size: 1.55rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hayt-auth-actions {
+        flex-direction: column;
+    }
+
+    .hayt-auth-actions .btn {
+        width: 100%;
+    }
+
+    .hayt-form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hayt-auth-logo {
+        width: 56px;
+        height: 56px;
+        border-radius: 20px;
+        font-size: 1.65rem;
+    }
+}

@@ -1,0 +1,31 @@
+﻿bin/
+obj/
+*.user
+*.suo
+appsettings.Production.json
+*.key
+*.pfx
+*.pem
+_SafeBackups/
+# Hayt internal backups
+**/_backups*/
+**/_backup*/
+**/Backups/
+**/Backup/
+# Build outputs
+.vs/
+*.cache
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+_Temp/
+_RoadmapReports/
+_Deployment/
+_HostDeployment_*/
+_ProductionTests/
+HaytWeb-ForHost-Temp/
+# Development settings / secrets
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/*.secrets.json

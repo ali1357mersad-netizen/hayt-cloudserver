@@ -1,0 +1,147 @@
+﻿.hayt-install-hero,
+.hayt-offline-card {
+    background:
+        radial-gradient(circle at top right, rgba(37,99,235,0.14), transparent 24rem),
+        radial-gradient(circle at bottom left, rgba(22,163,74,0.12), transparent 24rem),
+        rgba(255,255,255,0.96);
+    border: 1px solid #e4e7ec;
+    border-radius: 28px;
+    box-shadow: 0 18px 48px rgba(16,24,40,0.10);
+}
+
+.hayt-install-hero {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 1.2rem;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hayt-install-icon,
+.hayt-offline-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 30px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #2563eb, #16a34a);
+    color: #ffffff;
+    font-size: 3rem;
+    box-shadow: 0 18px 42px rgba(37,99,235,0.25);
+}
+
+.hayt-install-hero h1,
+.hayt-offline-card h1 {
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
+.hayt-install-hero p,
+.hayt-offline-card p {
+    color: #667085;
+    line-height: 1.9;
+    max-width: 760px;
+}
+
+.hayt-install-actions,
+.hayt-offline-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+.hayt-install-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.hayt-install-card {
+    background: rgba(255,255,255,0.94);
+    border: 1px solid #e4e7ec;
+    border-radius: 24px;
+    padding: 1.15rem;
+    box-shadow: 0 16px 40px rgba(16,24,40,0.08);
+}
+
+.hayt-install-card span {
+    width: 38px;
+    height: 38px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-weight: 900;
+    margin-bottom: 0.85rem;
+}
+
+.hayt-install-card strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.hayt-install-card p {
+    color: #667085;
+    line-height: 1.8;
+    margin-bottom: 0;
+    font-size: 0.92rem;
+}
+
+.hayt-offline-card {
+    text-align: center;
+    padding: 2rem;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.hayt-offline-icon {
+    margin: 0 auto 1rem auto;
+    background: linear-gradient(135deg, #475467, #101828);
+}
+
+.hayt-offline-actions {
+    justify-content: center;
+}
+
+@media (max-width: 991.98px) {
+    .hayt-install-hero {
+        grid-template-columns: 1fr;
+        padding: 1.35rem;
+    }
+
+    .hayt-install-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hayt-install-icon {
+        width: 78px;
+        height: 78px;
+        border-radius: 24px;
+        font-size: 2.35rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hayt-install-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hayt-install-actions,
+    .hayt-offline-actions {
+        flex-direction: column;
+    }
+
+    .hayt-install-actions .btn,
+    .hayt-offline-actions .btn {
+        width: 100%;
+    }
+
+    .hayt-offline-card {
+        padding: 1.3rem;
+        border-radius: 24px;
+    }
+}

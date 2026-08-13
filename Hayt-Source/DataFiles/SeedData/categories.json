@@ -1,0 +1,130 @@
+﻿{
+  "Categories": [
+    {
+      "Id": "religion",
+      "Title": "دینی و معارف اسلامی",
+      "Icon": "🕌",
+      "Color": "#2E7D32",
+      "Description": "کتاب‌های قرآن، حدیث، اخلاق، فقه، تبلیغ، منبر و حیات طیبه",
+      "SubCategories": [
+        { "Id": "quran_hadith", "Title": "قرآن و حدیث", "Icon": "📖" },
+        { "Id": "fiqh", "Title": "فقه و احکام", "Icon": "⚖️" },
+        { "Id": "ethics", "Title": "اخلاق و تهذیب", "Icon": "🌿" },
+        { "Id": "hayat_tayyebeh", "Title": "حیات طیبه", "Icon": "✨" },
+        { "Id": "tabligh_minbar", "Title": "تبلیغ و منبر", "Icon": "🎙️" }
+      ]
+    },
+    {
+      "Id": "health",
+      "Title": "سلامت، طب و سبک زندگی",
+      "Icon": "💊",
+      "Color": "#00897B",
+      "Description": "کتاب‌های سلامت، طب سنتی، تغذیه، گیاهان دارویی، مزاج‌شناسی و سبک زندگی سالم",
+      "SubCategories": [
+        { "Id": "traditional_medicine", "Title": "طب سنتی", "Icon": "🌱" },
+        { "Id": "temperament", "Title": "مزاج‌شناسی و اخلاط", "Icon": "🔥" },
+        { "Id": "nutrition", "Title": "تغذیه و رژیم", "Icon": "🍽️" },
+        { "Id": "herbal_medicine", "Title": "گیاهان دارویی", "Icon": "🌿" },
+        { "Id": "diseases_treatment", "Title": "بیماری‌ها و درمان", "Icon": "🩺" },
+        { "Id": "family_health", "Title": "سلامت خانواده", "Icon": "👨‍👩‍👧" }
+      ]
+    },
+    {
+      "Id": "family",
+      "Title": "خانواده و تربیت",
+      "Icon": "👨‍👩‍👧‍👦",
+      "Color": "#AD1457",
+      "Description": "کتاب‌های خانواده، تربیت فرزند، مادری و سبک زندگی خانوادگی",
+      "SubCategories": [
+        { "Id": "child_training", "Title": "تربیت فرزند", "Icon": "🧒" },
+        { "Id": "marriage", "Title": "ازدواج و همسرداری", "Icon": "💍" },
+        { "Id": "motherhood", "Title": "مادری و فرزندپروری", "Icon": "🤱" },
+        { "Id": "home_lifestyle", "Title": "سبک زندگی خانواده", "Icon": "🏡" }
+      ]
+    },
+    {
+      "Id": "education",
+      "Title": "آموزشی و مهارتی",
+      "Icon": "🎓",
+      "Color": "#1565C0",
+      "Description": "کتاب‌های آموزشی، مهارتی، زبان، درسی و یادگیری مرحله‌به‌مرحله",
+      "SubCategories": [
+        {
+          "Id": "language",
+          "Title": "زبان‌های خارجی",
+          "Icon": "🌍",
+          "SubCategories": [
+            { "Id": "english", "Title": "آموزش زبان انگلیسی", "Icon": "🇬🇧" }
+          ]
+        },
+        { "Id": "arabic", "Title": "ادبیات عرب", "Icon": "🔤" },
+        { "Id": "study_skills", "Title": "مهارت‌های مطالعه", "Icon": "📝" },
+        { "Id": "teacher_training", "Title": "تربیت مربی و مبلغ", "Icon": "👨‍🏫" }
+      ]
+    },
+    {
+      "Id": "culture",
+      "Title": "فرهنگی، اجتماعی و تمدنی",
+      "Icon": "🎭",
+      "Color": "#6A1B9A",
+      "Description": "کتاب‌های فرهنگی، اجتماعی، تمدنی، هویتی و تحلیل مسائل جامعه",
+      "SubCategories": [
+        { "Id": "culture_general", "Title": "فرهنگ عمومی", "Icon": "🎭" },
+        { "Id": "civilization", "Title": "تمدن و آینده‌پژوهی", "Icon": "🏛️" },
+        { "Id": "social", "Title": "اجتماعی", "Icon": "👥" },
+        { "Id": "media", "Title": "رسانه و فضای مجازی", "Icon": "📱" }
+      ]
+    },
+    {
+      "Id": "politics",
+      "Title": "سیاسی و حکمرانی",
+      "Icon": "🏛️",
+      "Color": "#455A64",
+      "Description": "کتاب‌های سیاسی، حکمرانی، انقلاب اسلامی، تاریخ سیاسی و تحلیل مسائل روز",
+      "SubCategories": [
+        { "Id": "islamic_revolution", "Title": "انقلاب اسلامی", "Icon": "🇮🇷" },
+        { "Id": "governance", "Title": "حکمرانی و مدیریت", "Icon": "🏢" },
+        { "Id": "political_thought", "Title": "اندیشه سیاسی", "Icon": "🧭" },
+        { "Id": "current_affairs", "Title": "مسائل روز", "Icon": "📰" }
+      ]
+    },
+    {
+      "Id": "literature",
+      "Title": "ادبیات و هنر",
+      "Icon": "📚",
+      "Color": "#EF6C00",
+      "Description": "کتاب‌های ادبی، داستانی، شعر، هنر، زیبایی‌شناسی و روایت",
+      "SubCategories": [
+        { "Id": "story", "Title": "داستان و رمان", "Icon": "📘" },
+        { "Id": "poetry", "Title": "شعر", "Icon": "🖋️" },
+        { "Id": "art", "Title": "هنر", "Icon": "🎨" },
+        { "Id": "writing", "Title": "نویسندگی و روایت", "Icon": "✍️" }
+      ]
+    },
+    {
+      "Id": "science",
+      "Title": "علمی و پژوهشی",
+      "Icon": "🔬",
+      "Color": "#0277BD",
+      "Description": "کتاب‌های علمی، پژوهشی، فناوری، روش تحقیق و دانش‌های نوین",
+      "SubCategories": [
+        { "Id": "research_method", "Title": "روش تحقیق", "Icon": "🔎" },
+        { "Id": "technology", "Title": "فناوری", "Icon": "💻" },
+        { "Id": "natural_sciences", "Title": "علوم طبیعی", "Icon": "🧪" },
+        { "Id": "interdisciplinary", "Title": "مطالعات میان‌رشته‌ای", "Icon": "🧩" }
+      ]
+    },
+    {
+      "Id": "children_youth",
+      "Title": "کودک و نوجوان",
+      "Icon": "🧒",
+      "Color": "#F9A825",
+      "Description": "کتاب‌های مخصوص کودکان، نوجوانان و آموزش‌های تربیتی ساده‌سازی‌شده",
+      "SubCategories": [
+        { "Id": "children_story", "Title": "داستان کودک", "Icon": "🧸" },
+        { "Id": "teen_education", "Title": "آموزش نوجوان", "Icon": "🎒" },
+        { "Id": "religious_children", "Title": "معارف کودک و نوجوان", "Icon": "🌙" }
+      ]
+    }
+  ]
+}

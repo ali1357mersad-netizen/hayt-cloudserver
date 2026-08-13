@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HaytWeb - حیات طیبه</title>
+    <base href="/" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/hayt-responsive.css" />
+    <link rel="stylesheet" href="css/hayt-pages.css" />
+    <link rel="stylesheet" href="css/hayt-auth.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Hayt" />
+    <link rel="apple-touch-icon" href="icons/icon-192.svg" />
+    <link rel="stylesheet" href="css/hayt-pwa.css" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="loading-screen">
+            <div class="loader"></div>
+            <h1>HaytWeb</h1>
+            <p>در حال بارگذاری نسخه وب حیات طیبه...</p>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        خطایی در اجرای برنامه رخ داد.
+        <a href="" class="reload">بارگذاری مجدد</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function (registration) {
+                    console.info('Hayt service worker registered:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.warn('Hayt service worker registration failed:', error);
+                });
+        });
+    }
+</script>
+    <script src="js/hayt-pwa.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+

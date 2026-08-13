@@ -1,0 +1,253 @@
+﻿<Window x:Class="Hayt.Views.UserProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="پروفایل کاربری"
+        Height="720"
+        Width="980"
+        WindowStartupLocation="CenterOwner"
+        FlowDirection="RightToLeft"
+        FontFamily="{StaticResource HaytFontFamily}"
+        Background="{DynamicResource HaytBackgroundBrush}">
+    <Window.Resources>
+        <Style x:Key="CardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="18"/>
+            <Setter Property="Padding" Value="18"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="BorderBrush" Value="#E1E8EA"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <Style x:Key="StatTitleStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#607D80"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Margin" Value="0,0,0,6"/>
+        </Style>
+
+        <Style x:Key="StatValueStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#12393B"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="ActionButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="42"/>
+            <Setter Property="MinWidth" Value="130"/>
+            <Setter Property="Margin" Value="6"/>
+            <Setter Property="Padding" Value="18,0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#147C78"/>
+            <Setter Property="BorderBrush" Value="#147C78"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="22">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0"
+                Background="{DynamicResource HaytPrimaryBrush}"
+                CornerRadius="22"
+                Padding="24"
+                Margin="0,0,0,14">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="پروفایل آموزشی"
+                               Foreground="{DynamicResource HaytOnPrimaryBrush}"
+                               FontSize="30"
+                               FontWeight="Bold"/>
+
+                    <TextBlock x:Name="UserNameText"
+                               Text="کاربر اصلی"
+                               Foreground="{DynamicResource HaytMutedTextBrush}"
+                               FontSize="18"
+                               Margin="0,8,0,0"/>
+
+                    <TextBlock x:Name="UserIdText"
+                               Text="شناسه: default"
+                               Foreground="{DynamicResource HaytMutedTextBrush}"
+                               FontSize="13"
+                               Margin="0,5,0,0"/>
+                </StackPanel>
+
+                <Border Grid.Column="1"
+                        Width="92"
+                        Height="92"
+                        CornerRadius="46"
+                        Background="{DynamicResource HaytPrimaryBrush}"
+                        VerticalAlignment="Center">
+                    <TextBlock Text="👤"
+                               FontSize="42"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </Border>
+            </Grid>
+        </Border>
+
+        <!-- Stats -->
+        <UniformGrid Grid.Row="1"
+                     Columns="4"
+                     Margin="0,0,0,14">
+            <Border Style="{StaticResource CardStyle}">
+                <StackPanel>
+                    <TextBlock Text="پیشرفت کلی" Style="{StaticResource StatTitleStyle}"/>
+                    <TextBlock x:Name="OverallPercentText" Text="۰٪" Style="{StaticResource StatValueStyle}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardStyle}">
+                <StackPanel>
+                    <TextBlock Text="درس‌های کامل‌شده" Style="{StaticResource StatTitleStyle}"/>
+                    <TextBlock x:Name="LessonsText" Text="۰ از ۰" Style="{StaticResource StatValueStyle}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardStyle}">
+                <StackPanel>
+                    <TextBlock Text="امتیاز کل" Style="{StaticResource StatTitleStyle}"/>
+                    <TextBlock x:Name="TotalScoreText" Text="۰" Style="{StaticResource StatValueStyle}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardStyle}">
+                <StackPanel>
+                    <TextBlock Text="سطح کاربر" Style="{StaticResource StatTitleStyle}"/>
+                    <TextBlock x:Name="LevelText" Text="نوآموز" Style="{StaticResource StatValueStyle}"/>
+                </StackPanel>
+            </Border>
+        </UniformGrid>
+
+        <!-- Body -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1.2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0"
+                    Style="{StaticResource CardStyle}">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top"
+                               Text="گزارش کتاب‌ها"
+                               Foreground="{DynamicResource HaytTextBrush}"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Margin="0,0,0,12"/>
+
+                    <ListView x:Name="BooksList"
+                              BorderThickness="0"
+                              Background="Transparent">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="{DynamicResource HaytBorderBrush}"
+                                        BorderThickness="0,0,0,1"
+                                        Padding="8">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding BookTitle}"
+                                                   FontSize="15"
+                                                   FontWeight="Bold"
+                                                   Foreground="{DynamicResource HaytTextBrush}"/>
+
+                                        <TextBlock Text="{Binding ProgressText}"
+                                                   FontSize="13"
+                                                   Foreground="{DynamicResource HaytMutedTextBrush}"
+                                                   Margin="0,4,0,0"/>
+
+                                        <ProgressBar Value="{Binding CompletionPercent, Mode=OneWay}"
+                                                     Maximum="100"
+                                                     Height="8"
+                                                     Margin="0,8,0,0"/>
+
+                                        <TextBlock Text="{Binding CertificateStatus}"
+                                                   FontSize="12"
+                                                   Foreground="{DynamicResource HaytPrimaryBrush}"
+                                                   Margin="0,6,0,0"/>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </DockPanel>
+            </Border>
+
+            <Border Grid.Column="1"
+                    Style="{StaticResource CardStyle}">
+                <StackPanel>
+                    <TextBlock Text="خلاصه دستاوردها"
+                               Foreground="{DynamicResource HaytTextBrush}"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Margin="0,0,0,14"/>
+
+                    <TextBlock x:Name="CompletedBooksText"
+                               Text="کتاب‌های کامل‌شده: ۰"
+                               FontSize="15"
+                               Margin="0,8"/>
+
+                    <TextBlock x:Name="CertificatesText"
+                               Text="گواهی‌های آماده: ۰"
+                               FontSize="15"
+                               Margin="0,8"/>
+
+                    <TextBlock x:Name="HoursText"
+                               Text="ساعت آموزش: ۰"
+                               FontSize="15"
+                               Margin="0,8"/>
+
+                    <Separator Margin="0,18"/>
+
+                    <TextBlock Text="پیام انگیزشی"
+                               Foreground="{DynamicResource HaytMutedTextBrush}"
+                               FontSize="13"
+                               Margin="0,0,0,8"/>
+
+                    <TextBlock x:Name="MotivationText"
+                               Text="اولین قدم را بردار؛ هر درس تو را به گواهی نزدیک‌تر می‌کند."
+                               TextWrapping="Wrap"
+                               FontSize="16"
+                               FontWeight="SemiBold"
+                               Foreground="{DynamicResource HaytTextBrush}"
+                               LineHeight="28"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- Footer -->
+        <DockPanel Grid.Row="3"
+                   Margin="0,14,0,0">
+            <TextBlock x:Name="StatusText"
+                       DockPanel.Dock="Right"
+                       Text="آماده"
+                       VerticalAlignment="Center"
+                       Foreground="{DynamicResource HaytMutedTextBrush}"
+                       FontSize="13"/>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Left">
+                <Button Content="به‌روزرسانی"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Click="RefreshButton_Click"/>
+
+                <Button Content="بستن"
+                        Style="{StaticResource ActionButtonStyle}"
+                        Background="{DynamicResource HaytMutedTextBrush}"
+                        BorderBrush="{DynamicResource HaytMutedTextBrush}"
+                        Click="CloseButton_Click"/>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>

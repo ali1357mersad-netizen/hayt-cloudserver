@@ -1,0 +1,71 @@
+﻿@page "/profile"
+
+<PageTitle>پروفایل - حیات طیبه</PageTitle>
+
+<div class="hayt-page" dir="rtl">
+    <div class="hayt-page-header">
+        <div>
+            <div class="hayt-kicker">User Profile</div>
+            <h1>پروفایل کاربر</h1>
+            <p>این صفحه برای اتصال نهایی به Auth، License و اطلاعات کاربر آماده شده است.</p>
+        </div>
+    </div>
+
+    <section class="hayt-profile-layout">
+        <div class="hayt-section-card">
+            <div class="hayt-profile-card">
+                <div class="hayt-avatar">ح</div>
+
+                <div>
+                    <h2>کاربر حیات طیبه</h2>
+                    <p>
+                        پس از تکمیل فاز ۲، اطلاعات واقعی کاربر، نقش‌ها، وضعیت اشتراک و لایسنس اینجا نمایش داده می‌شود.
+                    </p>
+
+                    <div class="hayt-mobile-actions">
+                        <a class="btn btn-primary" href="/login">ورود به حساب</a>
+                        <a class="btn btn-outline-secondary" href="/logout">خروج</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hayt-stat-grid hayt-profile-stats">
+            <div class="hayt-stat-card">
+                <span>وضعیت حساب</span>
+                <strong>آماده اتصال</strong>
+                <small>AuthStateProvider Ready</small>
+            </div>
+
+            <div class="hayt-stat-card">
+                <span>لایسنس</span>
+                <strong>در انتظار</strong>
+                <small>License Check Pending</small>
+            </div>
+
+            <div class="hayt-stat-card">
+                <span>پلن</span>
+                <strong>Premium</strong>
+                <small>Test Profile</small>
+            </div>
+
+            <div class="hayt-stat-card">
+                <span>دستگاه</span>
+                <strong>ثبت‌شده</strong>
+                <small>Device Ready</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="hayt-section-card">
+        <h2>چک‌لیست اتصال نهایی پروفایل</h2>
+
+        <ul class="hayt-check-list">
+            <li>دریافت اطلاعات کاربر از AuthStateProvider</li>
+            <li>نمایش ایمیل و شناسه کاربر</li>
+            <li>نمایش وضعیت لایسنس و تاریخ انقضا</li>
+            <li>نمایش نقش‌ها و سطح دسترسی</li>
+            <li>اتصال دکمه خروج به AuthService</li>
+        </ul>
+    </section>
+</div>

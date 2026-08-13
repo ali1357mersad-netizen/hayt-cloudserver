@@ -1,0 +1,37 @@
+﻿@page "/offline"
+
+<PageTitle>حالت آفلاین - حیات طیبه</PageTitle>
+
+<div class="hayt-page" dir="rtl">
+    <section class="hayt-offline-card">
+        <div class="hayt-offline-icon">📴</div>
+
+        <div class="hayt-kicker">Offline Mode</div>
+        <h1>شما آفلاین هستید</h1>
+
+        <p>
+            اتصال اینترنت یا ارتباط با سرور در حال حاضر در دسترس نیست.
+            برخی بخش‌های نصب‌شده و کش‌شده همچنان قابل نمایش هستند.
+        </p>
+
+        <div class="hayt-offline-actions">
+            <button class="btn btn-primary btn-lg" @onclick="Reload">
+                تلاش مجدد
+            </button>
+
+            <a class="btn btn-outline-secondary btn-lg" href="/">
+                بازگشت به خانه
+            </a>
+        </div>
+    </section>
+</div>
+
+@code {
+    private void Reload()
+    {
+        Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+    }
+
+    [Inject]
+    private NavigationManager Navigation { get; set; } = default!;
+}

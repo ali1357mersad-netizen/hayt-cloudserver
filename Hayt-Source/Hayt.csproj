@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>Hayt</AssemblyName>
+    <RootNamespace>Hayt</RootNamespace>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+    <Product>Hayt</Product>
+    <Title>Hayt</Title>
+    <Authors>Hayt Team</Authors>
+    <Company>Hayt</Company>
+    <Description>Hayt - اندیشکده حیات طیبه</Description>
+    <Copyright>Copyright © Hayt</Copyright>
+    <ApplicationIcon>Assets\hayt.ico</ApplicationIcon>
+    <!-- ===== اضافهشده: Self-Contained ===== -->
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishSingleFile>false</PublishSingleFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <PublishTrimmed>false</PublishTrimmed>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <PublishSingleFile>false</PublishSingleFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4129.50" />
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="DataFiles\SeedData\**\*.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Update="DataFiles\Media\Videos\**\*.*" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Update="DataFiles\Media\Audios\**\*.*" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Update="DataFiles\Media\Pdfs\**\*.*" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Update="DataFiles\Media\Covers\**\*.*" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\*.ttf" />
+    <Resource Include="Assets\Fonts\*.otf" />
+  </ItemGroup>
+  <PropertyGroup>
+    <DefaultItemExcludes>$(DefaultItemExcludes);**\_SafeBackups\**</DefaultItemExcludes>
+  </PropertyGroup>
+  <ItemGroup>
+    <Page Remove="Phase3-Info\**\*.xaml" />
+    <Compile Remove="Phase3-Info\**\*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="bin\**;obj\**;_Cleaned_TrashBin*\**;_ReviewPackage*\**;_SafeBackups*\**;_Backup*\**;_Trash*\**;**\*_wpftmp*.cs" />
+    <Page Remove="_Cleaned_TrashBin*\**;_ReviewPackage*\**;_SafeBackups*\**;_Backup*\**;_Trash*\**" />
+    <ApplicationDefinition Remove="_Cleaned_TrashBin*\**;_ReviewPackage*\**;_SafeBackups*\**;_Backup*\**;_Trash*\**" />
+    <EmbeddedResource Remove="_Cleaned_TrashBin*\**;_ReviewPackage*\**;_SafeBackups*\**;_Backup*\**;_Trash*\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="_phase_reports\**\*.cs" />
+    <Page Remove="_phase_reports\**\*.xaml" />
+    <EmbeddedResource Remove="_phase_reports\**\*" />
+    <None Remove="_phase_reports\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hayt.Shared\Hayt.Shared.csproj" />
+    <ProjectReference Include="..\Hayt.Licensing\Hayt.Licensing.csproj" />
+  </ItemGroup>
+</Project>

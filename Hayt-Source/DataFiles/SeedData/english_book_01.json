@@ -1,0 +1,445 @@
+﻿{
+    "Title":  "انگلیسی را قورت بده",
+    "Subtitle":  "از الفبا تا مکالمه در ۱۰ درس",
+    "Description":  "دوره مقدماتی آموزش انگلیسی از صفر مطلق - مناسب برای کسانی که حتی حروف را بلد نیستند",
+    "Author":  "Hayt Academy",
+    "Language":  "fa",
+    "Level":  1,
+    "Version":  "1.0.0",
+    "IsActive":  true,
+    "BookKey":  "english_made_easy_01",
+    "Sections":  [
+                     {
+                         "Title":  "بخش اول: الفبا و صداها",
+                         "OrderNumber":  1,
+                         "Chapters":  {
+                                          "Title":  "فصل اول: از صفر شروع می‌کنیم",
+                                          "OrderNumber":  1,
+                                          "Lessons":  [
+                                                          {
+                                                              "Title":  "درس ۱: الفبای انگلیسی - حروف A تا F",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا می‌خواد انگلیسی یاد بگیره. از کجا شروع کنه؟ از همون جایی که خودت الان هستی: از حروف!\n\n🎯 حروف امروز:\n\nA a = اَ (مثل «اَ» در «اَسب»)\nB b = ب (مثل «ب» در «باران»)\nC c = ک یا س (مثل «ک» در «کتاب»)\nD d = د (مثل «د» در «دوست»)\nE e = اِ (مثل «اِ» در «اِسم»)\nF f = ف (مثل «ف» در «فردا»)\n\n📝 کلمات ساده با این حروف:\n- A = یک (حرف تعریف)\n- B = حرف دوم الفبا\n- C = حرف سوم الفبا\n- D = حرف چهارم الفبا\n\n🗣️ تمرین تلفظ:\nA - B - C - D - E - F\n\n💡 نکته مادرانه:\nهر روز این ۶ حرف رو تکرار کن:\nA مثل Apple (سیب)\nB مثل Book (کتاب)\nC مثل Cat (گربه)\nD مثل Dog (سگ)\nE مثل Egg (تخم‌مرغ)\nF مثل Fish (ماهی)",
+                                                              "Level":  1,
+                                                              "OrderNumber":  1,
+                                                              "EstimatedMinutes":  15,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "حرف A چگونه تلفظ می‌شود؟",
+                                                                                    "OptionA":  "آ",
+                                                                                    "OptionB":  "اَ",
+                                                                                    "OptionC":  "ای",
+                                                                                    "OptionD":  "او",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "A مثل «اَ» در «اَسب» تلفظ می‌شود",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "حرف B شبیه کدام حرف فارسی است؟",
+                                                                                    "OptionA":  "پ",
+                                                                                    "OptionB":  "ب",
+                                                                                    "OptionC":  "ت",
+                                                                                    "OptionD":  "ف",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "B مثل «ب» در «باران» تلفظ می‌شود",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "کدام کلمه با حرف F شروع می‌شود؟",
+                                                                                    "OptionA":  "Apple",
+                                                                                    "OptionB":  "Fish",
+                                                                                    "OptionC":  "Cat",
+                                                                                    "OptionD":  "Dog",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Fish (ماهی) با حرف F شروع می‌شود",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۲: الفبای انگلیسی - حروف G تا L",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا دیروز ۶ حرف اول رو یاد گرفت. امروز نوبت ۶ حرف بعدیه!\n\n🎯 حروف امروز:\n\nG g = گ (مثل «گ» در «گل»)\nH h = ه (مثل «ه» در «هوا»)\nI i = ای (مثل «ای» در «ایران»)\nJ j = ج (مثل «ج» در «جان»)\nK k = ک (مثل «ک» در «کوچه»)\nL l = ل (مثل «ل» در «لبخند»)\n\n📝 کلمات ساده:\n- Go = رفتن\n- Hi = سلام\n- I = من\n- Jump = پریدن\n- Key = کلید\n- Love = عشق/دوست داشتن\n\n🗣️ تمرین تلفظ:\nG - H - I - J - K - L\n\n🔁 مرور درس قبل:\nA (اَ) - B (ب) - C (ک) - D (د) - E (اِ) - F (ف)\n\n💡 نکته مادرانه:\nحالا ۱۲ حرف بلدی! بگو:\nHi = سلام\nI = من\nGo = برو\nLove = عشق\n\nتمرین: با حروفی که یاد گرفتی، کلمه «Hello» رو بساز:\nH - E - L - L - O",
+                                                              "Level":  1,
+                                                              "OrderNumber":  2,
+                                                              "EstimatedMinutes":  15,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "حرف G چگونه تلفظ می‌شود؟",
+                                                                                    "OptionA":  "ج",
+                                                                                    "OptionB":  "گ",
+                                                                                    "OptionC":  "ک",
+                                                                                    "OptionD":  "چ",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "G مثل «گ» در «گل» تلفظ می‌شود",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "کدام کلمه به معنی «سلام» است؟",
+                                                                                    "OptionA":  "Go",
+                                                                                    "OptionB":  "Hi",
+                                                                                    "OptionC":  "Love",
+                                                                                    "OptionD":  "Key",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Hi یعنی سلام",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۱ چه حروفی یاد گرفتیم؟",
+                                                                                    "OptionA":  "G تا L",
+                                                                                    "OptionB":  "A تا F",
+                                                                                    "OptionC":  "M تا R",
+                                                                                    "OptionD":  "S تا Z",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۱ حروف A تا F را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۳: الفبای انگلیسی - حروف M تا R",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا داره پیشرفت می‌کنه! امروز ۶ حرف جدید یاد می‌گیره.\n\n🎯 حروف امروز:\n\nM m = م (مثل «م» در «مادر»)\nN n = ن (مثل «ن» در «نان»)\nO o = اُ (مثل «اُ» در «اُردک»)\nP p = پ (مثل «پ» در «پدر»)\nQ q = کیو (صدای «ک»)\nR r = ر (مثل «ر» در «رنگ»)\n\n📝 کلمات ساده:\n- Mom = مامان\n- No = نه\n- Ok = باشه\n- Pen = خودکار\n- Queen = ملکه\n- Red = قرمز\n\n🗣️ تمرین تلفظ:\nM - N - O - P - Q - R\n\n🔁 مرور دو درس قبل:\nA B C D E F\nG H I J K L\nM N O P Q R\n\n💡 نکته مادرانه:\n۱۸ حرف بلدی! بگو:\nMom = مامان\nNo = نه\nOk = باشه\nRed = قرمز\n\nتمرین: کلمه «Mom» رو با حروف بساز:\nM - O - M",
+                                                              "Level":  1,
+                                                              "OrderNumber":  3,
+                                                              "EstimatedMinutes":  15,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "حرف O چگونه تلفظ می‌شود؟",
+                                                                                    "OptionA":  "او",
+                                                                                    "OptionB":  "اُ",
+                                                                                    "OptionC":  "آ",
+                                                                                    "OptionD":  "ای",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "O مثل «اُ» در «اُردک» تلفظ می‌شود",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "کدام کلمه به معنی «مامان» است؟",
+                                                                                    "OptionA":  "Dad",
+                                                                                    "OptionB":  "Mom",
+                                                                                    "OptionC":  "Sister",
+                                                                                    "OptionD":  "Brother",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Mom یعنی مامان",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "تا الان چند حرف یاد گرفتیم؟",
+                                                                                    "OptionA":  "12",
+                                                                                    "OptionB":  "18",
+                                                                                    "OptionC":  "24",
+                                                                                    "OptionD":  "26",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "سه درس ۶ تایی = ۱۸ حرف",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۴: الفبای انگلیسی - حروف S تا Z",
+                                                              "Content":  "📖 داستان این درس:\n\nآخرین ۸ حرف! بعد از این درس، تمام الفبا رو بلدی! 🎉\n\n🎯 حروف امروز:\n\nS s = س (مثل «س» در «سگ»)\nT t = ت (مثل «ت» در «تابستان»)\nU u = یو (مثل «یو» در «یوگا»)\nV v = و (مثل «و» در «والدین»)\nW w = دبلیو (مثل «و»)\nX x = اکس (مثل «کس»)\nY y = وای (مثل «ی»)\nZ z = زد (مثل «ز» در «زمین»)\n\n📝 کلمات ساده:\n- Sun = خورشید\n- Tea = چای\n- Up = بالا\n- Van = ون\n- Water = آب\n- Box = جعبه\n- Yes = بله\n- Zoo = باغ وحش\n\n🗣️ تمرین تلفظ:\nS - T - U - V - W - X - Y - Z\n\n🔁 مرور همه حروف:\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\n💡 نکته مادرانه:\nآفرین! حالا تمام ۲۶ حرف الفبای انگلیسی رو بلدی! 🎉\nآهنگ الفبا رو بخون:\nA B C D E F G\nH I J K L M N O P\nQ R S T U V\nW X Y Z\nNow I know my ABC\u0027s!",
+                                                              "Level":  1,
+                                                              "OrderNumber":  4,
+                                                              "EstimatedMinutes":  15,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "حرف W چگونه تلفظ می‌شود؟",
+                                                                                    "OptionA":  "و",
+                                                                                    "OptionB":  "دبلیو",
+                                                                                    "OptionC":  "یو",
+                                                                                    "OptionD":  "وی",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "W به صورت «دبلیو» تلفظ می‌شود",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "کدام کلمه به معنی «بله» است؟",
+                                                                                    "OptionA":  "No",
+                                                                                    "OptionB":  "Yes",
+                                                                                    "OptionC":  "Ok",
+                                                                                    "OptionD":  "Hi",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Yes یعنی بله",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "الفبای انگلیسی چند حرف دارد؟",
+                                                                                    "OptionA":  "24",
+                                                                                    "OptionB":  "26",
+                                                                                    "OptionC":  "28",
+                                                                                    "OptionD":  "30",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "الفبای انگلیسی ۲۶ حرف دارد",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۵: صداهای کوتاه و بلند",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا حروف رو یاد گرفته. حالا نوبت صداهای مختلفه!\n\n🎯 صدای حروف صدادار:\n\nA = اَ (کوتاه) مثل Apple\nA = اِی (بلند) مثل Name\n\nE = اِ (کوتاه) مثل Egg\nE = ای (بلند) مثل He\n\nI = ای (کوتاه) مثل It\nI = آی (بلند) مثل Ice\n\nO = اُ (کوتاه) مثل Hot\nO = اُو (بلند) مثل Go\n\nU = آ (کوتاه) مثل Up\nU = یو (بلند) مثل Use\n\n📝 کلمات ساده:\n- Cat = گربه (صدای کوتاه A)\n- Cake = کیک (صدای بلند A)\n- Bed = تخت (صدای کوتاه E)\n- See = دیدن (صدای بلند E)\n- Sit = نشستن (صدای کوتاه I)\n- Bike = دوچرخه (صدای بلند I)\n\n🗣️ تمرین:\nCat - Cake\nBed - See\nSit - Bike\nHot - Go\nUp - Use\n\n💡 نکته مادرانه:\nصدای کوتاه = دهان کمی باز\nصدای بلند = دهان بیشتر باز\nتمرین کن جلوی آینه!",
+                                                              "Level":  1,
+                                                              "OrderNumber":  5,
+                                                              "EstimatedMinutes":  15,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "کدام کلمه صدای کوتاه A دارد؟",
+                                                                                    "OptionA":  "Cake",
+                                                                                    "OptionB":  "Cat",
+                                                                                    "OptionC":  "Name",
+                                                                                    "OptionD":  "Make",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Cat صدای کوتاه «اَ» دارد",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "کدام کلمه صدای بلند I دارد؟",
+                                                                                    "OptionA":  "Sit",
+                                                                                    "OptionB":  "Bike",
+                                                                                    "OptionC":  "It",
+                                                                                    "OptionD":  "Big",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Bike صدای بلند «آی» دارد",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چند حرف صدادار در انگلیسی داریم؟",
+                                                                                    "OptionA":  "3",
+                                                                                    "OptionB":  "5",
+                                                                                    "OptionC":  "7",
+                                                                                    "OptionD":  "10",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "۵ حرف صدادار: A, E, I, O, U",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۶: کلمات پرسشی",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا می‌خواد سوال بپرسه. باید کلمات پرسشی رو یاد بگیره!\n\n🎯 کلمات پرسشی:\n\nWhat = چه / چی\nمثال: What is this? = این چیه؟\n\nWho = کی / چه کسی\nمثال: Who are you? = تو کی هستی؟\n\nWhere = کجا\nمثال: Where are you? = تو کجایی؟\n\nWhen = کی / چه وقت\nمثال: When is it? = کی هست؟\n\nWhy = چرا\nمثال: Why are you sad? = چرا ناراحتی؟\n\nHow = چطور\nمثال: How are you? = چطوری؟\n\n📝 جملات ساده:\n- What is your name? = اسمت چیه؟\n- Who is she? = اون کیه؟\n- Where is my book? = کتابم کجاست؟\n- When is your birthday? = تولدت کیه؟\n- Why are you happy? = چرا خوشحالی؟\n- How old are you? = چند سالته؟\n\n🗣️ تمرین:\nبا هر کلمه پرسشی یه سوال بساز:\nWhat ___?\nWho ___?\nWhere ___?\nWhen ___?\nWhy ___?\nHow ___?\n\n💡 نکته مادرانه:\nاین ۶ کلمه رو حفظ کن:\nWhat, Who, Where, When, Why, How\nکلید سوال پرسیدن هستن!",
+                                                              "Level":  1,
+                                                              "OrderNumber":  6,
+                                                              "EstimatedMinutes":  15,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "کدام کلمه به معنی «کجا» است؟",
+                                                                                    "OptionA":  "What",
+                                                                                    "OptionB":  "Where",
+                                                                                    "OptionC":  "When",
+                                                                                    "OptionD":  "Why",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Where یعنی کجا",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "How are you? یعنی چه؟",
+                                                                                    "OptionA":  "تو کی هستی؟",
+                                                                                    "OptionB":  "چطوری؟",
+                                                                                    "OptionC":  "کجایی؟",
+                                                                                    "OptionD":  "چند سالته؟",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "How are you? یعنی چطوری؟",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۵ چه چیزی یاد گرفتیم؟",
+                                                                                    "OptionA":  "حروف الفبا",
+                                                                                    "OptionB":  "صداهای کوتاه و بلند",
+                                                                                    "OptionC":  "کلمات پرسشی",
+                                                                                    "OptionD":  "اعداد",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۵ صداهای کوتاه و بلند حروف صدادار را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۷: ضمایر شخصی",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا می‌خواد درباره خودش و دیگران حرف بزنه. باید ضمایر رو یاد بگیره!\n\n🎯 ضمایر شخصی:\n\nI = من\nمثال: I am Sara = من سارا هستم\n\nYou = تو / شما\nمثال: You are kind = تو مهربونی\n\nHe = او (مرد)\nمثال: He is a teacher = او معلم است\n\nShe = او (زن)\nمثال: She is a student = او دانش‌آموز است\n\nIt = آن (برای اشیا و حیوانات)\nمثال: It is a cat = آن یک گربه است\n\nWe = ما\nمثال: We are friends = ما دوست هستیم\n\nThey = آنها\nمثال: They are happy = آنها خوشحال هستند\n\n📝 جملات ساده:\n- I am happy = من خوشحالم\n- You are nice = تو خوش‌برخوردی\n- He is tall = او قدبلند است\n- She is kind = او مهربان است\n- It is big = آن بزرگ است\n- We are here = ما اینجا هستیم\n- They are there = آنها آنجا هستند\n\n🗣️ تمرین:\nI am ___\nYou are ___\nHe is ___\nShe is ___\nIt is ___\nWe are ___\nThey are ___\n\n💡 نکته مادرانه:\n۷ تا ضمیر رو حفظ کن:\nI, You, He, She, It, We, They\nبا هر کدوم یه جمله بساز!",
+                                                              "Level":  1,
+                                                              "OrderNumber":  7,
+                                                              "EstimatedMinutes":  15,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "ضمیر «من» در انگلیسی چیست؟",
+                                                                                    "OptionA":  "You",
+                                                                                    "OptionB":  "I",
+                                                                                    "OptionC":  "He",
+                                                                                    "OptionD":  "She",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "I یعنی من",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "کدام ضمیر برای اشیا استفاده می‌شود؟",
+                                                                                    "OptionA":  "He",
+                                                                                    "OptionB":  "It",
+                                                                                    "OptionC":  "She",
+                                                                                    "OptionD":  "They",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "It برای اشیا و حیوانات استفاده می‌شود",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۶ چه کلماتی یاد گرفتیم؟",
+                                                                                    "OptionA":  "ضمایر",
+                                                                                    "OptionB":  "کلمات پرسشی",
+                                                                                    "OptionC":  "اعداد",
+                                                                                    "OptionD":  "رنگ‌ها",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۶ کلمات پرسشی (What, Who, Where, When, Why, How) را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۸: فعل بودن (To Be)",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا می‌خواد بگه «من هستم»، «تو هستی»، «او هست». باید فعل «بودن» رو یاد بگیره!\n\n🎯 فعل To Be (بودن):\n\nI am = من هستم\nYou are = تو هستی\nHe is = او هست (مرد)\nShe is = او هست (زن)\nIt is = آن است\nWe are = ما هستیم\nThey are = آنها هستند\n\n📝 جملات ساده:\n- I am Sara = من سارا هستم\n- You are my friend = تو دوست من هستی\n- He is a doctor = او دکتر است\n- She is happy = او خوشحال است\n- It is a book = آن کتاب است\n- We are students = ما دانش‌آموز هستیم\n- They are teachers = آنها معلم هستند\n\n🗣️ تمرین:\nI ___ Sara.\nYou ___ my friend.\nHe ___ a doctor.\nShe ___ happy.\nIt ___ a book.\nWe ___ students.\nThey ___ teachers.\n\n🔁 مرور درس قبل:\nI, You, He, She, It, We, They\nحالا با فعل بودن ترکیب کن:\nI am, You are, He is, She is, It is, We are, They are\n\n💡 نکته مادرانه:\nفعل بودن مهم‌ترین فعل انگلیسیه!\nAm - Are - Is\nI am\nYou/We/They are\nHe/She/It is",
+                                                              "Level":  1,
+                                                              "OrderNumber":  8,
+                                                              "EstimatedMinutes":  15,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "فعل «هستم» در انگلیسی چیست؟",
+                                                                                    "OptionA":  "Are",
+                                                                                    "OptionB":  "Am",
+                                                                                    "OptionC":  "Is",
+                                                                                    "OptionD":  "Be",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "I am = من هستم",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "کدام گزینه برای He مناسب است؟",
+                                                                                    "OptionA":  "Am",
+                                                                                    "OptionB":  "Is",
+                                                                                    "OptionC":  "Are",
+                                                                                    "OptionD":  "Be",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "He is = او هست",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۷ چه چیزی یاد گرفتیم؟",
+                                                                                    "OptionA":  "فعل بودن",
+                                                                                    "OptionB":  "ضمایر شخصی",
+                                                                                    "OptionC":  "اعداد",
+                                                                                    "OptionD":  "رنگ‌ها",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۷ ضمایر شخصی (I, You, He, She, It, We, They) را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۹: اعداد ۱ تا ۱۰",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا می‌خواد بشماره! بیا اعداد رو یاد بگیریم.\n\n🎯 اعداد ۱ تا ۱۰:\n\n1 = One = وان\n2 = Two = تو\n3 = Three = ثری\n4 = Four = فور\n5 = Five = فایو\n6 = Six = سیکس\n7 = Seven = سون\n8 = Eight = ایت\n9 = Nine = ناین\n10 = Ten = تن\n\n📝 جملات ساده:\n- I have one book = من یک کتاب دارم\n- I have two cats = من دو گربه دارم\n- I am ten years old = من ده سالمه\n- We have three apples = ما سه تا سیب داریم\n\n🗣️ تمرین:\nOne - Two - Three - Four - Five\nSix - Seven - Eight - Nine - Ten\n\n🔁 مرور درس‌های قبل:\nضمایر: I, You, He, She, It, We, They\nفعل بودن: I am, You are, He is\nحالا ترکیب کن:\nI am ten years old = من ده سالمه\n\n💡 نکته مادرانه:\nبا انگشتات بشمار:\nOne (۱) - Two (۲) - Three (۳) - Four (۴) - Five (۵)\nSix (۶) - Seven (۷) - Eight (۸) - Nine (۹) - Ten (۱۰)",
+                                                              "Level":  1,
+                                                              "OrderNumber":  9,
+                                                              "EstimatedMinutes":  15,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "عدد ۵ در انگلیسی چیست؟",
+                                                                                    "OptionA":  "Four",
+                                                                                    "OptionB":  "Five",
+                                                                                    "OptionC":  "Six",
+                                                                                    "OptionD":  "Seven",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Five = ۵",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "عدد ۱۰ در انگلیسی چیست؟",
+                                                                                    "OptionA":  "Nine",
+                                                                                    "OptionB":  "Ten",
+                                                                                    "OptionC":  "Eight",
+                                                                                    "OptionD":  "Six",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Ten = ۱۰",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۸ چه چیزی یاد گرفتیم؟",
+                                                                                    "OptionA":  "اعداد",
+                                                                                    "OptionB":  "فعل بودن (To Be)",
+                                                                                    "OptionC":  "رنگ‌ها",
+                                                                                    "OptionD":  "روزهای هفته",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۸ فعل To Be (am, are, is) را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۱۰: سلام و احوالپرسی - اولین مکالمه 🎉",
+                                                              "Content":  "📖 داستان این درس:\n\nآفرین! به درس ۱۰ رسیدی! حالا می‌تونیم اولین مکالمه رو داشته باشیم! 🎉\n\n🎯 جملات ضروری:\n\nHello = سلام\nHi = سلام (خودمونی)\nGood morning = صبح بخیر\nGood afternoon = عصر بخیر\nGood evening = عصر بخیر (غروب)\nGood night = شب بخیر\n\nHow are you? = چطوری؟\nI\u0027m fine, thanks = خوبم، ممنون\nI\u0027m great = عالی‌ام\nAnd you? = و تو؟\n\nWhat is your name? = اسمت چیه؟\nMy name is... = اسم من ... است\nNice to meet you = از دیدنت خوشحالم\n\nGoodbye = خداحافظ\nBye = خداحافظ (خودمونی)\nSee you later = بعداً می‌بینمت\n\n📝 مکالمه کامل:\n\nSara: \"Hello!\"\nAlex: \"Hi! How are you?\"\nSara: \"I\u0027m great, thanks! And you?\"\nAlex: \"I\u0027m fine. What is your name?\"\nSara: \"My name is Sara. What is your name?\"\nAlex: \"I am Alex. Nice to meet you!\"\nSara: \"Nice to meet you too!\"\nAlex: \"Goodbye, Sara!\"\nSara: \"Bye! See you later!\"\n\n🔁 مرور همه درس‌ها:\n✅ درس ۱: حروف A تا F\n✅ درس ۲: حروف G تا L\n✅ درس ۳: حروف M تا R\n✅ درس ۴: حروف S تا Z\n✅ درس ۵: صداهای کوتاه و بلند\n✅ درس ۶: کلمات پرسشی\n✅ درس ۷: ضمایر شخصی\n✅ درس ۸: فعل بودن\n✅ درس ۹: اعداد ۱ تا ۱۰\n✅ درس ۱۰: اولین مکالمه!\n\n💡 نکته مادرانه:\nتو الان می‌تونی:\n- حروف الفبا رو بخونی ✨\n- خودت رو معرفی کنی ✨\n- سلام و احوالپرسی کنی ✨\n- تا ۱۰ بشماری ✨\n- سوال بپرسی ✨\n- یه مکالمه کوتاه داشته باشی ✨\n\nآفرین! راهت رو ادامه بده! 🚀",
+                                                              "Level":  1,
+                                                              "OrderNumber":  10,
+                                                              "EstimatedMinutes":  20,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "How are you? یعنی چه؟",
+                                                                                    "OptionA":  "اسمت چیه؟",
+                                                                                    "OptionB":  "چطوری؟",
+                                                                                    "OptionC":  "کجایی؟",
+                                                                                    "OptionD":  "چند سالته؟",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "How are you? یعنی چطوری؟",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "Nice to meet you یعنی چه؟",
+                                                                                    "OptionA":  "خداحافظ",
+                                                                                    "OptionB":  "از دیدنت خوشحالم",
+                                                                                    "OptionC":  "بعداً می‌بینمت",
+                                                                                    "OptionD":  "صبح بخیر",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Nice to meet you یعنی از دیدنت خوشحالم",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در این ۱۰ درس چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "فقط حروف الفبا",
+                                                                                    "OptionB":  "از الفبا تا اولین مکالمه",
+                                                                                    "OptionC":  "فقط اعداد",
+                                                                                    "OptionD":  "فقط رنگ‌ها",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "از حروف الفبا شروع کردیم و به اولین مکالمه رسیدیم! 🎉",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          }
+                                                      ]
+                                      }
+                     }
+                 ],
+    "CategoryId":  "education",
+    "CategoryTitle":  "آموزشی و مهارتی"
+}

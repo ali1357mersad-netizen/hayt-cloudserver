@@ -1,0 +1,445 @@
+﻿{
+    "Title":  "انگلیسی را قورت بده - جلد دوم",
+    "Subtitle":  "مکالمات روزمره در ۱۰ درس",
+    "Description":  "دوره دوم آموزش انگلیسی - مکالمات واقعی و کاربردی برای زندگی روزمره",
+    "Author":  "Hayt Academy",
+    "Language":  "fa",
+    "Level":  2,
+    "Version":  "1.0.0",
+    "IsActive":  true,
+    "BookKey":  "english_made_easy_02",
+    "Sections":  [
+                     {
+                         "Title":  "بخش اول: مکالمات روزمره",
+                         "OrderNumber":  1,
+                         "Chapters":  {
+                                          "Title":  "فصل اول: زندگی روزانه",
+                                          "OrderNumber":  1,
+                                          "Lessons":  [
+                                                          {
+                                                              "Title":  "درس ۱۱: خانواده - معرفی اعضای خانواده",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا می‌خواد از خانواده‌ش بگه. الکس می‌پرسه:\n\n\"Do you have any siblings?\"\n\"Yes, I have one brother and one sister.\"\n\"That\u0027s nice! What are their names?\"\n\n🎯 کلمات جدید:\n- Mother / Mom = مادر / مامان\n- Father / Dad = پدر / بابا\n- Sister = خواهر\n- Brother = برادر\n- Grandmother = مادربزرگ\n- Grandfather = پدربزرگ\n- Aunt = عمه / خاله\n- Uncle = عمو / دایی\n- Cousin = پسرعمو / دخترعمو\n- Sibling = خواهر یا برادر\n\n📝 جملات کاربردی:\n- I have one sister = من یک خواهر دارم\n- My mother is a teacher = مادرم معلم است\n- Do you have any brothers? = برادر داری؟\n- I love my family = من خانواده‌ام را دوست دارم\n\n🗣️ تمرین مکالمه:\nA: \"Do you have any siblings?\"\nB: \"Yes, I have two sisters.\"\nA: \"That\u0027s great! I have one brother.\"\n\n🔁 مرور درس‌های قبل:\nدرس ۷: ضمایر (I, You, He, She)\nدرس ۸: فعل بودن (I am, You are, He is)\nحالا ترکیب کن:\n\"She is my sister. He is my brother.\"\n\n💡 نکته مادرانه:\nعکس خانواده‌ات رو ببین و بگو:\n\"This is my mother. This is my father. I love them!\"",
+                                                              "Level":  2,
+                                                              "OrderNumber":  11,
+                                                              "EstimatedMinutes":  18,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Sister یعنی چه؟",
+                                                                                    "OptionA":  "برادر",
+                                                                                    "OptionB":  "خواهر",
+                                                                                    "OptionC":  "مادر",
+                                                                                    "OptionD":  "پدر",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Sister یعنی خواهر",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بپرسی «خواهر یا برادر داری؟»",
+                                                                                    "OptionA":  "Do you have family?",
+                                                                                    "OptionB":  "Do you have any siblings?",
+                                                                                    "OptionC":  "Do you have parents?",
+                                                                                    "OptionD":  "Do you have children?",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Do you have any siblings? یعنی خواهر یا برادر داری؟",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۱۰ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "اعداد",
+                                                                                    "OptionB":  "اولین مکالمه سلام و احوالپرسی",
+                                                                                    "OptionC":  "رنگ‌ها",
+                                                                                    "OptionD":  "روزهای هفته",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۱۰ اولین مکالمه کامل سلام و احوالپرسی را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۱۲: خانه و وسایل منزل",
+                                                              "Content":  "📖 داستان این درس:\n\nالکس به خونه سارا دعوت شده. سارا خونه‌ش رو نشون می‌ده:\n\n\"Welcome to my home!\"\n\"Thank you! It\u0027s beautiful!\"\n\"This is the living room. That is the kitchen.\"\n\n🎯 کلمات جدید:\n- House = خانه\n- Room = اتاق\n- Living room = اتاق نشیمن\n- Kitchen = آشپزخانه\n- Bedroom = اتاق خواب\n- Bathroom = حمام\n- Door = در\n- Window = پنجره\n- Table = میز\n- Chair = صندلی\n- Bed = تخت\n- Lamp = چراغ\n\n📝 جملات کاربردی:\n- This is my house = این خانه من است\n- The kitchen is big = آشپزخانه بزرگ است\n- Where is the bathroom? = حمام کجاست؟\n- My room is small = اتاق من کوچک است\n\n🗣️ تمرین مکالمه:\nA: \"Welcome to my house!\"\nB: \"Thank you! It\u0027s very nice.\"\nA: \"This is the living room.\"\nB: \"I love the big window!\"\n\n🔁 مرور:\nدرس ۶: Where (کجا)\nحالا بپرس:\n\"Where is the kitchen?\"\n\"Where is the bathroom?\"\n\n💡 نکته مادرانه:\nتوی خونه‌ات بگرد و به انگلیسی بگو:\n\"This is the kitchen. That is my bedroom.\"",
+                                                              "Level":  2,
+                                                              "OrderNumber":  12,
+                                                              "EstimatedMinutes":  18,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Kitchen یعنی چه؟",
+                                                                                    "OptionA":  "اتاق خواب",
+                                                                                    "OptionB":  "آشپزخانه",
+                                                                                    "OptionC":  "حمام",
+                                                                                    "OptionD":  "اتاق نشیمن",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Kitchen یعنی آشپزخانه",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «حمام کجاست؟»",
+                                                                                    "OptionA":  "What is bathroom?",
+                                                                                    "OptionB":  "Where is the bathroom?",
+                                                                                    "OptionC":  "Who is bathroom?",
+                                                                                    "OptionD":  "When is bathroom?",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Where is the bathroom? یعنی حمام کجاست؟",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۱۱ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "خانه و وسایل",
+                                                                                    "OptionB":  "اعضای خانواده",
+                                                                                    "OptionC":  "غذاها",
+                                                                                    "OptionD":  "رنگ‌ها",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۱۱ اعضای خانواده را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۱۳: رنگ‌ها و شکل‌ها",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا و الکس در حال نقاشی کردن هستن:\n\n\"What color is this?\"\n\"It\u0027s red. I love red!\"\n\"What is your favorite color?\"\n\"My favorite color is blue.\"\n\n🎯 رنگ‌ها:\n- Red = قرمز\n- Blue = آبی\n- Green = سبز\n- Yellow = زرد\n- Black = سیاه\n- White = سفید\n- Orange = نارنجی\n- Pink = صورتی\n- Purple = بنفش\n- Brown = قهوه‌ای\n- Gray = خاکستری\n\n🎯 شکل‌ها:\n- Circle = دایره\n- Square = مربع\n- Triangle = مثلث\n- Star = ستاره\n- Heart = قلب\n\n📝 جملات کاربردی:\n- My favorite color is blue = رنگ مورد علاقه‌ام آبی است\n- The sky is blue = آسمان آبی است\n- I have a red car = من یک ماشین قرمز دارم\n- The sun is yellow = خورشید زرد است\n\n🗣️ تمرین مکالمه:\nA: \"What is your favorite color?\"\nB: \"My favorite color is green. What about you?\"\nA: \"I love blue!\"\n\n🔁 مرور:\nدرس ۷: My (مال من)\nحالا بگو:\n\"My favorite color is...\"\n\"My car is red.\"\n\n💡 نکته مادرانه:\nبه اطرافت نگاه کن و رنگ‌ها رو به انگلیسی بگو:\n\"The door is brown. The wall is white.\"",
+                                                              "Level":  2,
+                                                              "OrderNumber":  13,
+                                                              "EstimatedMinutes":  18,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Green یعنی چه رنگی؟",
+                                                                                    "OptionA":  "آبی",
+                                                                                    "OptionB":  "سبز",
+                                                                                    "OptionC":  "قرمز",
+                                                                                    "OptionD":  "زرد",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Green یعنی سبز",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بپرسی «رنگ مورد علاقه‌ات چیه؟»",
+                                                                                    "OptionA":  "What is your favorite food?",
+                                                                                    "OptionB":  "What is your favorite color?",
+                                                                                    "OptionC":  "What is your favorite book?",
+                                                                                    "OptionD":  "What is your favorite movie?",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "What is your favorite color? یعنی رنگ مورد علاقه‌ات چیه؟",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۱۲ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "خانواده",
+                                                                                    "OptionB":  "خانه و وسایل منزل",
+                                                                                    "OptionC":  "غذاها",
+                                                                                    "OptionD":  "حیوانات",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۱۲ خانه و وسایل منزل را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۱۴: لباس‌ها و پوشاک",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا و الکس برای خرید لباس رفته‌ان:\n\n\"I like this shirt. It\u0027s beautiful!\"\n\"What size do you wear?\"\n\"I wear medium. What about you?\"\n\n🎯 کلمات جدید:\n- Shirt = پیراهن\n- Pants = شلوار\n- Shoes = کفش\n- Hat = کلاه\n- Jacket = کاپشن\n- Dress = لباس (زنانه)\n- Skirt = دامن\n- Socks = جوراب\n- Coat = پالتو\n- T-shirt = تی‌شرت\n\n📝 جملات کاربردی:\n- I like your shirt = پیراهنت را دوست دارم\n- This dress is beautiful = این لباس قشنگ است\n- Where are my shoes? = کفش‌های من کجاست؟\n- I need a new jacket = من یک کاپشن جدید نیاز دارم\n\n🗣️ تمرین مکالمه:\nA: \"I like your T-shirt!\"\nB: \"Thank you! It\u0027s new.\"\nA: \"Where did you buy it?\"\nB: \"I bought it from the mall.\"\n\n🔁 مرور:\nدرس ۶: Where (کجا)\nدرس ۱۳: رنگ‌ها\nحالا ترکیب کن:\n\"I have a red shirt.\"\n\"Where is my blue jacket?\"\n\n💡 نکته مادرانه:\nوقتی لباس می‌پوشی، به انگلیسی بگو:\n\"I am wearing a blue shirt and black pants.\"",
+                                                              "Level":  2,
+                                                              "OrderNumber":  14,
+                                                              "EstimatedMinutes":  18,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Shoes یعنی چه؟",
+                                                                                    "OptionA":  "جوراب",
+                                                                                    "OptionB":  "کفش",
+                                                                                    "OptionC":  "کلاه",
+                                                                                    "OptionD":  "شلوار",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Shoes یعنی کفش",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «این لباس قشنگ است»؟",
+                                                                                    "OptionA":  "This dress is bad",
+                                                                                    "OptionB":  "This dress is beautiful",
+                                                                                    "OptionC":  "This dress is old",
+                                                                                    "OptionD":  "This dress is small",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "This dress is beautiful یعنی این لباس قشنگ است",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۱۳ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "لباس‌ها",
+                                                                                    "OptionB":  "رنگ‌ها و شکل‌ها",
+                                                                                    "OptionC":  "حیوانات",
+                                                                                    "OptionD":  "مشاغل",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۱۳ رنگ‌ها و شکل‌ها را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۱۵: غذا خوردن در رستوران",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا و الکس به رستوران رفته‌ان:\n\n\"Welcome! Table for two?\"\n\"Yes, please.\"\n\"Here is the menu.\"\n\"What would you like to eat?\"\n\n🎯 کلمات جدید:\n- Menu = منو\n- Order = سفارش\n- Waiter = پیشخدمت\n- Bill = صورت حساب\n- Delicious = خوشمزه\n- Breakfast = صبحانه\n- Lunch = ناهار\n- Dinner = شام\n- Appetizer = پیش غذا\n- Dessert = دسر\n\n📝 جملات کاربردی:\n- I would like pizza = پیتزا می‌خواهم\n- Can I have the menu, please? = منو را می‌توانم لطفاً؟\n- The food is delicious = غذا خوشمزه است\n- Check, please! = صورت حساب لطفاً!\n\n🗣️ تمرین مکالمه:\nWaiter: \"Are you ready to order?\"\nYou: \"Yes, I would like pasta, please.\"\nWaiter: \"Anything to drink?\"\nYou: \"Yes, water please.\"\n\n🔁 مرور:\nدرس ۷: I would like = من می‌خواهم\nدرس ۹: اعداد (برای قیمت)\nحالا بگو:\n\"I would like a pizza. How much is it?\"\n\n💡 نکته مادرانه:\nتوی رستوران بگو:\n\"I would like... please.\"\n\"Thank you!\"\n\"Delicious!\"",
+                                                              "Level":  2,
+                                                              "OrderNumber":  15,
+                                                              "EstimatedMinutes":  18,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Menu یعنی چه؟",
+                                                                                    "OptionA":  "پیشخدمت",
+                                                                                    "OptionB":  "منو / فهرست غذا",
+                                                                                    "OptionC":  "صورت حساب",
+                                                                                    "OptionD":  "دسر",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Menu یعنی منوی غذا",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «صورت حساب لطفاً»؟",
+                                                                                    "OptionA":  "Menu please",
+                                                                                    "OptionB":  "Check please",
+                                                                                    "OptionC":  "Food please",
+                                                                                    "OptionD":  "Water please",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Check please یعنی صورت حساب لطفاً",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۱۴ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "غذا خوردن در رستوران",
+                                                                                    "OptionB":  "لباس‌ها و پوشاک",
+                                                                                    "OptionC":  "رنگ‌ها",
+                                                                                    "OptionD":  "حیوانات",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۱۴ لباس‌ها و پوشاک را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۱۶: خرید از فروشگاه",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا به فروشگاه رفته:\n\n\"Excuse me, how much is this?\"\n\"It\u0027s ten dollars.\"\n\"That\u0027s expensive! Any discount?\"\n\"Sorry, no discount.\"\n\n🎯 کلمات جدید:\n- Store = فروشگاه\n- Price = قیمت\n- How much = چقدر\n- Dollar = دلار\n- Cheap = ارزان\n- Expensive = گران\n- Discount = تخفیف\n- Sale = حراج\n- Buy = خریدن\n- Pay = پرداخت کردن\n\n📝 جملات کاربردی:\n- How much is this? = این چقدر است؟\n- It\u0027s too expensive = خیلی گران است\n- Do you have a discount? = تخفیف دارید؟\n- I will buy this = این را می‌خرم\n\n🗣️ تمرین مکالمه:\nA: \"Excuse me, how much is this shirt?\"\nB: \"It\u0027s twenty dollars.\"\nA: \"That\u0027s expensive! Any discount?\"\nB: \"Yes, ten percent off.\"\n\n🔁 مرور:\nدرس ۹: اعداد (برای قیمت)\nدرس ۱۴: لباس‌ها\nحالا ترکیب کن:\n\"How much is this red shirt?\"\n\"It\u0027s fifteen dollars.\"\n\n💡 نکته مادرانه:\nوقتی خرید می‌ری بگو:\n\"How much is this?\"\n\"It\u0027s cheap! I will buy it.\"",
+                                                              "Level":  2,
+                                                              "OrderNumber":  16,
+                                                              "EstimatedMinutes":  18,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "How much یعنی چه؟",
+                                                                                    "OptionA":  "چطور",
+                                                                                    "OptionB":  "چقدر",
+                                                                                    "OptionC":  "کجا",
+                                                                                    "OptionD":  "کی",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "How much یعنی چقدر (برای قیمت)",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "Expensive یعنی چه؟",
+                                                                                    "OptionA":  "ارزان",
+                                                                                    "OptionB":  "گران",
+                                                                                    "OptionC":  "خوب",
+                                                                                    "OptionD":  "بد",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Expensive یعنی گران",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۱۵ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "خرید از فروشگاه",
+                                                                                    "OptionB":  "غذا خوردن در رستوران",
+                                                                                    "OptionC":  "لباس‌ها",
+                                                                                    "OptionD":  "رنگ‌ها",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۱۵ غذا خوردن در رستوران را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۱۷: جهت‌ها و مکان‌ها",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا گم شده و از الکس راه می‌پرسه:\n\n\"Excuse me, where is the bank?\"\n\"Go straight. Turn left. It\u0027s on your right.\"\n\"Thank you so much!\"\n\"You\u0027re welcome!\"\n\n🎯 کلمات جدید:\n- Left = چپ\n- Right = راست\n- Straight = مستقیم\n- Turn = پیچیدن\n- Go = رفتن\n- Stop = ایستادن\n- Near = نزدیک\n- Far = دور\n- Next to = کنار\n- Between = بین\n- Corner = گوشه\n\n📝 جملات کاربردی:\n- Go straight = مستقیم برو\n- Turn left = به چپ بپیچ\n- Turn right = به راست بپیچ\n- It\u0027s on your right = در سمت راست شماست\n- It\u0027s near here = نزدیک اینجاست\n\n🗣️ تمرین مکالمه:\nA: \"Excuse me, where is the hospital?\"\nB: \"Go straight. Turn left. It\u0027s on your right.\"\nA: \"Thank you!\"\nB: \"You\u0027re welcome!\"\n\n🔁 مرور:\nدرس ۶: Where (کجا)\nحالا بپرس:\n\"Where is the bank?\"\n\"Where is the park?\"\n\n💡 نکته مادرانه:\nبا دستت تمرین کن:\n\"Turn left\" (دست چپ)\n\"Turn right\" (دست راست)\n\"Go straight\" (دست مستقیم)",
+                                                              "Level":  2,
+                                                              "OrderNumber":  17,
+                                                              "EstimatedMinutes":  18,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Turn left یعنی چه؟",
+                                                                                    "OptionA":  "به راست بپیچ",
+                                                                                    "OptionB":  "به چپ بپیچ",
+                                                                                    "OptionC":  "مستقیم برو",
+                                                                                    "OptionD":  "بایست",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Turn left یعنی به چپ بپیچ",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بگی «مستقیم برو»؟",
+                                                                                    "OptionA":  "Turn left",
+                                                                                    "OptionB":  "Go straight",
+                                                                                    "OptionC":  "Turn right",
+                                                                                    "OptionD":  "Go back",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Go straight یعنی مستقیم برو",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۱۶ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "جهت‌ها و مکان‌ها",
+                                                                                    "OptionB":  "خرید از فروشگاه",
+                                                                                    "OptionC":  "رستوران",
+                                                                                    "OptionD":  "خانواده",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۱۶ خرید از فروشگاه را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۱۸: زمان و ساعت",
+                                                              "Content":  "📖 داستان این درس:\n\nالکس می‌پرسه ساعت چنده:\n\n\"Excuse me, what time is it?\"\n\"It\u0027s three o\u0027clock.\"\n\"Thank you! What time is the meeting?\"\n\"It\u0027s at four thirty.\"\n\n🎯 کلمات جدید:\n- Time = زمان / ساعت\n- O\u0027clock = ساعت دقیق\n- Half past = و نیم\n- Quarter past = و ربع\n- Quarter to = ربع به\n- Morning = صبح\n- Afternoon = بعد از ظهر\n- Evening = عصر\n- Night = شب\n- Noon = ظهر\n- Midnight = نیمه شب\n\n📝 جملات کاربردی:\n- What time is it? = ساعت چنده؟\n- It\u0027s two o\u0027clock = ساعت دو است\n- It\u0027s half past three = ساعت سه و نیم است\n- It\u0027s quarter past four = ساعت چهار و ربع است\n- It\u0027s quarter to five = ساعت پنج ربع است\n\n🗣️ تمرین مکالمه:\nA: \"What time is it?\"\nB: \"It\u0027s half past seven.\"\nA: \"Oh! I\u0027m late!\"\nB: \"Don\u0027t worry!\"\n\n🔁 مرور:\nدرس ۹: اعداد\nحالا ترکیب کن:\n\"It\u0027s three o\u0027clock.\"\n\"It\u0027s ten thirty.\"\n\n💡 نکته مادرانه:\nهر ساعت به ساعتت نگاه کن و بگو:\n\"It\u0027s ... o\u0027clock.\"\n\"It\u0027s half past ...\"",
+                                                              "Level":  2,
+                                                              "OrderNumber":  18,
+                                                              "EstimatedMinutes":  18,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "What time is it? یعنی چه؟",
+                                                                                    "OptionA":  "ساعت چنده؟",
+                                                                                    "OptionB":  "کجایی؟",
+                                                                                    "OptionC":  "چند سالته؟",
+                                                                                    "OptionD":  "چطوری؟",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "What time is it? یعنی ساعت چنده؟",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "Half past three یعنی چه؟",
+                                                                                    "OptionA":  "ساعت سه",
+                                                                                    "OptionB":  "ساعت سه و نیم",
+                                                                                    "OptionC":  "ساعت چهار",
+                                                                                    "OptionD":  "ساعت دو و نیم",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Half past three یعنی ساعت سه و نیم",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۱۷ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "زمان و ساعت",
+                                                                                    "OptionB":  "جهت‌ها و مکان‌ها",
+                                                                                    "OptionC":  "خرید",
+                                                                                    "OptionD":  "رستوران",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۱۷ جهت‌ها و مکان‌ها را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۱۹: روزهای هفته و ماه‌ها",
+                                                              "Content":  "📖 داستان این درس:\n\nسارا و الکس برنامه هفتگی‌شان را هماهنگ می‌کنند:\n\n\"What day is it today?\"\n\"It\u0027s Monday.\"\n\"What do you do on Fridays?\"\n\"I usually go to the park.\"\n\n🎯 روزهای هفته:\n- Monday = دوشنبه\n- Tuesday = سه‌شنبه\n- Wednesday = چهارشنبه\n- Thursday = پنجشنبه\n- Friday = جمعه\n- Saturday = شنبه\n- Sunday = یکشنبه\n\n🎯 ماه‌ها:\n- January = ژانویه\n- February = فوریه\n- March = مارس\n- April = آوریل\n- May = می\n- June = ژوئن\n- July = ژوئیه\n- August = اوت\n- September = سپتامبر\n- October = اکتبر\n- November = نوامبر\n- December = دسامبر\n\n📝 جملات کاربردی:\n- Today is Monday = امروز دوشنبه است\n- My birthday is in May = تولد من در ماه می است\n- I go to school on Saturdays = من شنبه‌ها به مدرسه می‌روم\n- What day is it today? = امروز چه روزی است؟\n\n🗣️ تمرین مکالمه:\nA: \"What day is it today?\"\nB: \"It\u0027s Friday!\"\nA: \"Great! What do you do on Fridays?\"\nB: \"I go to the park with my family.\"\n\n🔁 مرور:\nدرس ۸: I go = من می‌روم\nدرس ۱۸: زمان\nحالا ترکیب کن:\n\"I go to school on Monday at eight o\u0027clock.\"\n\n💡 نکته مادرانه:\nهر روز صبح بگو:\n\"Today is ...\"\n\"I will ... today.\"",
+                                                              "Level":  2,
+                                                              "OrderNumber":  19,
+                                                              "EstimatedMinutes":  18,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Monday یعنی چه روزی؟",
+                                                                                    "OptionA":  "شنبه",
+                                                                                    "OptionB":  "دوشنبه",
+                                                                                    "OptionC":  "سه‌شنبه",
+                                                                                    "OptionD":  "یکشنبه",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Monday یعنی دوشنبه",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "چطور بپرسی «امروز چه روزیه؟»",
+                                                                                    "OptionA":  "What time is it?",
+                                                                                    "OptionB":  "What day is it today?",
+                                                                                    "OptionC":  "What month is it?",
+                                                                                    "OptionD":  "What year is it?",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "What day is it today? یعنی امروز چه روزیه؟",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در درس ۱۸ چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "روزهای هفته",
+                                                                                    "OptionB":  "زمان و ساعت",
+                                                                                    "OptionC":  "جهت‌ها",
+                                                                                    "OptionD":  "خرید",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "در درس ۱۸ زمان و ساعت را یاد گرفتیم",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          },
+                                                          {
+                                                              "Title":  "درس ۲۰: جمع‌بندی - مکالمه کامل روزمره 🎉",
+                                                              "Content":  "📖 داستان این درس:\n\nتبریک! به آخر جلد دوم رسیدی! 🎉\nحالا می‌تونی یه مکالمه کامل روزمره داشته باشی!\n\n🎯 مکالمه کامل:\n\nAlex: \"Hi Sara! How are you today?\"\nSara: \"I\u0027m great! It\u0027s a beautiful day!\"\nAlex: \"Yes! Today is Friday. What do you do on Fridays?\"\nSara: \"I usually go to the park with my family.\"\nAlex: \"That\u0027s nice! What time do you go?\"\nSara: \"At three o\u0027clock in the afternoon.\"\nAlex: \"Can I come with you?\"\nSara: \"Of course! Let\u0027s go together!\"\n\n(At the park)\nSara: \"This is my mother and my sister.\"\nAlex: \"Nice to meet you! I\u0027m Alex.\"\nSara\u0027s mom: \"Nice to meet you too!\"\nSara: \"Mom, this is my friend Alex. He is a teacher.\"\nAlex: \"The park is beautiful! I love the green trees.\"\nSara: \"Me too! Let\u0027s sit here.\"\n\n(Later, at a cafe)\nWaiter: \"Welcome! What would you like?\"\nSara: \"I would like tea, please.\"\nAlex: \"I would like coffee, please.\"\nWaiter: \"Anything else?\"\nSara: \"No, thank you.\"\n\n(After cafe)\nAlex: \"The tea was delicious! How much was it?\"\nSara: \"It was five dollars. Not expensive!\"\nAlex: \"Great! Well, I should go now. It\u0027s six o\u0027clock.\"\nSara: \"Ok! See you on Monday!\"\nAlex: \"See you! Take care!\"\n\n📝 کلمات جدید این درس:\n- Together = با هم\n- Of course = البته\n- Beautiful = زیبا\n- Tree = درخت\n- Sit = نشستن\n- Should = باید\n- Now = الآن\n\n🔁 مرور جلد دوم:\n✅ درس ۱۱: خانواده\n✅ درس ۱۲: خانه و وسایل\n✅ درس ۱۳: رنگ‌ها و شکل‌ها\n✅ درس ۱۴: لباس‌ها\n✅ درس ۱۵: رستوران\n✅ درس ۱۶: خرید\n✅ درس ۱۷: جهت‌ها\n✅ درس ۱۸: زمان و ساعت\n✅ درس ۱۹: روزهای هفته\n✅ درس ۲۰: مکالمه کامل روزمره!\n\n💡 نکته مادرانه:\nتو الآن می‌تونی:\n- از خانواده‌ات بگی ✨\n- خونه‌ات رو توصیف کنی ✨\n- رنگ‌ها و لباس‌ها رو بگی ✨\n- توی رستوران غذا سفارش بدی ✨\n- خرید کنی و قیمت بپرسی ✨\n- راهنمایی بگیري ✨\n- ساعت و روز رو بگی ✨\n- یه مکالمه کامل روزمره داشته باشی ✨\n\nآفرین! راهت رو ادامه بده! 🚀\n\n\"I can speak English every day!\"",
+                                                              "Level":  2,
+                                                              "OrderNumber":  20,
+                                                              "EstimatedMinutes":  25,
+                                                              "LessonType":  "Educational",
+                                                              "PassingScore":  70,
+                                                              "IsActive":  true,
+                                                              "Questions":  [
+                                                                                {
+                                                                                    "QuestionText":  "Together یعنی چه؟",
+                                                                                    "OptionA":  "تنها",
+                                                                                    "OptionB":  "با هم",
+                                                                                    "OptionC":  "بعداً",
+                                                                                    "OptionD":  "الآن",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "Together یعنی با هم",
+                                                                                    "OrderNumber":  1
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "در این ۱۰ درس چه یاد گرفتیم؟",
+                                                                                    "OptionA":  "فقط رنگ‌ها",
+                                                                                    "OptionB":  "مکالمات روزمره از خانواده تا خرید و رستوران",
+                                                                                    "OptionC":  "فقط اعداد",
+                                                                                    "OptionD":  "فقط حروف",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "مکالمات روزمره شامل خانواده، خانه، خرید، رستوران، جهت‌ها، زمان و...",
+                                                                                    "OrderNumber":  2
+                                                                                },
+                                                                                {
+                                                                                    "QuestionText":  "بعد از ۲۰ درس، چه کاری می‌توانی انجام دهی؟",
+                                                                                    "OptionA":  "فقط سلام کنم",
+                                                                                    "OptionB":  "یک مکالمه کامل روزمره داشته باشم",
+                                                                                    "OptionC":  "فقط بخوانم",
+                                                                                    "OptionD":  "هیچی",
+                                                                                    "CorrectOptionIndex":  1,
+                                                                                    "Explanation":  "بعد از ۲۰ درس می‌توانی یک مکالمه کامل روزمره داشته باشی! 🎉",
+                                                                                    "OrderNumber":  3
+                                                                                }
+                                                                            ]
+                                                          }
+                                                      ]
+                                      }
+                     }
+                 ],
+    "CategoryId":  "education",
+    "CategoryTitle":  "آموزشی و مهارتی"
+}

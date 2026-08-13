@@ -1,0 +1,85 @@
+﻿@page "/login"
+
+<PageTitle>ورود - حیات طیبه</PageTitle>
+
+<div class="hayt-auth-page" dir="rtl">
+    <section class="hayt-auth-shell">
+        <div class="hayt-auth-info">
+            <div class="hayt-auth-logo">ح</div>
+            <div class="hayt-kicker">Hayt Cloud Identity</div>
+            <h1>ورود به سامانه حیات طیبه</h1>
+            <p>
+                این صفحه برای اتصال نهایی به سیستم احراز هویت و لایسنس آماده شده است.
+                در پایان، منطق فاز ۲ به این UI متصل می‌شود.
+            </p>
+
+            <div class="hayt-auth-badges">
+                <span>Blazor WASM</span>
+                <span>JWT Ready</span>
+                <span>License Ready</span>
+            </div>
+        </div>
+
+        <div class="hayt-auth-card">
+            <h2>ورود کاربر</h2>
+            <p class="hayt-auth-muted">اطلاعات تست فعلی شما در فرم قرار داده شده است.</p>
+
+            <div class="hayt-form-group">
+                <label>ایمیل</label>
+                <input class="form-control" @bind="email" placeholder="example@hayt.local" />
+            </div>
+
+            <div class="hayt-form-group">
+                <label>رمز عبور</label>
+                <input class="form-control" type="password" @bind="password" placeholder="••••••" />
+            </div>
+
+            <div class="hayt-form-row">
+                <label class="hayt-check-inline">
+                    <input type="checkbox" @bind="rememberMe" />
+                    <span>مرا به خاطر بسپار</span>
+                </label>
+
+                <a href="/profile">پروفایل</a>
+            </div>
+
+            <button class="btn btn-primary btn-lg w-100" @onclick="ShowPendingMessage">
+                ورود آزمایشی
+            </button>
+
+            @if (!string.IsNullOrWhiteSpace(message))
+            {
+                <div class="alert alert-info mt-3 mb-0">
+                    @message
+                </div>
+            }
+
+            <div class="hayt-auth-divider">
+                <span>یا</span>
+            </div>
+
+            <div class="hayt-auth-actions">
+                <a class="btn btn-outline-primary" href="/register">ایجاد حساب</a>
+                <a class="btn btn-outline-secondary" href="/">بازگشت به خانه</a>
+            </div>
+
+            <div class="hayt-auth-test-box">
+                <strong>اطلاعات تست فعلی</strong>
+                <span>Email: local-admin@hayt.local</span>
+                <span>Password: 123456</span>
+            </div>
+        </div>
+    </section>
+</div>
+
+@code {
+    private string email = "local-admin@hayt.local";
+    private string password = "123456";
+    private bool rememberMe = true;
+    private string message = "";
+
+    private void ShowPendingMessage()
+    {
+        message = "UI ورود آماده است. اتصال نهایی به AuthService در بازگشت به فاز ۲ انجام می‌شود.";
+    }
+}

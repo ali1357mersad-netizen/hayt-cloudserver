@@ -1,0 +1,300 @@
+<Window x:Class="Hayt.Views.PersonalGoalsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="مدیریت اهداف شخصی"
+        Width="900"
+        Height="680"
+        MinWidth="760"
+        MinHeight="560"
+        WindowStartupLocation="CenterOwner"
+        FlowDirection="RightToLeft"
+        Background="{DynamicResource HaytBackgroundBrush}">
+
+    <Grid Margin="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="14"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="14"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="14"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0"
+                Background="{DynamicResource HaytSurfaceBrush}"
+                BorderBrush="{DynamicResource HaytBorderBrush}"
+                BorderThickness="1"
+                CornerRadius="14"
+                Padding="16">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right">
+                    <TextBlock Text="🎯 مدیریت اهداف شخصی"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Foreground="{DynamicResource HaytTextBrush}"/>
+                    <TextBlock Text="{Binding HeaderText}"
+                               Margin="0,6,0,0"
+                               FontSize="13"
+                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                </StackPanel>
+
+                <StackPanel DockPanel.Dock="Left"
+                            HorizontalAlignment="Left">
+                    <TextBlock Text="{Binding OverallPercentText}"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Left"
+                               Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                    <TextBlock Text="پیشرفت کلی"
+                               FontSize="11"
+                               HorizontalAlignment="Left"
+                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- Overall progress -->
+        <Border Grid.Row="2"
+                Background="{DynamicResource HaytSurfaceBrush}"
+                BorderBrush="{DynamicResource HaytBorderBrush}"
+                BorderThickness="1"
+                CornerRadius="12"
+                Padding="12">
+            <StackPanel>
+                <ProgressBar Height="11"
+                             Minimum="0"
+                             Maximum="100"
+                             Value="{Binding OverallProgressPercent, Mode=OneWay}"
+                             Foreground="{DynamicResource HaytPrimaryBrush}"
+                             Background="{DynamicResource HaytBackgroundBrush}"
+                             BorderBrush="{DynamicResource HaytBorderBrush}"
+                             BorderThickness="1"/>
+
+                <UniformGrid Columns="4" Margin="0,12,0,0">
+                    <Border Background="{DynamicResource HaytBackgroundBrush}"
+                            BorderBrush="{DynamicResource HaytBorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="9"
+                            Padding="10"
+                            Margin="0,0,5,0">
+                        <StackPanel>
+                            <TextBlock Text="کل اهداف"
+                                       FontSize="11"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            <TextBlock Text="{Binding TotalGoals}"
+                                       FontSize="22"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytTextBrush}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="{DynamicResource HaytBackgroundBrush}"
+                            BorderBrush="{DynamicResource HaytBorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="9"
+                            Padding="10"
+                            Margin="5,0">
+                        <StackPanel>
+                            <TextBlock Text="فعال"
+                                       FontSize="11"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            <TextBlock Text="{Binding EnabledGoals}"
+                                       FontSize="22"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="{DynamicResource HaytBackgroundBrush}"
+                            BorderBrush="{DynamicResource HaytBorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="9"
+                            Padding="10"
+                            Margin="5,0">
+                        <StackPanel>
+                            <TextBlock Text="انجام‌شده"
+                                       FontSize="11"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            <TextBlock Text="{Binding CompletedGoals}"
+                                       FontSize="22"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="{DynamicResource HaytBackgroundBrush}"
+                            BorderBrush="{DynamicResource HaytBorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="9"
+                            Padding="10"
+                            Margin="5,0,0,0">
+                        <StackPanel>
+                            <TextBlock Text="غیرفعال"
+                                       FontSize="11"
+                                       Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                            <TextBlock Text="{Binding DisabledGoals}"
+                                       FontSize="22"
+                                       FontWeight="Bold"
+                                       Foreground="{DynamicResource HaytTextBrush}"/>
+                        </StackPanel>
+                    </Border>
+                </UniformGrid>
+            </StackPanel>
+        </Border>
+
+        <!-- Goals list -->
+        <Border Grid.Row="4"
+                Background="{DynamicResource HaytSurfaceBrush}"
+                BorderBrush="{DynamicResource HaytBorderBrush}"
+                BorderThickness="1"
+                CornerRadius="12"
+                Padding="12">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Goals}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Background="{DynamicResource HaytBackgroundBrush}"
+                                    BorderBrush="{DynamicResource HaytBorderBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="10"
+                                    Padding="12"
+                                    Margin="0,0,0,10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="8"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="8"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="10"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <DockPanel Grid.Row="0">
+                                        <StackPanel DockPanel.Dock="Right"
+                                                    Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Icon}"
+                                                       FontSize="22"
+                                                       Margin="0,0,8,0"/>
+                                            <StackPanel>
+                                                <TextBlock Text="{Binding Title}"
+                                                           FontSize="16"
+                                                           FontWeight="Bold"
+                                                           Foreground="{DynamicResource HaytTextBrush}"/>
+                                                <TextBlock Text="{Binding SummaryText}"
+                                                           Margin="0,3,0,0"
+                                                           FontSize="11"
+                                                           Foreground="{DynamicResource HaytMutedTextBrush}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+
+                                        <StackPanel DockPanel.Dock="Left"
+                                                    HorizontalAlignment="Left">
+                                            <TextBlock Text="{Binding StatusText}"
+                                                       FontSize="12"
+                                                       FontWeight="Bold"
+                                                       HorizontalAlignment="Left"
+                                                       Foreground="{DynamicResource HaytPrimaryBrush}"/>
+                                            <TextBlock Text="{Binding PercentText}"
+                                                       Margin="0,3,0,0"
+                                                       FontSize="13"
+                                                       FontWeight="Bold"
+                                                       HorizontalAlignment="Left"
+                                                       Foreground="{DynamicResource HaytTextBrush}"/>
+                                        </StackPanel>
+                                    </DockPanel>
+
+                                    <TextBlock Grid.Row="2"
+                                               Text="{Binding Description}"
+                                               TextWrapping="Wrap"
+                                               FontSize="12"
+                                               Foreground="{DynamicResource HaytMutedTextBrush}"/>
+
+                                    <ProgressBar Grid.Row="4"
+                                                 Height="9"
+                                                 Minimum="0"
+                                                 Maximum="100"
+                                                 Value="{Binding ProgressPercent, Mode=OneWay}"
+                                                 Foreground="{DynamicResource HaytPrimaryBrush}"
+                                                 Background="{DynamicResource HaytSurfaceBrush}"
+                                                 BorderBrush="{DynamicResource HaytBorderBrush}"
+                                                 BorderThickness="1"/>
+
+                                    <DockPanel Grid.Row="6">
+                                        <TextBlock DockPanel.Dock="Right"
+                                                   Text="{Binding ProgressText}"
+                                                   FontSize="12"
+                                                   FontWeight="Bold"
+                                                   Foreground="{DynamicResource HaytTextBrush}"/>
+
+                                        <StackPanel DockPanel.Dock="Left"
+                                                    Orientation="Horizontal"
+                                                    HorizontalAlignment="Left">
+                                            <Button Content="+ هدف"
+                                                    Command="{Binding DataContext.IncreaseTargetCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding}"
+                                                    Padding="8,4"
+                                                    Margin="0,0,5,0"/>
+
+                                            <Button Content="- هدف"
+                                                    Command="{Binding DataContext.DecreaseTargetCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding}"
+                                                    Padding="8,4"
+                                                    Margin="0,0,5,0"/>
+
+                                            <Button Content="+ پیشرفت"
+                                                    Command="{Binding DataContext.IncreaseProgressCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding}"
+                                                    Padding="8,4"
+                                                    Margin="0,0,5,0"/>
+
+                                            <Button Content="- پیشرفت"
+                                                    Command="{Binding DataContext.DecreaseProgressCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding}"
+                                                    Padding="8,4"
+                                                    Margin="0,0,5,0"/>
+
+                                            <Button Content="ریست"
+                                                    Command="{Binding DataContext.ResetGoalProgressCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding}"
+                                                    Padding="8,4"
+                                                    Margin="0,0,5,0"/>
+
+                                            <Button Content="{Binding ToggleText}"
+                                                    Command="{Binding DataContext.ToggleGoalEnabledCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    CommandParameter="{Binding}"
+                                                    Padding="8,4"/>
+                                        </StackPanel>
+                                    </DockPanel>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Border>
+
+        <!-- Footer -->
+        <DockPanel Grid.Row="6">
+            <StackPanel DockPanel.Dock="Right"
+                        Orientation="Horizontal">
+                <Button Content="بازخوانی"
+                        Command="{Binding RefreshStateCommand}"
+                        Padding="14,7"
+                        Margin="0,0,8,0"/>
+
+                <Button Content="بازگشت به اهداف پیش‌فرض"
+                        Command="{Binding ResetToDefaultsCommand}"
+                        Padding="14,7"/>
+            </StackPanel>
+
+            <Button DockPanel.Dock="Left"
+                    Content="بستن"
+                    Click="CloseButton_Click"
+                    Padding="18,7"
+                    HorizontalAlignment="Left"/>
+        </DockPanel>
+    </Grid>
+</Window>

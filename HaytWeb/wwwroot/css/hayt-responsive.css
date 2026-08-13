@@ -1,0 +1,404 @@
+﻿:root {
+    --hayt-bg: #f5f7fb;
+    --hayt-card: #ffffff;
+    --hayt-sidebar: #101828;
+    --hayt-sidebar-soft: #1d2939;
+    --hayt-primary: #2563eb;
+    --hayt-primary-soft: #dbeafe;
+    --hayt-success: #16a34a;
+    --hayt-text: #101828;
+    --hayt-muted: #667085;
+    --hayt-border: #e4e7ec;
+    --hayt-shadow: 0 16px 40px rgba(16, 24, 40, 0.10);
+}
+
+html,
+body {
+    direction: rtl;
+    background: var(--hayt-bg);
+}
+
+body {
+    margin: 0;
+    font-family: "Vazirmatn", "Segoe UI", Tahoma, Arial, sans-serif;
+    color: var(--hayt-text);
+}
+
+.hayt-app-shell {
+    min-height: 100vh;
+    display: flex;
+    background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.10), transparent 28rem),
+        radial-gradient(circle at bottom left, rgba(22, 163, 74, 0.08), transparent 26rem),
+        var(--hayt-bg);
+}
+
+.hayt-sidebar {
+    width: 286px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--hayt-sidebar), var(--hayt-sidebar-soft));
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    box-shadow: var(--hayt-shadow);
+    z-index: 40;
+}
+
+.hayt-sidebar-header {
+    padding: 1.25rem 1.1rem;
+    display: flex;
+    gap: 0.85rem;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.hayt-brand-mark {
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #60a5fa, #22c55e);
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    font-size: 1.35rem;
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.35);
+}
+
+.hayt-brand-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.hayt-brand-subtitle {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.72);
+    margin-top: 0.15rem;
+}
+
+.hayt-nav {
+    padding: 1rem 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+}
+
+.hayt-nav-link {
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+    padding: 0.85rem 0.95rem;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    transition: all 0.18s ease;
+    font-weight: 600;
+}
+
+.hayt-nav-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.10);
+    transform: translateX(-2px);
+}
+
+.hayt-nav-link.active {
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(22, 163, 74, 0.80));
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.24);
+}
+
+.hayt-nav-icon {
+    width: 1.7rem;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 1.08rem;
+}
+
+.hayt-sidebar-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.hayt-mini-status {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.70);
+    padding: 0.35rem 0;
+}
+
+.hayt-mini-status strong {
+    color: #ffffff;
+    direction: ltr;
+    font-weight: 700;
+}
+
+.hayt-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.hayt-topbar {
+    height: 72px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--hayt-border);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.25rem;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+}
+
+.hayt-menu-button {
+    display: none;
+    border: 1px solid var(--hayt-border);
+    background: #ffffff;
+    border-radius: 14px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
+    line-height: 1;
+    color: var(--hayt-text);
+    box-shadow: 0 8px 20px rgba(16, 24, 40, 0.08);
+}
+
+.hayt-topbar-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.hayt-topbar-title strong {
+    font-size: 1rem;
+}
+
+.hayt-topbar-title small {
+    color: var(--hayt-muted);
+    font-size: 0.78rem;
+}
+
+.hayt-topbar-actions {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.hayt-cloud-pill,
+.hayt-web-pill {
+    direction: ltr;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.42rem 0.7rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border: 1px solid var(--hayt-border);
+    background: #ffffff;
+}
+
+.hayt-cloud-pill {
+    color: #166534;
+    background: #ecfdf3;
+}
+
+.hayt-web-pill {
+    color: #1d4ed8;
+    background: #eff6ff;
+}
+
+.hayt-content {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 1.35rem;
+}
+
+.hayt-backdrop {
+    display: none;
+}
+
+.card,
+.alert,
+.btn,
+.form-control,
+.form-select {
+    border-radius: 16px;
+}
+
+.card {
+    border-color: var(--hayt-border);
+}
+
+.container,
+.container-fluid {
+    max-width: 1180px;
+}
+
+@media (max-width: 991.98px) {
+    .hayt-app-shell {
+        display: block;
+    }
+
+    .hayt-sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(86vw, 320px);
+        height: 100vh;
+        min-height: 100vh;
+        transform: translateX(110%);
+        transition: transform 0.22s ease;
+        z-index: 60;
+        border-top-left-radius: 24px;
+        border-bottom-left-radius: 24px;
+    }
+
+    .hayt-sidebar.open {
+        transform: translateX(0);
+    }
+
+    .hayt-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        border: 0;
+        background: rgba(16, 24, 40, 0.50);
+        z-index: 55;
+    }
+
+    .hayt-main {
+        min-height: 100vh;
+    }
+
+    .hayt-topbar {
+        height: auto;
+        min-height: 68px;
+        padding: 0.75rem 0.9rem;
+    }
+
+    .hayt-menu-button {
+        display: inline-grid;
+        place-items: center;
+        flex: 0 0 auto;
+    }
+
+    .hayt-topbar-title {
+        min-width: 0;
+    }
+
+    .hayt-topbar-title strong {
+        font-size: 0.95rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .hayt-topbar-title small {
+        display: none;
+    }
+
+    .hayt-topbar-actions {
+        display: none;
+    }
+
+    .hayt-content {
+        padding: 0.95rem;
+    }
+
+    .container,
+    .container-fluid {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    h1 {
+        font-size: 1.55rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .lead {
+        font-size: 0.98rem;
+    }
+
+    .card-body {
+        padding: 1rem !important;
+    }
+
+    .row {
+        --bs-gutter-x: 0.85rem;
+        --bs-gutter-y: 0.85rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hayt-content {
+        padding: 0.75rem;
+    }
+
+    .hayt-sidebar {
+        width: 88vw;
+    }
+
+    .hayt-sidebar-header {
+        padding: 1rem;
+    }
+
+    .hayt-brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+    }
+
+    .hayt-brand-title {
+        font-size: 1.05rem;
+    }
+
+    .hayt-brand-subtitle {
+        font-size: 0.72rem;
+    }
+
+    .hayt-nav-link {
+        padding: 0.78rem 0.8rem;
+        border-radius: 13px;
+    }
+
+    .hayt-topbar {
+        gap: 0.7rem;
+    }
+
+    .hayt-menu-button {
+        width: 42px;
+        height: 42px;
+    }
+
+    .alert.fs-5 {
+        font-size: 1rem !important;
+    }
+
+    .badge.fs-6 {
+        font-size: 0.78rem !important;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

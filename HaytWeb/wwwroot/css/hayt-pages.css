@@ -1,0 +1,343 @@
+﻿.hayt-page {
+    width: 100%;
+}
+
+.hayt-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    gap: 1rem;
+    align-items: stretch;
+    margin-bottom: 1rem;
+}
+
+.hayt-hero-content,
+.hayt-live-card,
+.hayt-section-card,
+.hayt-stat-card,
+.hayt-quick-card {
+    background: rgba(255,255,255,0.92);
+    border: 1px solid #e4e7ec;
+    border-radius: 24px;
+    box-shadow: 0 16px 40px rgba(16,24,40,0.08);
+}
+
+.hayt-hero-content {
+    padding: 2rem;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hayt-kicker {
+    color: #2563eb;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.45rem;
+}
+
+.hayt-hero h1,
+.hayt-page-header h1 {
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.7rem;
+}
+
+.hayt-hero p,
+.hayt-page-header p {
+    color: #667085;
+    max-width: 680px;
+    line-height: 1.9;
+}
+
+.hayt-hero-actions,
+.hayt-mobile-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+.hayt-live-card {
+    padding: 1.2rem;
+}
+
+.hayt-live-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid #e4e7ec;
+    padding-bottom: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.hayt-live-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.hayt-live-grid > div {
+    background: #f8fafc;
+    border-radius: 18px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.hayt-live-grid span,
+.hayt-stat-card span {
+    display: block;
+    color: #667085;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+.hayt-live-grid strong,
+.hayt-stat-card strong {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.hayt-live-meta {
+    margin-top: 1rem;
+    color: #667085;
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.hayt-quick-grid,
+.hayt-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hayt-quick-card {
+    padding: 1.2rem;
+    text-decoration: none;
+    color: #101828;
+    transition: all 0.18s ease;
+    min-height: 150px;
+}
+
+.hayt-quick-card:hover {
+    transform: translateY(-3px);
+    color: #101828;
+    box-shadow: 0 20px 50px rgba(16,24,40,0.12);
+}
+
+.hayt-quick-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    background: #eff6ff;
+    font-size: 1.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.hayt-quick-card strong {
+    display: block;
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+}
+
+.hayt-quick-card small {
+    color: #667085;
+    line-height: 1.7;
+}
+
+.hayt-page-header {
+    background: linear-gradient(135deg, #ffffff, #eff6ff);
+    border: 1px solid #e4e7ec;
+    border-radius: 24px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 16px 40px rgba(16,24,40,0.07);
+}
+
+.hayt-stat-card {
+    padding: 1.2rem;
+}
+
+.hayt-stat-card small {
+    display: block;
+    color: #667085;
+    margin-top: 0.35rem;
+}
+
+.hayt-section-card {
+    padding: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.hayt-section-card h2 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.hayt-action-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.hayt-action-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 1rem;
+    border: 1px solid #e4e7ec;
+    border-radius: 18px;
+    color: #101828;
+    text-decoration: none;
+    background: #ffffff;
+}
+
+.hayt-action-item:hover {
+    color: #101828;
+    background: #f8fafc;
+}
+
+.hayt-action-item > span {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: #eff6ff;
+    border-radius: 14px;
+    font-size: 1.25rem;
+}
+
+.hayt-action-item strong,
+.hayt-action-item small {
+    display: block;
+}
+
+.hayt-action-item small {
+    color: #667085;
+    margin-top: 0.2rem;
+}
+
+.hayt-empty-state {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 1.5rem 0.5rem;
+}
+
+.hayt-empty-icon {
+    font-size: 3.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.hayt-empty-state h2 {
+    font-weight: 900;
+}
+
+.hayt-empty-state p {
+    color: #667085;
+    line-height: 1.9;
+}
+
+.hayt-check-list {
+    margin: 0;
+    padding-right: 1.2rem;
+    color: #344054;
+    line-height: 2.1;
+}
+
+.hayt-profile-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.hayt-avatar {
+    width: 74px;
+    height: 74px;
+    border-radius: 24px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #2563eb, #16a34a);
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 900;
+    flex: 0 0 auto;
+}
+
+.hayt-profile-card h2 {
+    margin-bottom: 0.4rem;
+}
+
+.hayt-profile-card p {
+    color: #667085;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+    .hayt-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hayt-quick-grid,
+    .hayt-stat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hayt-hero-content {
+        padding: 1.35rem;
+        min-height: auto;
+    }
+
+    .hayt-hero h1,
+    .hayt-page-header h1 {
+        font-size: 1.65rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hayt-quick-grid,
+    .hayt-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hayt-hero-actions,
+    .hayt-mobile-actions {
+        flex-direction: column;
+    }
+
+    .hayt-hero-actions .btn,
+    .hayt-mobile-actions .btn {
+        width: 100%;
+    }
+
+    .hayt-live-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hayt-page-header,
+    .hayt-hero-content,
+    .hayt-live-card,
+    .hayt-section-card,
+    .hayt-stat-card,
+    .hayt-quick-card {
+        border-radius: 20px;
+    }
+
+    .hayt-profile-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hayt-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 20px;
+        font-size: 1.6rem;
+    }
+}

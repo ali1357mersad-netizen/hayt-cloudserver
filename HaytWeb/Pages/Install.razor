@@ -1,0 +1,79 @@
+﻿@page "/install"
+@inject IJSRuntime JS
+
+<PageTitle>نصب اپلیکیشن - حیات طیبه</PageTitle>
+
+<div class="hayt-page" dir="rtl">
+    <section class="hayt-install-hero">
+        <div class="hayt-install-icon">📲</div>
+
+        <div>
+            <div class="hayt-kicker">Install Hayt App</div>
+            <h1>نصب اپلیکیشن حیات طیبه</h1>
+            <p>
+                نسخه وب حیات طیبه به‌صورت PWA آماده نصب روی موبایل، تبلت و دسکتاپ است.
+                پس از نصب، برنامه شبیه یک اپلیکیشن مستقل اجرا می‌شود.
+            </p>
+
+            <div class="hayt-install-actions">
+                <button class="btn btn-primary btn-lg" @onclick="TryInstallAsync">
+                    نصب اپلیکیشن
+                </button>
+
+                <a class="btn btn-outline-secondary btn-lg" href="/">
+                    بازگشت به خانه
+                </a>
+            </div>
+
+            @if (!string.IsNullOrWhiteSpace(message))
+            {
+                <div class="alert alert-info mt-3 mb-0">
+                    @message
+                </div>
+            }
+        </div>
+    </section>
+
+    <section class="hayt-install-grid">
+        <div class="hayt-install-card">
+            <span>۱</span>
+            <strong>Chrome / Edge</strong>
+            <p>روی دکمه نصب در همین صفحه یا آیکون نصب کنار نوار آدرس بزنید.</p>
+        </div>
+
+        <div class="hayt-install-card">
+            <span>۲</span>
+            <strong>Android</strong>
+            <p>از منوی مرورگر گزینه Add to Home screen یا Install app را انتخاب کنید.</p>
+        </div>
+
+        <div class="hayt-install-card">
+            <span>۳</span>
+            <strong>iPhone / iPad</strong>
+            <p>از Safari گزینه Share و سپس Add to Home Screen را انتخاب کنید.</p>
+        </div>
+
+        <div class="hayt-install-card">
+            <span>۴</span>
+            <strong>Offline Ready</strong>
+            <p>بخش‌های اصلی برنامه برای تجربه آفلاین پایه آماده شده‌اند.</p>
+        </div>
+    </section>
+</div>
+
+@code {
+    private string message = "اگر دکمه نصب فعال نبود، از منوی مرورگر گزینه نصب یا Add to Home Screen را انتخاب کنید.";
+
+    private async Task TryInstallAsync()
+    {
+        try
+        {
+            var result = await JS.InvokeAsync<string>("haytPwa.tryInstall");
+            message = result;
+        }
+        catch (Exception ex)
+        {
+            message = "درخواست نصب در این مرورگر در دسترس نیست: " + ex.Message;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+﻿<Window x:Class="Hayt.Views.WelcomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="اندیشکده حیات طیبه"
+        Width="900" Height="600"
+        MinWidth="800" MinHeight="500"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        FlowDirection="RightToLeft"
+        FontFamily="{StaticResource HaytFontFamily}">
+
+    <Border CornerRadius="24" Background="{DynamicResource HaytBackgroundBrush}" BorderBrush="{DynamicResource HaytBorderBrush}" BorderThickness="1">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="30" ShadowDepth="6" Opacity="0.3" />
+        </Border.Effect>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- محتوای اصلی -->
+            <Grid Grid.Row="0" Margin="40">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- لوگو و عنوان -->
+                <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Border Width="100" Height="100" CornerRadius="50" Background="{DynamicResource HaytPrimaryBrush}" HorizontalAlignment="Center">
+                        <TextBlock Text="📚" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <TextBlock Text="اندیشکده حیات طیبه" FontSize="32" FontWeight="Bold" Foreground="{DynamicResource HaytTextBrush}" HorizontalAlignment="Center" Margin="0,20,0,0" />
+                    <TextBlock Text="سامانه آموزش گام‌به‌گام" FontSize="16" Foreground="{DynamicResource HaytMutedTextBrush}" HorizontalAlignment="Center" Margin="0,8,0,0" />
+                </StackPanel>
+
+                <!-- ویژگی‌ها -->
+                <Grid Grid.Row="1" Margin="0,40,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0" Style="{StaticResource HaytCardStyle}" Margin="8">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="📖" FontSize="32" HorizontalAlignment="Center" />
+                            <TextBlock Text="کتاب‌های آموزشی" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource HaytTextBrush}" HorizontalAlignment="Center" Margin="0,8,0,0" />
+                        </StackPanel>
+                    </Border>
+
+                    <Border Grid.Column="1" Style="{StaticResource HaytCardStyle}" Margin="8">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="🎯" FontSize="32" HorizontalAlignment="Center" />
+                            <TextBlock Text="تمرین و آزمون" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource HaytTextBrush}" HorizontalAlignment="Center" Margin="0,8,0,0" />
+                        </StackPanel>
+                    </Border>
+
+                    <Border Grid.Column="2" Style="{StaticResource HaytCardStyle}" Margin="8">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="📊" FontSize="32" HorizontalAlignment="Center" />
+                            <TextBlock Text="گزارش پیشرفت" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource HaytTextBrush}" HorizontalAlignment="Center" Margin="0,8,0,0" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+
+                <!-- دکمه شروع -->
+                <StackPanel Grid.Row="3" HorizontalAlignment="Center" Margin="0,40,0,0">
+                    <Button Content="🚀 شروع یادگیری" FontSize="18" Padding="40,14" MinWidth="220" MinHeight="52" Click="StartButton_Click" />
+                    <TextBlock Text="نسخه ۶۵.۰.۱" FontSize="12" Foreground="{DynamicResource HaytMutedTextBrush}" HorizontalAlignment="Center" Margin="0,12,0,0" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
