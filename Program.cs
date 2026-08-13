@@ -1,19 +1,4 @@
-﻿builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowBlazorWeb", policy =>
-    {
-        policy.WithOrigins(
-            "https://hayat110.ir", 
-            "https://www.hayat110.ir",
-            "http://localhost:5137",
-            "https://localhost:7260"
-        )
-        .AllowAnyHeader()
-        .AllowAnyMethod()
-        .AllowCredentials();
-    });
-});
-using Hayt.CloudServer.Endpoints;
+﻿using Hayt.CloudServer.Endpoints;
 using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -24,6 +9,23 @@ using Microsoft.AspNetCore.Http.Json;
 using Microsoft.AspNetCore.SignalR;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowBlazorWeb", policy =>
+    {
+        policy.WithOrigins(
+            "https://hayat110.ir",
+            "https://www.hayat110.ir",
+            "https://api.hayat110.ir",
+            "http://localhost:5137",
+            "https://localhost:7260"
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials();
+    });
+});
 
 var startupTimeUtc = DateTimeOffset.UtcNow;
 var stopwatch = Stopwatch.StartNew();
@@ -48,26 +50,6 @@ builder.Services.AddSignalR(options =>
     options.MaximumReceiveMessageSize = 1024 * 1024;
 });
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("HaytLocalPolicy", policy =>
-    {
-        policy
-            .SetIsOriginAllowed(origin =>
-            {
-                if (!Uri.TryCreate(origin, UriKind.Absolute, out var uri))
-                    return false;
-
-                return uri.Host.Equals("localhost", StringComparison.OrdinalIgnoreCase)
-                    || uri.Host.Equals("127.0.0.1", StringComparison.OrdinalIgnoreCase)
-                    || uri.Host.Equals("::1", StringComparison.OrdinalIgnoreCase);
-            })
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowCredentials();
-    });
-});
-
 builder.Services.AddSignalR(options =>
 {
     options.EnableDetailedErrors = true;
@@ -81,6 +63,8 @@ builder.Services.AddSignalR(options =>
 builder.Services.AddSingleton<OnlineUserTracker>();
 
 var app = builder.Build();
+
+app.UseCors("AllowBlazorWeb");
 
 app.Use(async (context, next) =>
 {
@@ -346,6 +330,7 @@ app.MapOnlineUsersV2Endpoints();
 app.MapLicenseEndpoints();
 app.MapAuthEndpoints();
 app.Run();
+
 
 
 
