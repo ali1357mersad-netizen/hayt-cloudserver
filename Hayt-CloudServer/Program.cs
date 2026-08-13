@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.SignalR;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("http://+:8080");
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazorWeb", policy =>
@@ -72,7 +74,6 @@ app.Use(async (context, next) =>
     await next();
 });
 
-app.UseCors("HaytLocalPolicy");
 
 app.MapGet("/", () => Results.Ok(new
 {
@@ -330,6 +331,8 @@ app.MapOnlineUsersV2Endpoints();
 app.MapLicenseEndpoints();
 app.MapAuthEndpoints();
 app.Run();
+
+
 
 
 
